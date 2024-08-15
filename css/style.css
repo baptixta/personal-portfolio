@@ -72,6 +72,15 @@ nav > ul > li:hover {
     background-color: var(--background-bar);
 }
 
+nav > ul > li > a {
+    color: var(--color-title);
+    text-decoration: none;
+}
+
+nav > ul > li > a > i {
+    margin-right: var(--extra-small-margin);
+}
+
 nav > ul > li > i {
     margin-right: var(--extra-small-margin);
 }
@@ -166,10 +175,20 @@ strong {
     color: var(--color-title);
 }
 
+.text-trabalho {
+    margin-bottom: var(--small-margin);
+}
+
 .text-details {
     color: var(--color-details);
 }
 
 .text-subtitle {
     color: var(--color-subtitle);
+}
+
+/* newsletter feed */
+
+.newsletter-feed {
+    margin-top: var(--huge-margin);
 }

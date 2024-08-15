@@ -21,12 +21,12 @@
             </div>                
 
             <ul>
-                <li class="selected"><i class="fa-solid fa-house"></i> Home</li>
-                <li><i class="fa-solid fa-envelope"></i> Newsletter</li>
+                <li><i class="fa-solid fa-house"></i> Home</li>
+                <li  class="selected"><i class="fa-solid fa-envelope"></i> Newsletter</li>
 
                 <li class="nav-title">Projetos</li>
                 <li><i class="fa-solid fa-house"></i> Home</li>
-                <li><a href="newsletter.html"><i class="fa-solid fa-envelope"></i> Newsletter</a></li>
+                <li><i class="fa-solid fa-envelope"></i> Newsletter</li>
 
                 <li class="nav-title">Projetos Pessoais</li>
                 <li><i class="fa-solid fa-house"></i> Home</li>
@@ -39,14 +39,21 @@
         </nav>        
 
         <div class="content">
-            <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit dignissimos provident nesciunt, quibusdam quam ex rem, explicabo quidem porro non debitis veritatis ipsa dolores aut necessitatibus! Nostrum provident possimus reiciendis.</p>
+            <div id="substack-feed-embed" class="newsletter-feed"></div>
 
-            <h3 class="title">Trabalho</h3>
-            <p class="text-trabalho"><strong>FIAP</strong> <span class="text-details">////</span> <span class="text-subtitle">Professor [2024-]</span></p>
-            <p class="text-trabalho"><strong>Dumativa</strong> <span class="text-details">////</span> <span class="text-subtitle">Game Designer [2022-]</span></p>
-            <p class="text-trabalho"><strong>FIAP</strong> <span class="text-details">////</span> <span class="text-subtitle">Professor[2024-]</span></p>
-            <p class="text-trabalho"><strong>FIAP</strong> <span class="text-details">////</span> <span class="text-subtitle">Professor[2024-]</span></p>
-            <p class="text-trabalho"><strong>FIAP</strong> <span class="text-details">////</span> <span class="text-subtitle">Professor[2024-]</span></p>
+
+            <script>
+            window.SubstackFeedWidget = {
+                substackUrl: "baptixta.substack.com",
+                posts: 5,
+                colors: {
+                primary: "#FFFFFF",
+                secondary: "#C5C5C5",
+                background: "#050505",
+                }
+            };
+            </script>
+            <script src="https://substackapi.com/embeds/feed.js" async></script>       
         </div>
     </div>
 
