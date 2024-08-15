@@ -1,0 +1,175 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap');
+
+:root {
+    --background-nav: #1C1C1C;
+    --background-content: #050505;
+    --background-bar: #404040;
+    --color-highlight: #FF2B58;
+    --color-title: #fff;
+    --color-subtitle: #686868;
+    --color-text: #C5C5C5;
+    --color-details: #313131;
+    --extra-small-padding: 6px;
+    --small-padding: 12px;
+    --medium-padding: 24px;
+    --big-padding: 48px;
+    --extra-small-margin: 6px;
+    --small-margin: 12px;
+    --medium-margin: 24px;
+    --big-margin: 48px;
+    --huge-margin: 72px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-content);    
+    font-family: 'Archivo';
+    margin: 0 auto;
+}
+
+p {
+    color: var(--color-text);
+}
+
+/* overall content */
+
+.all {
+    display: grid;
+    grid-template-areas: "nav content";
+}
+
+/* nav */
+
+nav {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: nav;
+    background-color: var(--background-nav);
+    justify-content: center;
+    width: 200px;
+}
+
+nav > ul {
+    color: var(--color-title);
+    font-size: 0.85em;
+    padding: 0;
+    list-style: none;
+    width: 140px;
+}
+
+nav > ul > li {
+    border-radius: 4px;
+    margin: var(--extra-small-margin);
+    padding: var(--extra-small-padding);
+}
+
+nav > ul > li:hover {
+    background-color: var(--background-bar);
+}
+
+nav > ul > li > i {
+    margin-right: var(--extra-small-margin);
+}
+
+.nav-title {
+    background-color: var(--background-nav) !important;
+    margin-top: var(--medium-margin);
+    font-weight: 600;
+}
+
+.selected {
+    background-color: var(--background-bar);
+}
+
+.presentation {
+    padding: var(--medium-padding);
+}
+
+.presentation-title {
+    color: var(--color-text);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.portrait {
+    border-radius: 5px;
+    width: 130px;
+    height: 130px;
+    transition: all .2s ease-out;
+}
+
+.portrait:hover {
+    cursor: url(../img/gun-cursor.png), pointer;
+    transform: scale(1.1) rotate(2deg);
+}
+
+.presentation-subtitle  {
+    color: var(--color-title);
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+/* hp lifebar */
+
+.hp {
+    align-items: center;
+    background-color: var(--background-bar);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hp > h3 {
+    color: var(--color-title);
+    font-size: 0.9em;
+    margin: 4px 8px;
+    z-index: 1;
+}
+
+#hp-bar {
+    background-color: var(--color-highlight);
+    border-radius: 4px;
+    height: 24px;
+    position: absolute;
+    transition: all .4s ease;
+    width: 65px;
+}
+
+.lifecount {
+    font-weight: 400;
+}
+
+/* content */
+
+.content {
+    grid-area: content;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.text {
+    margin-top: var(--huge-margin);
+}
+
+.title {
+    color: var(--color-highlight);
+    margin-top: var(--big-margin);
+    margin-bottom: var(--medium-margin);
+}
+
+strong {
+    color: var(--color-title);
+}
+
+.text-details {
+    color: var(--color-details);
+}
+
+.text-subtitle {
+    color: var(--color-subtitle);
+}
