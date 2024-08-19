@@ -51,10 +51,13 @@ nav {
     grid-area: nav;
     background-color: var(--background-nav);
     justify-content: flex-start;
+    position: fixed;
     width: 200px;
+    height: 100%;
+    overflow-y: auto;
 }
 
-nav > ul {
+.nav-ul {
     color: var(--color-title);
     font-size: 0.85em;
     padding: 0;
@@ -62,7 +65,28 @@ nav > ul {
     width: 140px;
 }
 
+.nav-li {
+    color: var(--color-title);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    margin: var(--extra-small-margin);
+    padding: var(--extra-small-padding);
+}
+
+.nav-li > li > i {
+    margin-right: var(--extra-small-margin);
+}
+
+.nav-li:hover {
+    background-color: var(--background-bar);
+}
+
+
 nav > ul > li {
+    display: flex;
+    align-items: center;
     border-radius: 4px;
     margin: var(--extra-small-margin);
     padding: var(--extra-small-padding);
@@ -70,15 +94,6 @@ nav > ul > li {
 
 nav > ul > li:hover {
     background-color: var(--background-bar);
-}
-
-nav > ul > li > a {
-    color: var(--color-title);
-    text-decoration: none;
-}
-
-nav > ul > li > a > i {
-    margin-right: var(--extra-small-margin);
 }
 
 nav > ul > li > i {
@@ -159,6 +174,7 @@ nav > ul > li > i {
     grid-area: content;
     justify-content: center;
     max-width: 600px;
+    margin-bottom: var(--big-margin);
 }
 
 .text {
@@ -209,4 +225,14 @@ strong {
 
 .newsletter-feed {
     margin-top: var(--huge-margin);
+}
+
+
+
+/* responsive */
+@media (max-width: 1080px) {
+    nav {
+        position: absolute;
+        left: -250px;
+    }
 }
