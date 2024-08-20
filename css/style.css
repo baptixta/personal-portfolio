@@ -93,6 +93,7 @@ nav {
     width: 200px;
     height: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
     transition: all .3s ease;
     z-index: 10;
 }
@@ -267,9 +268,39 @@ strong {
     margin-top: var(--huge-margin);
 }
 
+/* game page */
 
+.trailer-content {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.game-plataforms { 
+    align-self: center;
+    margin-top: 32px;    
+}
+
+.game-plataforms > a > img {
+    width: 32px;
+    padding: 0px var(--medium-padding);
+}
+
+.text-game {
+    margin-top: var(--medium-margin);
+}
+
+.list-game {
+    color: var(--color-title);
+    font-weight: 00;
+    list-style: none;
+    padding-left: 0px;
+    margin: var(--small-margin) 0px;
+}
 
 /* responsive */
+
 @media (max-width: 1080px) {
     .all {        
         grid-template-areas: "content";
@@ -316,7 +347,7 @@ strong {
     }
 
     .content {
-        margin: 0 auto;
+        margin: 0 auto var(--big-margin);
     }
 }
 
