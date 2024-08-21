@@ -355,11 +355,26 @@ strong {
     .content {
         width: 80%;
     }
+
+    .trailer-content > iframe {
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 550px) {
     .text-trabalho {
         display: flex;
         flex-direction: column;
+    }
+
+    .trailer-content > iframe {
+        max-width: 290px;
+        height: 200px;
+    }
+
+    .game-plataforms > a > img {
+        width: 24px;
+        padding: 0px var(--small-padding);
     }
 }
