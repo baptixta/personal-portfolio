@@ -1,0 +1,181 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap');
+
+:root {
+    --background-nav: #1C1C1C;
+    --background-points: #1A1A1A;
+    --background-content: #050505;
+    --background-bar: #404040;
+    --color-highlight: #FF2B58;
+    --color-title: #fff;
+    --color-subtitle: #686868;
+    --color-text: #C5C5C5;
+    --color-details: #313131;
+    --extra-small-padding: 6px;
+    --small-padding: 12px;
+    --medium-padding: 24px;
+    --big-padding: 48px;
+    --extra-small-margin: 6px;
+    --small-margin: 12px;
+    --medium-margin: 24px;
+    --big-margin: 48px;
+    --huge-margin: 72px;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--background-content);
+}
+
+body {
+    background-color: var(--background-content);    
+    font-family: 'Archivo';
+    margin: 0 auto;
+}
+
+p {
+    color: var(--color-text);
+    margin-top: var(--big-margin);
+}
+
+a {
+    margin-top: var(--big-margin);
+    color: var(--color-subtitle);
+    transition: all .4s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-highlight);
+}
+
+.title {
+    color: var(--color-highlight);
+    margin-top: var(--big-margin);
+    margin-bottom: var(--medium-margin);
+    font-size: 1.5em;
+}
+
+
+.text-subtitle {
+    margin: var(--extra-small-margin) 0px;
+    color: var(--color-subtitle);
+}
+
+.easter-egg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "gd loja loja"
+    "conquistas loja loja";
+
+    background-color: var(--background-nav);
+    max-width: 650px;
+    width: 100%;
+    height: 100%;
+    margin-top: var(--medium-margin);
+    border-radius: 5px;
+}
+
+.game-designer {
+    margin: var(--small-margin);
+    border-radius: 4px;
+    background-color: var(--background-content);
+    grid-area: gd;
+    max-width: 189px;    
+}
+
+.gd {
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.gd:hover {
+    transform: scale(1.2);
+}
+
+.conquistas {
+    grid-area: conquistas;
+    max-width: 189px;
+    margin: 0px var(--small-margin);
+}
+
+.conquista {
+    background-color: var(--background-content);
+    border-radius: 4px;
+    padding: var(--small-padding);
+    color: var(--color-title);
+    margin: var(--small-margin) 0px;
+}
+
+.loja {
+    grid-area: loja;
+    background-color: var(--background-content);
+    border-radius: 4px;
+    margin: var(--small-margin);
+    color: var(--color-title);
+}
+
+.title-loja {
+    text-align: center;
+}
+
+.item {
+    background-color: var(--background-bar);
+    border-radius: 4px;
+    margin: var(--small-margin);
+}
+
+.gd-points {
+    color: var(--color-title);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-points);
+    margin-top: var(--medium-margin);
+    padding: var(--small-margin) 0;
+}
+
+.points-all {
+    margin: 0 auto;
+    font-size: 16px;
+    font-size: 18px;
+}
+
+.points-second {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.gd-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: var(--medium-margin);
+}
+
+.text-info {
+    color: var(--color-title);
+    font-size: 13px;
+    font-weight: 400;
+    margin: var(--small-margin);
+}
+
+#hpBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-title);
+    font-weight: 300;
+    font-size: 12px;
+}

@@ -372,6 +372,12 @@ strong {
         max-width: 400px;
         margin: 0 auto;
     }
+
+    .trailer-content > img {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
 }
 
 @media (max-width: 550px) {
@@ -383,6 +389,11 @@ strong {
     .trailer-content > iframe {
         max-width: 290px;
         height: 200px;
+    }
+
+    .trailer-content > img {
+        max-width: 290px;
+        margin: 0 auto;
     }
 
     .game-plataforms > a > img {
