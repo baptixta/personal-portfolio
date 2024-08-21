@@ -96,6 +96,9 @@ nav {
     overflow-x: hidden;
     transition: all .3s ease;
     z-index: 10;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--background-bar) var(--background-content);
 }
 
 .nav-ul {
@@ -168,9 +171,32 @@ nav > ul > li > i {
     transition: all .2s ease-out;
 }
 
+.blurred {
+    filter: blur(20px) grayscale(1);
+    transition: 1s ease all;
+    cursor: auto !important;
+}
+
 .portrait:hover {
-    cursor: url(../img/gun-cursor.png), pointer;
+    cursor: url('../img/gun-cursor.png'), pointer;
     transform: scale(1.1) rotate(2deg);
+}
+
+.game-secret {
+    cursor: pointer;
+    position: absolute;
+    left: 70px;
+    top: 100px;
+    display: none;
+    transition: all .3s ease;
+}
+
+.game-secret:hover {
+    transform: scale(1.4);
+}
+
+.game-unlock {
+    display: block;
 }
 
 .presentation-subtitle  {
@@ -181,29 +207,15 @@ nav > ul > li > i {
 
 /* hp lifebar */
 
-.hp {
+#hpBar {
+    color: var(--color-text);
+    font-size: 0.72em;
     align-items: center;
-    background-color: var(--background-bar);
-    border-radius: 4px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 130px !important;
 }
 
-.hp > h3 {
-    color: var(--color-title);
-    font-size: 0.9em;
-    margin: 4px 8px;
-    z-index: 1;
-}
-
-#hp-bar {
-    background-color: var(--color-highlight);
-    border-radius: 4px;
-    height: 24px;
-    position: absolute;
-    transition: all .4s ease;
-    width: 65px;
-}
 
 .lifecount {
     font-weight: 400;
