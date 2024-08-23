@@ -127,9 +127,7 @@ a:hover {
     text-align: center;
 }
 
-.item {
-    background-color: var(--background-bar);
-    border-radius: 4px;
+.item {    
     margin: var(--small-margin);
 }
 
@@ -171,6 +169,15 @@ a:hover {
     margin: var(--small-margin);
 }
 
+.text-level {
+    margin: 0;
+    font-weight: 500;
+    background-color: var(--color-highlight);
+    padding: var(--extra-small-margin);
+    margin-top: var(--small-margin);
+    border-radius: 4px;
+}
+
 #hpBar {
     display: flex;
     align-items: center;
@@ -178,4 +185,60 @@ a:hover {
     color: var(--color-title);
     font-weight: 300;
     font-size: 12px;
+}
+
+.item-content {
+    background-color: var(--background-bar);
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin: var(--small-margin) 0px;
+    transition: all .3s ease;
+    cursor: pointer;
+    border: 2px solid var(--background-bar);
+}
+
+.item-content:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--color-highlight);
+}
+
+.item-content > img {
+    margin-left: var(--small-margin);
+}
+
+.item-stats {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.item-stats-text {
+    margin: var(--small-margin);
+}
+
+.item-stats-text > h2 {
+    margin: var(--small-margin) 0px;
+}
+
+.item-stats-preco {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.item-stats-preco > img {
+    max-width: 20px;
+    margin: 0px var(--extra-small-margin);
+}
+
+.item-stats-preco > p {
+    margin: 0;
+}
+
+.upgrade-amount {
+    margin: var(--medium-margin);
+    font-size: 25px;
+    font-weight: 600;
 }
