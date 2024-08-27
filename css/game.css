@@ -25,6 +25,9 @@
 html {
     box-sizing: border-box;
     background-color: var(--background-content);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 body {
@@ -113,6 +116,7 @@ a:hover {
     padding: var(--small-padding);
     color: var(--color-title);
     margin: var(--small-margin) 0px;
+    transition: all .4s ease;
 }
 
 .loja {
@@ -140,6 +144,17 @@ a:hover {
     background-color: var(--background-points);
     margin-top: var(--medium-margin);
     padding: var(--small-margin) 0;
+}
+
+.per-click {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.per-click > img {
+    max-width: 25px;
+    margin-left: var(--small-margin);
 }
 
 .points-all {
@@ -188,7 +203,6 @@ a:hover {
 }
 
 .item-content {
-    background-color: var(--background-bar);
     border-radius: 4px;
     justify-content: space-between;
     align-items: center;
@@ -201,7 +215,11 @@ a:hover {
 
 .item-content:hover {
     transform: scale(1.05);
-    border: 2px solid var(--color-highlight);
+    border: 2px solid var(--background-bar);
+}
+
+.can-buy {
+    border: 2px solid var(--color-highlight) !important;
 }
 
 .item-content > img {
