@@ -92,16 +92,41 @@ a:hover {
     border-radius: 4px;
     background-color: var(--background-content);
     grid-area: gd;
+    max-height: 350px;
     max-width: 189px;    
 }
 
 .gd {
     transition: all .3s ease;
     cursor: pointer;
+    animation: glow 2.5s infinite ease-in;
 }
 
 .gd:hover {
     transform: scale(1.2);
+}
+
+@keyframes glow {
+    0% {filter: drop-shadow(0px 0px 0px #FF2B58);}
+    50% {filter: drop-shadow(0px 0px 18px #FF2B58);}
+    100% {filter: drop-shadow(0px 0px 0px #FF2B58);}
+}
+
+.tooltip {
+    width: 200px;
+    visibility: hidden;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -100px;
+    transition: all .4s ease;
+    background-color: var(--color-highlight);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: var(--extra-small-margin);
 }
 
 .conquistas {
@@ -203,6 +228,7 @@ a:hover {
 }
 
 .item-content {
+    position: relative;
     border-radius: 4px;
     justify-content: space-between;
     align-items: center;
@@ -216,6 +242,10 @@ a:hover {
 .item-content:hover {
     transform: scale(1.05);
     border: 2px solid var(--background-bar);
+}
+
+.item-content:hover + .tooltip {
+    visibility: visible;
 }
 
 .can-buy {
