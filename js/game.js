@@ -258,7 +258,11 @@ function upgradesTimer() {
         let totalPoints = gdPointsPerSecond;
         clickVisual.classList.add('click-per-second')
         clickVisual.innerHTML = `+${totalPoints}`;
-        gdStats.appendChild(clickVisual);   
+        gdStats.appendChild(clickVisual);
+        // destruir visual
+        setTimeout(() => {
+            clickVisual.remove();
+        }, 1000);
     }
 
     // visuals add estudo

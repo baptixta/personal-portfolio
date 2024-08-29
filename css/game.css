@@ -138,6 +138,7 @@ a:hover {
     z-index: 10;
     transform: scale(1.3);
     transition: all .4s ease;
+    animation: boxtutorial 1.6s infinite ease;
 }
 
 .box-tutorial::after {
@@ -149,6 +150,10 @@ a:hover {
     border-width: 8px;
     border-style: solid;
     border-color: transparent var(--color-highlight) transparent transparent;
+}
+
+@keyframes boxtutorial {
+    50% {transform: scale(1.35);};
 }
 
 .remove-box-tutorial {
@@ -376,4 +381,25 @@ a:hover {
     margin: var(--medium-margin);
     font-size: 25px;
     font-weight: 600;
+}
+
+/* responsividade */
+@media (max-width: 780px) {
+    .game-box {
+        grid-template-areas: 
+        "gd"
+        "loja"
+        "conquistas";
+        max-width: 400px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+
+    .game-designer {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background-nav);
+        max-width: 100%;
+        width: 100%;
+    }
 }
