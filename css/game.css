@@ -52,6 +52,11 @@ a:hover {
     color: var(--color-highlight);
 }
 
+.banner {
+    margin-top: var(--medium-margin);
+    margin-bottom: 0;
+}
+
 .title {
     color: var(--color-highlight);
     margin-top: var(--big-margin);
@@ -59,6 +64,20 @@ a:hover {
     font-size: 1.5em;
 }
 
+.black-panel {
+    background-color: var(--background-content);
+    opacity: .85;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    transition: all 1s ease;
+}
+
+.remove-black-panel {
+    opacity: 0;
+    pointer-events: none;
+}
 
 .text-subtitle {
     margin: var(--extra-small-margin) 0px;
@@ -93,7 +112,8 @@ a:hover {
     background-color: var(--background-content);
     grid-area: gd;
     max-height: 350px;
-    max-width: 189px;    
+    max-width: 189px;   
+    z-index: 1;
 }
 
 .gd {
@@ -106,9 +126,71 @@ a:hover {
     transform: scale(1.2);
 }
 
+.box-tutorial {
+    border-radius: 5px;
+    position: absolute;
+    color: var(--color-title);
+    background-color: #FF2B58;
+    padding: var(--small-padding);
+    right: -260px;
+    top: 10px;
+    max-width: 200px;
+    z-index: 10;
+    transform: scale(1.3);
+    transition: all .4s ease;
+}
+
+.box-tutorial::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent var(--color-highlight) transparent transparent;
+}
+
+.remove-box-tutorial {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.click-feedback {
+    position: absolute;
+    content: 'click';
+    color: var(--color-title);
+    right: 10px;
+    font-size: 1.8em;
+    font-weight: 300;
+    top: 20px;
+    opacity: 0;
+    animation: points .4s ease-in-out;
+    pointer-events: none;
+}
+
+.click-per-second {
+    position: absolute;
+    content: 'click';
+    color: var(--color-title);
+    left: 10px;
+    font-size: 1.4em;
+    font-weight: 300;
+    top: -20px;
+    opacity: 0;
+    animation: points .4s ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes points {
+    0% {opacity: 1; transform: translateY(50px)};
+    50% {opacity: .5; transform: translateY(50px)};
+    100% {opacity: 1; transform: translateY(50px)};
+}
+
 @keyframes glow {
     0% {filter: drop-shadow(0px 0px 0px #FF2B58);}
-    50% {filter: drop-shadow(0px 0px 18px #FF2B58);}
+    50% {filter: drop-shadow(0px 0px 30px #FF2B58);}
     100% {filter: drop-shadow(0px 0px 0px #FF2B58);}
 }
 
@@ -184,8 +266,7 @@ a:hover {
 
 .points-all {
     margin: 0 auto;
-    font-size: 16px;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .points-second {
@@ -195,11 +276,13 @@ a:hover {
 }
 
 .gd-stats {
+    position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: var(--medium-margin);
+    z-index: 5;
 }
 
 .text-info {
@@ -250,6 +333,10 @@ a:hover {
 
 .can-buy {
     border: 2px solid var(--color-highlight) !important;
+}
+
+.evo-1 {
+    background-color: var(--color-details);
 }
 
 .item-content > img {

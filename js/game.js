@@ -23,6 +23,8 @@ const upgradePlanilhasAmountText = document.querySelector('#planilhas-amount');
 const upgradeBalanceamento = document.querySelector('#balanceamento');
 
 const itemContent = document.querySelectorAll('.item-content');
+const blackpanel = document.querySelector('.black-panel');
+const boxTutorial = document.querySelector('.box-tutorial');
 const textLevel = document.querySelector('.text-level');
 
 let estudoCost = 5;
@@ -37,7 +39,7 @@ let planilhasCost = 1000
 let planilhasAmount = 0;
 
 const conquistas = document.querySelector('.conquistas');
-
+const gdStats = document.querySelector('.gd-stats')
 
 
 /* Ganhar GD Points */
@@ -48,11 +50,23 @@ gd.addEventListener('click', () => {
     gdPoints += documentacaoPoints;
     gdPointsText.innerHTML = gdPoints
 
+    // tutorial    
+    if (gdPoints == 5) {
+        boxTutorial.innerHTML = "Muito bem, agora use os pontos para comprar conhecimento na loja!"    
+        setTimeout(() => {
+            blackpanel.classList.add('remove-black-panel');
+            boxTutorial.classList.add('remove-box-tutorial');
+        }, 2250);
+    }
+    
+
     // visuals add estudo
     if (gdPoints >= escritaCost) {
         itemContent.forEach((item, idx) => {
             if (idx == 0) {
                 item.classList.add(('can-buy'))
+            } else {
+                item.classList.remove(('can-buy'))
             }
         });
     }
@@ -90,6 +104,17 @@ gd.addEventListener('click', () => {
             }
         });
     }
+
+    // visuals ponto ao clicar na tela
+    const clickVisual = document.createElement("div")
+    let totalPoints = 1 + estudoAmount + escritaPoints + documentacaoPoints;
+    clickVisual.classList.add('click-feedback')
+    clickVisual.innerHTML = `+${totalPoints}`;
+    gdStats.appendChild(clickVisual);
+    // destruir visual
+    setTimeout(() => {
+        clickVisual.remove();
+    }, 1000);
 });
 
 /* upgrades regulares */
@@ -120,6 +145,10 @@ upgradeEstudo.addEventListener('click', ()=> {
             conquistaInicial.innerHTML = "Primeiros passos"
             conquistas.appendChild(conquistaInicial);
         }
+
+        if (estudoAmount >= 10) {
+            textLevel.innerHTML = "Nível 1";
+        };
     }    
 });
 
@@ -148,8 +177,12 @@ upgradeEscrita.addEventListener('click', ()=> {
             const conquistaInicial = document.createElement("div")
             conquistaInicial.classList.add('conquista')
             conquistaInicial.innerHTML = "Reforçando conceitos"
-            conquistas.appendChild(conquistaInicial);
+            conquistas.appendChild(conquistaInicial);            
         }
+
+        if (estudoAmount >= 10 && escritaAmount >= 10) {
+            textLevel.innerHTML = "Nível 2";
+        };
     }    
 });
 
@@ -216,8 +249,17 @@ upgradePlanilhas.addEventListener('click', ()=> {
 
 function upgradesTimer() {    
     gdPoints += gdPointsPerSecond;
-    gdPointsText.innerHTML = gdPoints;
+    gdPointsText.innerHTML = gdPoints
+    
 
+    // visuals ponto por segundo na tela
+    if (gdPointsPerSecond >= 1) {
+        const clickVisual = document.createElement("div")
+        let totalPoints = gdPointsPerSecond;
+        clickVisual.classList.add('click-per-second')
+        clickVisual.innerHTML = `+${totalPoints}`;
+        gdStats.appendChild(clickVisual);   
+    }
 
     // visuals add estudo
     if (gdPoints >= estudoCost) {
