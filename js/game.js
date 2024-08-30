@@ -21,11 +21,14 @@ const upgradePlanilhasCostText = document.querySelector('#planilhas-cost');
 const upgradePlanilhasAmountText = document.querySelector('#planilhas-amount');
 
 const upgradeBalanceamento = document.querySelector('#balanceamento');
+const upgradeBalanceamentoCostText = document.querySelector('#balanceamento-cost');
+const upgradeBalanceamentoAmountText = document.querySelector('#balanceamento-amount');
 
 const itemContent = document.querySelectorAll('.item-content');
 const blackpanel = document.querySelector('.black-panel');
 const boxTutorial = document.querySelector('.box-tutorial');
 const textLevel = document.querySelector('.text-level');
+const masterizado = document.querySelectorAll('.masterizado');
 
 let estudoCost = 5;
 let estudoAmount = 0;
@@ -37,6 +40,15 @@ let documentacaoAmount = 0;
 let documentacaoPoints = 0;
 let planilhasCost = 1000
 let planilhasAmount = 0;
+let balanceamentoCost = 10000
+let balanceamentoAmount = 0;
+let balanceamentoPoints = 0;
+
+const cliquesEstudo = document.querySelector('#cliques-estudo');
+const cliquesEscrita = document.querySelector('#cliques-escrita');
+const cliquesDocumentacao = document.querySelector('#cliques-documentacao');
+const cliquesPlanilhas = document.querySelector('#cliques-planilhas');
+const cliquesBalanceamento = document.querySelector('#cliques-balanceamento');
 
 const conquistas = document.querySelector('.conquistas');
 const gdStats = document.querySelector('.gd-stats')
@@ -105,6 +117,15 @@ gd.addEventListener('click', () => {
         });
     }
 
+    // visuals add balanceamento
+    if (gdPoints >= balanceamentoCost) {
+        itemContent.forEach((item, idx) => {
+            if (idx == 4) {
+                item.classList.add(('can-buy'))
+            }
+        });
+    }
+
     // visuals ponto ao clicar na tela
     const clickVisual = document.createElement("div")
     let totalPoints = 1 + estudoAmount + escritaPoints + documentacaoPoints;
@@ -138,6 +159,9 @@ upgradeEstudo.addEventListener('click', ()=> {
             });
         }
 
+        // feedback de quantidade de cliques
+        cliquesEstudo.innerHTML = `Boost de cliques: +${estudoAmount}`;
+
         // conquistas desbloqueadas
         if (estudoAmount == 1) {
             const conquistaInicial = document.createElement("div")
@@ -149,6 +173,22 @@ upgradeEstudo.addEventListener('click', ()=> {
         if (estudoAmount >= 10) {
             textLevel.innerHTML = "Nível 1";
         };
+
+        if (estudoAmount >= 50) {
+            itemContent.forEach((item, idx) => {
+                if (idx == 0) {
+                    item.classList.add('evo-1')
+                }
+            });
+        }
+
+        if (estudoAmount >= 100) {
+            masterizado.forEach((item, idx) => {
+                if (idx == 0) {
+                    item.classList.add('unlock')
+                }
+            });
+        }
     }    
 });
 
@@ -158,7 +198,7 @@ upgradeEscrita.addEventListener('click', ()=> {
         gdPointsText.innerHTML = gdPoints       
         escritaCost += 1;
         escritaAmount += 1;
-        documentacaoPoints += 2;         
+        escritaPoints += 2;         
 
         upgradeEscritaCostText.innerHTML = escritaCost;
         upgradeEscritaAmountText.innerHTML = escritaAmount;
@@ -172,6 +212,9 @@ upgradeEscrita.addEventListener('click', ()=> {
             });
         }
 
+        // feedback de quantidade de cliques
+        cliquesEscrita.innerHTML = `Boost de cliques: +${escritaPoints}`;
+
         // conquistas desbloqueadas
         if (escritaAmount == 1) {
             const conquistaInicial = document.createElement("div")
@@ -183,6 +226,22 @@ upgradeEscrita.addEventListener('click', ()=> {
         if (estudoAmount >= 10 && escritaAmount >= 10) {
             textLevel.innerHTML = "Nível 2";
         };
+
+        if (escritaAmount >= 50) {
+            itemContent.forEach((item, idx) => {
+                if (idx == 1) {
+                    item.classList.add('evo-1')
+                }
+            });
+        }
+
+        if (escritaAmount >= 100) {
+            masterizado.forEach((item, idx) => {
+                if (idx == 1) {
+                    item.classList.add('unlock')
+                }
+            });
+        }
     }    
 });
 
@@ -192,7 +251,7 @@ upgradeDocumentacao.addEventListener('click', ()=> {
         gdPointsText.innerHTML = gdPoints       
         documentacaoCost += 200;
         documentacaoAmount += 1;
-        documentacaoPoints += 50;        
+        documentacaoPoints += 25;        
 
         upgradeDocumentacaoCostText.innerHTML = documentacaoCost;
         upgradeDocumentacaoAmountText.innerHTML = documentacaoAmount;
@@ -205,11 +264,31 @@ upgradeDocumentacao.addEventListener('click', ()=> {
             });
         }
 
+        // feedback de quantidade de cliques
+        cliquesDocumentacao.innerHTML = `Boost de cliques: +${documentacaoPoints}`;
+
+        // conquistas desbloqueadas
         if (documentacaoAmount == 1) {
             const conquistaInicial = document.createElement("div")
             conquistaInicial.classList.add('conquista')
             conquistaInicial.innerHTML = "Fez o primeiro GDD"
             conquistas.appendChild(conquistaInicial);
+        }
+
+        if (documentacaoAmount >= 50) {
+            itemContent.forEach((item, idx) => {
+                if (idx == 2) {
+                    item.classList.add('evo-1')
+                }
+            });
+        }
+
+        if (documentacaoAmount >= 50) {
+            masterizado.forEach((item, idx) => {
+                if (idx == 2) {
+                    item.classList.add('unlock')
+                }
+            });
         }
     }    
 });
@@ -237,18 +316,72 @@ upgradePlanilhas.addEventListener('click', ()=> {
             });
         }
 
-        if (planilhasAmount == 1) {
+        // feedback de quantidade de cliques por segundo
+        cliquesPlanilhas.innerHTML = `Boost de cliques p/ segundo: +${planilhasAmount}`;
+
+        // conquistas desbloqueadas
+        if (balanceamentoAmount == 1) {
             const conquistaInicial = document.createElement("div")
             conquistaInicial.classList.add('conquista')
             conquistaInicial.innerHTML = "Usa tabelas"
             conquistas.appendChild(conquistaInicial);
+        }
+
+        if (balanceamentoAmount >= 50) {
+            itemContent.forEach((item, idx) => {
+                if (idx == 3) {
+                    item.classList.add('evo-1')
+                }
+            });
+        }
+    }    
+});
+
+upgradeBalanceamento.addEventListener('click', ()=> {
+    if (gdPoints >= balanceamentoCost) {
+        gdPoints -= balanceamentoCost;      
+        gdPointsPerSecond += 1;         
+        gdPointsText.innerHTML = gdPoints          
+        gdPointsTextPerSecond.innerHTML = "Por segundo: " + gdPointsPerSecond;
+        balanceamentoCost += 5000;
+        balanceamentoAmount += 1;  
+        balanceamentoPoints += 10;            
+
+        upgradeBalanceamentoCostText.innerHTML = balanceamentoCost;
+        upgradeBalanceamentoAmountText.innerHTML = balanceamentoAmount;
+
+        if(gdPoints < balanceamentoCost) {
+            itemContent.forEach((item, idx) => {
+                if (idx == 4) {
+                    item.classList.remove('can-buy')
+                }
+            });
+        }
+
+        // feedback de quantidade de cliques por segundo
+        cliquesBalanceamento.innerHTML = `Boost de cliques p/ segundo: +${balanceamentoPoints}`;
+
+        // conquistas desbloqueadas
+        if (balanceamentoAmount == 1) {
+            const conquistaInicial = document.createElement("div")
+            conquistaInicial.classList.add('conquista')
+            conquistaInicial.innerHTML = "Acha que sabe balancear"
+            conquistas.appendChild(conquistaInicial);
+        }
+
+        if (balanceamentoAmount >= 50) {
+            itemContent.forEach((item, idx) => {
+                if (idx == 4) {
+                    item.classList.add('evo-1')
+                }
+            });
         }
     }    
 });
 
 
 function upgradesTimer() {    
-    gdPoints += gdPointsPerSecond;
+    gdPoints += gdPointsPerSecond + balanceamentoPoints;
     gdPointsText.innerHTML = gdPoints
     
 

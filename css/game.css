@@ -85,10 +85,18 @@ a:hover {
 }
 
 .easter-egg {
+    background-image: url('/img/bg.png');
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: slide 32s linear infinite;
+    min-height: 100vh;
+}
+
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 0px -512px; }
 }
 
 .game-box {
@@ -199,22 +207,6 @@ a:hover {
     100% {filter: drop-shadow(0px 0px 0px #FF2B58);}
 }
 
-.tooltip {
-    width: 200px;
-    visibility: hidden;
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -100px;
-    transition: all .4s ease;
-    background-color: var(--color-highlight);
-    border-radius: 4px;
-    margin-bottom: 10px;
-    text-align: center;
-    padding: var(--extra-small-margin);
-}
 
 .conquistas {
     grid-area: conquistas;
@@ -332,8 +324,36 @@ a:hover {
     border: 2px solid var(--background-bar);
 }
 
-.item-content:hover + .tooltip {
-    visibility: visible;
+.tooltip {
+    width: 220px;
+    /* Position the tooltip */
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -110px;
+    transition: all .3s ease;
+    background-color: var(--color-highlight);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: var(--extra-small-margin);
+    pointer-events: none;
+}
+
+.tooltip > h3, p {
+    margin: var(--extra-small-margin) 0px;
+    color: var(--color-title);
+}
+
+.tooltip > strong {
+    font-size: 0.8em;
+    color: var(--background-content);
+}
+
+.item-content:hover > .tooltip {
+    opacity: 1;
 }
 
 .can-buy {
@@ -341,7 +361,36 @@ a:hover {
 }
 
 .evo-1 {
-    background-color: var(--color-details);
+    animation: evo1 3s infinite ease;
+}
+
+.evo-2 {
+    animation: evo2 3s infinite ease;
+}
+
+.masterizado {
+    background-color: var(--color-highlight);
+    padding: 2px;
+    border-radius: 3px 3px 0px 0px;
+    position: absolute;
+    font-size: .75em;
+    margin-left: 42px;
+    top: -21px;
+    right: 12px;
+    animation: floating 2s infinite ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.unlock {
+    opacity: 1;
+}
+
+@keyframes evo1 {
+    0% { box-shadow: none;}
+    50% { -webkit-box-shadow: 0px 0px 25px -3px rgba(255,43,88,0.78); -moz-box-shadow: 0px 0px 25px -3px rgba(255,43,88,0.78); box-shadow: 0px 0px 25px -3px rgba(255,43,88,0.78);}
+    100% { box-shadow: none;}
 }
 
 .item-content > img {
