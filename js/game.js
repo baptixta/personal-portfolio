@@ -1,3 +1,4 @@
+const easterEgg = document.querySelector('.easter-egg')
 const gd = document.querySelector('.gd');
 const gdPointsText = document.querySelector('.points-all')
 const gdPointsTextPerSecond = document.querySelector('.points-second')
@@ -50,7 +51,6 @@ const cliquesDocumentacao = document.querySelector('#cliques-documentacao');
 const cliquesPlanilhas = document.querySelector('#cliques-planilhas');
 const cliquesBalanceamento = document.querySelector('#cliques-balanceamento');
 
-const conquistas = document.querySelector('.conquistas');
 const gdStats = document.querySelector('.gd-stats')
 
 
@@ -164,25 +164,19 @@ upgradeEstudo.addEventListener('click', ()=> {
 
         // conquistas desbloqueadas
         if (estudoAmount == 1) {
-            const conquistaInicial = document.createElement("div")
-            conquistaInicial.classList.add('conquista')
-            conquistaInicial.innerHTML = "Primeiros passos"
-            conquistas.appendChild(conquistaInicial);
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Primeiros Passos');
+            conquista.appendTo('.easter-egg');
         }
 
-        if (estudoAmount >= 10) {
-            textLevel.innerHTML = "Nível 1";
-        };
-
-        if (estudoAmount >= 50) {
-            itemContent.forEach((item, idx) => {
-                if (idx == 0) {
-                    item.classList.add('evo-1')
-                }
-            });
+        if (estudoAmount == 50) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Estudioso');
+            conquista.appendTo('.easter-egg');
         }
 
         if (estudoAmount >= 100) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Super Estudioso');
+            conquista.appendTo('.easter-egg');
+
             masterizado.forEach((item, idx) => {
                 if (idx == 0) {
                     item.classList.add('unlock')
@@ -217,25 +211,19 @@ upgradeEscrita.addEventListener('click', ()=> {
 
         // conquistas desbloqueadas
         if (escritaAmount == 1) {
-            const conquistaInicial = document.createElement("div")
-            conquistaInicial.classList.add('conquista')
-            conquistaInicial.innerHTML = "Reforçando conceitos"
-            conquistas.appendChild(conquistaInicial);            
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Reforçando Conceitos');
+            conquista.appendTo('.easter-egg');          
         }
 
-        if (estudoAmount >= 10 && escritaAmount >= 10) {
-            textLevel.innerHTML = "Nível 2";
-        };
-
-        if (escritaAmount >= 50) {
-            itemContent.forEach((item, idx) => {
-                if (idx == 1) {
-                    item.classList.add('evo-1')
-                }
-            });
+        if (escritaAmount == 50) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Fera da Escrita');
+            conquista.appendTo('.easter-egg');          
         }
 
         if (escritaAmount >= 100) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Mestre dos Conceitos');
+            conquista.appendTo('.easter-egg'); 
+
             masterizado.forEach((item, idx) => {
                 if (idx == 1) {
                     item.classList.add('unlock')
@@ -269,10 +257,18 @@ upgradeDocumentacao.addEventListener('click', ()=> {
 
         // conquistas desbloqueadas
         if (documentacaoAmount == 1) {
-            const conquistaInicial = document.createElement("div")
-            conquistaInicial.classList.add('conquista')
-            conquistaInicial.innerHTML = "Fez o primeiro GDD"
-            conquistas.appendChild(conquistaInicial);
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Fez o primeiro GDD');
+            conquista.appendTo('.easter-egg');
+        }
+
+        if (documentacaoAmount == 50) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Muitos GDDs feitos');
+            conquista.appendTo('.easter-egg');
+        }
+
+        if (documentacaoAmount == 100) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', '1000h gastas em GDD');
+            conquista.appendTo('.easter-egg');
         }
 
         if (documentacaoAmount >= 50) {
@@ -320,19 +316,19 @@ upgradePlanilhas.addEventListener('click', ()=> {
         cliquesPlanilhas.innerHTML = `Boost de cliques p/ segundo: +${planilhasAmount}`;
 
         // conquistas desbloqueadas
-        if (balanceamentoAmount == 1) {
-            const conquistaInicial = document.createElement("div")
-            conquistaInicial.classList.add('conquista')
-            conquistaInicial.innerHTML = "Usa tabelas"
-            conquistas.appendChild(conquistaInicial);
+        if (planilhasAmount == 1) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Usa Tabelas');
+            conquista.appendTo('.easter-egg');
         }
 
-        if (balanceamentoAmount >= 50) {
-            itemContent.forEach((item, idx) => {
-                if (idx == 3) {
-                    item.classList.add('evo-1')
-                }
-            });
+        if (planilhasAmount == 50) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Brabo das linhas e colunas');
+            conquista.appendTo('.easter-egg');
+        }
+
+        if (planilhasAmount == 100) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Sabe todas fórmulas');
+            conquista.appendTo('.easter-egg');
         }
     }    
 });
@@ -363,19 +359,20 @@ upgradeBalanceamento.addEventListener('click', ()=> {
 
         // conquistas desbloqueadas
         if (balanceamentoAmount == 1) {
-            const conquistaInicial = document.createElement("div")
-            conquistaInicial.classList.add('conquista')
-            conquistaInicial.innerHTML = "Acha que sabe balancear"
-            conquistas.appendChild(conquistaInicial);
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Acha que sabe balancear');
+            conquista.appendTo('.easter-egg');
         }
 
-        if (balanceamentoAmount >= 50) {
-            itemContent.forEach((item, idx) => {
-                if (idx == 4) {
-                    item.classList.add('evo-1')
-                }
-            });
+        if (balanceamentoAmount == 50) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'GD Balanceado');
+            conquista.appendTo('.easter-egg');
         }
+        
+        if (balanceamentoAmount == 100) {
+            const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', 'Perfeitamente balanceado');
+            conquista.appendTo('.easter-egg');
+        }
+        
     }    
 });
 
@@ -442,3 +439,63 @@ function upgradesTimer() {
 }
 
 setInterval(upgradesTimer, 1000);
+
+
+// Constructor para conquistas
+
+class CustomElement {
+    constructor(imgSrc, heading2Text, heading3Text) {
+      this.imgSrc = imgSrc;
+      this.heading2Text = heading2Text;
+      this.heading3Text = heading3Text;
+    }
+  
+    // Método para criar o elemento
+    createElement() {
+      const container = document.createElement('div');
+      container.classList.add('conquista');
+      container.style.opacity = 0; // Inicialmente invisível
+  
+      const img = document.createElement('img');
+      img.src = this.imgSrc;
+      img.alt = this.heading2Text || 'Image';
+      container.appendChild(img);
+  
+      const infoContainer = document.createElement('div');
+      infoContainer.classList.add('conquista-info');
+  
+      const h2 = document.createElement('h2');
+      h2.textContent = this.heading2Text;
+      infoContainer.appendChild(h2);
+  
+      const h3 = document.createElement('h3');
+      h3.textContent = this.heading3Text;
+      infoContainer.appendChild(h3);
+  
+      container.appendChild(infoContainer);
+      return container;
+    }
+  
+    // Método para adicionar o elemento ao DOM com animação de fade in e fade out
+    appendTo(parentElement) {
+      const element = this.createElement();
+      document.querySelector(parentElement).appendChild(element);
+  
+      // Fade in
+      setTimeout(() => {
+        element.style.transition = 'opacity .5s'; // Transição suave de 1 segundo
+        element.style.opacity = 1; // Aparecer
+  
+        // Após 2 segundos de exibição, iniciar o fade out
+        setTimeout(() => {
+          element.style.opacity = 0; // Desaparecer com fade out
+  
+          // Após a transição do fade out, remover o elemento do DOM
+          setTimeout(() => {
+            element.remove();
+          }, 500); // Esperar 1 segundo para a animação de fade out ser concluída
+        }, 3200); // Esperar 3 segundos antes do fade out
+      }, 100); // Iniciar o fade in logo após a adição ao DOM
+    }
+  }
+  
