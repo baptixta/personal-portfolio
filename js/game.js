@@ -41,7 +41,7 @@ let documentacaoAmount = 0;
 let documentacaoPoints = 0;
 let planilhasCost = 1000
 let planilhasAmount = 0;
-let balanceamentoCost = 10000
+let balanceamentoCost = 5000;
 let balanceamentoAmount = 0;
 let balanceamentoPoints = 0;
 
@@ -313,7 +313,7 @@ upgradePlanilhas.addEventListener('click', ()=> {
         }
 
         // feedback de quantidade de cliques por segundo
-        cliquesPlanilhas.innerHTML = `Boost de cliques p/ segundo: +${planilhasAmount}`;
+        cliquesPlanilhas.innerHTML = `Boost de pontos p/ segundo: +${planilhasAmount}`;
 
         // conquistas desbloqueadas
         if (planilhasAmount == 1) {
@@ -336,10 +336,10 @@ upgradePlanilhas.addEventListener('click', ()=> {
 upgradeBalanceamento.addEventListener('click', ()=> {
     if (gdPoints >= balanceamentoCost) {
         gdPoints -= balanceamentoCost;      
-        gdPointsPerSecond += 1;         
+        gdPointsPerSecond += 10;         
         gdPointsText.innerHTML = gdPoints          
         gdPointsTextPerSecond.innerHTML = "Por segundo: " + gdPointsPerSecond;
-        balanceamentoCost += 5000;
+        balanceamentoCost += 1500;
         balanceamentoAmount += 1;  
         balanceamentoPoints += 10;            
 
@@ -355,7 +355,7 @@ upgradeBalanceamento.addEventListener('click', ()=> {
         }
 
         // feedback de quantidade de cliques por segundo
-        cliquesBalanceamento.innerHTML = `Boost de cliques p/ segundo: +${balanceamentoPoints}`;
+        cliquesBalanceamento.innerHTML = `Boost de pontos p/ segundo: +${balanceamentoPoints}`;
 
         // conquistas desbloqueadas
         if (balanceamentoAmount == 1) {
@@ -378,14 +378,14 @@ upgradeBalanceamento.addEventListener('click', ()=> {
 
 
 function upgradesTimer() {    
-    gdPoints += gdPointsPerSecond + balanceamentoPoints;
-    gdPointsText.innerHTML = gdPoints
+    gdPoints += gdPointsPerSecond;
+    gdPointsText.innerHTML = gdPoints;
     
 
     // visuals ponto por segundo na tela
     if (gdPointsPerSecond >= 1) {
         const clickVisual = document.createElement("div")
-        let totalPoints = gdPointsPerSecond;
+        let totalPoints = gdPointsPerSecond + balanceamentoPoints;
         clickVisual.classList.add('click-per-second')
         clickVisual.innerHTML = `+${totalPoints}`;
         gdStats.appendChild(clickVisual);

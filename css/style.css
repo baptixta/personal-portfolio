@@ -361,6 +361,11 @@ strong {
     .content {
         margin: 0 auto var(--big-margin);
     }
+
+    .game-secret {
+        left: 90px;
+        transform: scale(2);
+    }
 }
 
 @media (max-width: 800px) {
