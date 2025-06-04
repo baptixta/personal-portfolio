@@ -226,12 +226,9 @@ nav > ul > li > i {
 .content {
     grid-area: content;
     justify-content: center;
+    margin-top: 2.25em;
     max-width: 600px;
     margin-bottom: var(--big-margin);
-}
-
-.text {
-    margin-top: var(--huge-margin);
 }
 
 .title {
@@ -311,6 +308,35 @@ strong {
     margin: var(--small-margin) 0px;
 }
 
+.language-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
+
+.language-switcher button {
+  margin: 0 4px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--background-bar);
+  color: var(--color-text);
+  transition: all .4s ease;
+}
+
+.language-switcher button:hover {
+    background-color: var(--color-highlight);
+    color: var(--color-title);
+    transform: scale(1.1);
+}
+
+.language-selected {
+    background-color: var(--color-highlight) !important;
+}
+
+
 /* responsive */
 
 @media (max-width: 1080px) {
@@ -359,7 +385,7 @@ strong {
     }
 
     .content {
-        margin: 0 auto var(--big-margin);
+        margin: 50px auto var(--big-margin);
     }
 
     .game-secret {
@@ -368,9 +394,10 @@ strong {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
     .content {
         width: 80%;
+        margin-top: 80px;
     }
 
     .trailer-content > iframe {

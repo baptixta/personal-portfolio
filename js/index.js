@@ -44,3 +44,30 @@ closeMenu.addEventListener('click', (e) => {
     backgroundBlur.style.opacity = "0";
     backgroundBlur.style.pointerEvents = "none";
 })
+
+
+// sistema bilíngue no site
+function setLanguage(lang) {
+  localStorage.setItem('preferredLanguage', lang);
+  updateLanguage();
+}
+
+function updateLanguage() {
+  const lang = localStorage.getItem('preferredLanguage') || 'pt';
+
+  document.querySelectorAll('.lang').forEach(el => {
+    el.style.display = 'none';
+  });
+
+  document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+    el.style.display = 'block';
+  });
+
+  // Atualiza estilo dos botões
+  document.getElementById('btn-pt').classList.remove('language-selected');
+  document.getElementById('btn-en').classList.remove('language-selected');
+  document.getElementById(`btn-${lang}`).classList.add('language-selected');
+}
+
+// Executa ao carregar
+document.addEventListener('DOMContentLoaded', updateLanguage);
