@@ -1,120 +1,243 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptixta - Cobra Kai 2: Dojos Rising</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="/img/portrait.png" type="img">
-    <link rel="stylesheet" type="text/css" href="/css/loading-bar.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/loading-bar.css" />
     <script type="text/javascript" src="/js/loading-bar.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXEN8TKVGB"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-XXEN8TKVGB');
+    gtag('config', 'G-XXEN8TKVGB');
 </script>
+
 <body>
     <div class="language-switcher">
         <button id="btn-pt" onclick="setLanguage('pt')">🇧🇷 PT</button>
         <button id="btn-en" onclick="setLanguage('en')">🇺🇸 EN</button>
-    </div> 
-    
+    </div>
+
     <div class="all">
-        <div class="menu-responsive"></div>         
+        <div class="menu-responsive"></div>
         <div class="background-blur"></div>
-        <nav>        
-            <div class="close-menu"></div>        
+        <nav>
+            <div class="close-menu"></div>
             <div class="presentation">
                 <h2 class="presentation-title">Baptixta</h2>
                 <img class="portrait" src="/img/portrait.png" alt="BaptiLista contendo todos os atalhosxta Portrait">
                 <img class="game-secret" src="img/game-icon.png" alt="Game Icon">
                 <h3 class="presentation-subtitle">Game/Web Designer</h3>
-                   
-                <div id="hpBar"></div>                             
-            </div>                
+
+                <div id="hpBar"></div>
+            </div>
 
             <ul class="nav-ul">
-                <a class="nav-li" href="/index.html" rel="noopener noreferrer"><li><i class="fa-solid fa-house"></i> Home</li></a>
-                <a class="nav-li" href="/pages/newsletter.html" rel="noopener noreferrer"><li><i class="fa-solid fa-envelope"></i> Newsletter</li></a>
+                <a class="nav-li" href="/index.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-house"></i> Home</li>
+                </a>
+                <a class="nav-li" href="/pages/newsletter.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-envelope"></i> Newsletter</li>
+                </a>
 
                 <li class="nav-title lang lang-pt">Jogos</li>
                 <li class="nav-title lang lang-en">Games</li>
 
-                <a class="nav-li" href="/pages/pimbolas.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-futbol"></i> Pimbolas</li></a>
-                <a class="selected nav-li" href="/pages/cobrakai2.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-hand-fist"></i> Cobra Kai 2: Dojos Rising</li></a>
-                <a class="nav-li" href="/pages/avalon.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-user-ninja"></i> Avalon</li></a>
-                <a class="nav-li" href="/pages/rasek.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-dungeon"></i> Rasek</li></a>
-                <a class="nav-li" href="/pages/atlas-wars.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-explosion"></i> Atlas Wars</li></a>
-                
-                <a class="nav-li lang lang-pt" href="https://baptixta.itch.io/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-arrow-up-right-from-square"></i> Outros</li></a>
-                <a class="nav-li lang lang-en" href="https://baptixta.itch.io/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-arrow-up-right-from-square"></i> Others</li></a>
-                
+                <a class="nav-li" href="/pages/pimbolas.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-futbol"></i> Pimbolas</li>
+                </a>
+                <a class="selected nav-li" href="/pages/cobrakai2.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-hand-fist"></i> Cobra Kai 2: Dojos Rising</li>
+                </a>
+                <a class="nav-li" href="/pages/avalon.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-user-ninja"></i> Avalon</li>
+                </a>
+                <a class="nav-li" href="/pages/rasek.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-dungeon"></i> Rasek</li>
+                </a>
+                <a class="nav-li" href="/pages/atlas-wars.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-explosion"></i> Atlas Wars</li>
+                </a>
+
+                <a class="nav-li lang lang-pt" href="https://baptixta.itch.io/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Outros</li>
+                </a>
+                <a class="nav-li lang lang-en" href="https://baptixta.itch.io/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Others</li>
+                </a>
+
 
                 <li class="nav-title lang lang-pt">Projetos</li>
                 <li class="nav-title lang lang-en">Projects</li>
 
-                <a class="nav-li" href="https://csjdigital.com.br/pv-gdx/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-gamepad"></i>Game Design Experience</li></a>
-                <a class="nav-li" href="https://baptixta.github.io/guia-do-game-designer/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-gamepad"></i>Guia do Game Designer</li></a>
+                <a class="nav-li" href="https://csjdigital.com.br/pv-gdx/" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-gamepad"></i>Game Design Experience</li>
+                </a>
+                <a class="nav-li" href="https://baptixta.github.io/guia-do-game-designer/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-gamepad"></i>Guia do Game Designer</li>
+                </a>
 
-                
+
 
                 <li class="nav-title lang lang-pt">Fala Comigo</li>
                 <li class="nav-title lang lang-en">Let's Talk</li>
 
-                <a class="nav-li" href="https://www.linkedin.com/in/baptixta/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-briefcase"></i> Linkedin</li></a>
-                <a class="nav-li" href="https://www.instagram.com/baptixta/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-camera-retro"></i> Instagram</li></a>                
-                <a class="nav-li" href="https://www.youtube.com/@baptixta" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-video"></i> Youtube</li></a>                
-                <a class="nav-li" href="https://www.tiktok.com/@baptixta1" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-mobile"></i> Tiktok</li></a>                
+                <a class="nav-li" href="https://www.linkedin.com/in/baptixta/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-briefcase"></i> Linkedin</li>
+                </a>
+                <a class="nav-li" href="https://www.instagram.com/baptixta/" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-camera-retro"></i> Instagram</li>
+                </a>
+                <a class="nav-li" href="https://www.youtube.com/@baptixta" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-video"></i> Youtube</li>
+                </a>
+                <a class="nav-li" href="https://www.tiktok.com/@baptixta1" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-mobile"></i> Tiktok</li>
+                </a>
             </ul>
-        </nav>        
+        </nav>
 
         <div class="content">
             <h3 class="title">Cobra Kai 2: Dojos Rising</h3>
             <div class="trailer-content">
-                <iframe width="600" height="300" src="https://www.youtube.com/embed/IQ0HB7sPSx0?si=YDeXbuL7mTJeN4mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="600" height="300" src="https://www.youtube.com/embed/IQ0HB7sPSx0?si=YDeXbuL7mTJeN4mB"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="game-plataforms">
-                    <a href="https://playcobrakai.com/" target="_blank" rel="noopener noreferrer"><img src="/img/ps-icon.png" alt="Playstation Icon"></a>
-                    <a href="https://playcobrakai.com/" target="_blank" rel="noopener noreferrer"><img src="/img/xbox-icon.png" alt="Xbox Icon"></a>
-                    <a href="https://playcobrakai.com/" target="_blank" rel="noopener noreferrer"><img src="/img/switch-icon.png" alt="Switch Icon"></a>
-                    <a href="https://playcobrakai.com/" target="_blank" rel="noopener noreferrer"><img src="/img/steam-icon.png" alt="Steam Icon"></a>
+                    <a href="https://playcobrakai.com/" target="_blank" rel="noopener noreferrer"><img
+                            src="/img/ps-icon.png" alt="Playstation Icon"></a>
+                    <a href="https://playcobrakai.com/" target="_blank" rel="noopener noreferrer"><img
+                            src="/img/xbox-icon.png" alt="Xbox Icon"></a>
+                    <a href="https://playcobrakai.com/" target="_blank" rel="noopener noreferrer"><img
+                            src="/img/switch-icon.png" alt="Switch Icon"></a>
+                    <a href="https://playcobrakai.com/" target="_blank" rel="noopener noreferrer"><img
+                            src="/img/steam-icon.png" alt="Steam Icon"></a>
                 </div>
-                <p class="text-game">"Recrute... Treine... Lute! O All Valley Aguarda!
+                <p class="text-game lang lang-pt">"Recrute... Treine... Lute! O All Valley Aguarda!
 
-                    Eagle Fang, Cobra Kai, Miyagi-do – Qual é seu dojo? Tal escolha inicia a sua jornada, mas cabe a você recrutar a equipe mais poderosa enquanto domina seu estilo de luta e batalha para solidificar o LEGADO do seu dojo como All Valley Karate Grand Champion!"</p>
-            </div>            
+                    Eagle Fang, Cobra Kai, Miyagi-do – Qual é seu dojo? Tal escolha inicia a sua jornada, mas cabe a
+                    você recrutar a equipe mais poderosa enquanto domina seu estilo de luta e batalha para solidificar o
+                    LEGADO do seu dojo como All Valley Karate Grand Champion!"</p>
 
-            <h3 class="title">Responsabilidades</h3>
+                <p class="text-game lang lang-en">"Recruit…Train…Fight! The All Valley Awaits!
+
+                    Eagle Fang, Cobra Kai, Miyagi-do – Which is your dojo? Your in-game choice is only the beginning of
+                    your journey. You must then recruit the most powerful team to join your dojo, master your fighting
+                    style, and battle your way towards solidifying your dojo’s LEGACY as the All Valley Karate
+                    Tournament Grand Champion!"</p>
+            </div>
+
+            <h3 class="title lang lang-pt">Responsabilidades</h3>
+            <h3 class="title lang lang-en">Responsabilities</h3>
+
             <ul class="list-game">
                 <li class="list-game">👾 AI Enemy System</li>
                 <li class="list-game">👹 AI Boss System</li>
                 <li class="list-game">✍️ Enemy and Boss Design</li>
-                <li class="list-game">🔢 Balanceamento</li>
+
+                <li class="list-game lang lang-pt">🔢 Balanceamento</li>
+                <li class="list-game lang lang-en">🔢 Balancing</li>
             </ul>
 
-            <h3 class="title">Minha Experiência</h3>
-            <p class="text-game">
-                Foi um projeto muito interessante (12 meses de duração). Durante esse tempo, pude trabalhar de perto das equipes de programação e arte.
+            <h3 class="title lang lang-pt">Minha Experiência</h3>
+            <h3 class="title lang lang-en">My Experience</h3>
+
+            <p class="text-game lang lang-pt">
+                Foi um projeto muito interessante (12 meses de duração). Durante esse tempo, pude trabalhar de perto das
+                equipes de programação e arte.
+            </p>
+            <p class="text-game lang lang-en">
+                It was a very interesting project (12 months long). During this time, I had the opportunity to work
+                closely with the programming and art teams.
             </p>
 
-            <p class="text-game">
-                Acompanhei a equipe de programação na criação do sistema de IA, e interação e iterações do sistema até que ele estivesse completo.
+            <p class="text-game lang lang-pt">
+                Acompanhei a equipe de programação na criação do sistema de IA, e interação e iterações do sistema até
+                que ele estivesse completo.
+            </p>
+            <p class="text-game lang lang-en">
+                I worked alongside the programming team in creating the AI system, following its development and
+                iterations until it was complete.
             </p>
 
-            <p class="text-game">
+            <p class="text-game lang lang-pt">
                 Falando do meu processo na criação de inimigos/chefões, ele foi feito da seguinte forma:
+            </p>
+            <p class="text-game lang lang-en">
+                Speaking about my process in creating enemies/bosses, it was done as follows:
             </p>
 
             <ul class="list-game">
-                <li class="list-game">Design <span class="text-details">////</span> <span class="text-subtitle">Documentação de tudo sobre o inimigo</span></li>
-                <li class="list-game">Criação da arte <span class="text-details">////</span> <span class="text-subtitle">Gravação de movimentos/visual do personagem a partir do briefing</span></li>
-                <li class="list-game">Implementação do comportamento da IA <span class="text-details">////</span> <span class="text-subtitle">Dentro da Unity, a partir do sistema construído pela equipe</span></li>
-                <li class="list-game">Implementação dos golpes <span class="text-details">////</span> <span class="text-subtitle">Dentro da Unity, a partir do sistema construído pela equipe</span></li>
-                <li class="list-game">Iteração <span class="text-details">////</span> <span class="text-subtitle">Pequenas mudanças feitas para melhorar o funcionamento</span></li>
-                <li class="list-game">Finalização <span class="text-details">////</span> <span class="text-subtitle">Entrega do inimigo completo</span></li>
+                <li class="list-game lang lang-pt">
+                    Design <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-pt">Documentação de tudo sobre o inimigo</span>
+                </li>
+                <li class="list-game lang lang-en">
+                    Design <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-en">Documentation of everything about the enemy</span>
+                </li>
+
+                <li class="list-game lang lang-pt">
+                    Criação da arte <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-pt">Gravação de movimentos/visual do personagem a partir do
+                        briefing</span>
+                </li>
+                <li class="list-game lang lang-en">
+                    Art creation <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-en">Recording of character movements/appearance based on the
+                        briefing</span>
+                </li>
+
+                <li class="list-game lang lang-pt">
+                    Implementação do comportamento da IA <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-pt">Dentro da Unity, a partir do sistema construído pela
+                        equipe</span>
+                </li>
+                <li class="list-game lang lang-en">
+                    AI behavior implementation <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-en">Inside Unity, based on the system built by the team</span>
+                </li>
+
+                <li class="list-game lang lang-pt">
+                    Implementação dos golpes <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-pt">Dentro da Unity, a partir do sistema construído pela
+                        equipe</span>
+                </li>
+                <li class="list-game lang lang-en">
+                    Attack implementation <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-en">Inside Unity, based on the system built by the team</span>
+                </li>
+
+                <li class="list-game lang lang-pt">
+                    Iteração <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-pt">Pequenas mudanças feitas para melhorar o
+                        funcionamento</span>
+                </li>
+                <li class="list-game lang lang-en">
+                    Iteration <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-en">Small changes made to improve functionality</span>
+                </li>
+
+                <li class="list-game lang lang-pt">
+                    Finalização <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-pt">Entrega do inimigo completo</span>
+                </li>
+                <li class="list-game lang lang-en">
+                    Finalization <span class="text-details">////</span>
+                    <span class="text-subtitle lang lang-en">Delivery of the complete enemy</span>
+                </li>
             </ul>
         </div>
     </div>
@@ -122,4 +245,5 @@
     <script src="/js/index.js"></script>
     <script src="https://kit.fontawesome.com/11a0e0cedc.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

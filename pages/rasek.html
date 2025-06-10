@@ -1,111 +1,182 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptixta - Rasek</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="/img/portrait.png" type="img">
-    <link rel="stylesheet" type="text/css" href="../css/loading-bar.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/loading-bar.css" />
     <script type="text/javascript" src="../js/loading-bar.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXEN8TKVGB"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-XXEN8TKVGB');
+    gtag('config', 'G-XXEN8TKVGB');
 </script>
+
 <body>
     <div class="language-switcher">
         <button id="btn-pt" onclick="setLanguage('pt')">🇧🇷 PT</button>
         <button id="btn-en" onclick="setLanguage('en')">🇺🇸 EN</button>
-    </div> 
+    </div>
 
     <div class="all">
-        <div class="menu-responsive"></div>         
+        <div class="menu-responsive"></div>
         <div class="background-blur"></div>
-        <nav>        
-            <div class="close-menu"></div>        
+        <nav>
+            <div class="close-menu"></div>
             <div class="presentation">
                 <h2 class="presentation-title">Baptixta</h2>
                 <img class="portrait" src="/img/portrait.png" alt="BaptiLista contendo todos os atalhosxta Portrait">
                 <img class="game-secret" src="img/game-icon.png" alt="Game Icon">
                 <h3 class="presentation-subtitle">Game/Web Designer</h3>
-                   
-                <div id="hpBar"></div>                             
-            </div>                
+
+                <div id="hpBar"></div>
+            </div>
 
             <ul class="nav-ul">
-                <a class="nav-li" href="/index.html" rel="noopener noreferrer"><li><i class="fa-solid fa-house"></i> Home</li></a>
-                <a class="nav-li" href="/pages/newsletter.html" rel="noopener noreferrer"><li><i class="fa-solid fa-envelope"></i> Newsletter</li></a>
+                <a class="nav-li" href="/index.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-house"></i> Home</li>
+                </a>
+                <a class="nav-li" href="/pages/newsletter.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-envelope"></i> Newsletter</li>
+                </a>
 
                 <li class="nav-title lang lang-pt">Jogos</li>
                 <li class="nav-title lang lang-en">Games</li>
 
-                <a class="nav-li" href="/pages/pimbolas.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-futbol"></i> Pimbolas</li></a>
-                <a class="nav-li" href="/pages/cobrakai2.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-hand-fist"></i> Cobra Kai 2: Dojos Rising</li></a>
-                <a class="nav-li" href="/pages/avalon.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-user-ninja"></i> Avalon</li></a>
-                <a class="selected nav-li" href="/pages/rasek.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-dungeon"></i> Rasek</li></a>
-                <a class="nav-li" href="/pages/atlas-wars.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-explosion"></i> Atlas Wars</li></a>
+                <a class="nav-li" href="/pages/pimbolas.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-futbol"></i> Pimbolas</li>
+                </a>
+                <a class="nav-li" href="/pages/cobrakai2.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-hand-fist"></i> Cobra Kai 2: Dojos Rising</li>
+                </a>
+                <a class="nav-li" href="/pages/avalon.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-user-ninja"></i> Avalon</li>
+                </a>
+                <a class="selected nav-li" href="/pages/rasek.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-dungeon"></i> Rasek</li>
+                </a>
+                <a class="nav-li" href="/pages/atlas-wars.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-explosion"></i> Atlas Wars</li>
+                </a>
 
-                <a class="nav-li lang lang-pt" href="https://baptixta.itch.io/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-arrow-up-right-from-square"></i> Outros</li></a>
-                <a class="nav-li lang lang-en" href="https://baptixta.itch.io/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-arrow-up-right-from-square"></i> Others</li></a>
-                
+                <a class="nav-li lang lang-pt" href="https://baptixta.itch.io/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Outros</li>
+                </a>
+                <a class="nav-li lang lang-en" href="https://baptixta.itch.io/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Others</li>
+                </a>
+
 
                 <li class="nav-title lang lang-pt">Projetos</li>
                 <li class="nav-title lang lang-en">Projects</li>
 
-                <a class="nav-li" href="https://csjdigital.com.br/pv-gdx/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-gamepad"></i>Game Design Experience</li></a>
-                <a class="nav-li" href="https://baptixta.github.io/guia-do-game-designer/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-gamepad"></i>Guia do Game Designer</li></a>
+                <a class="nav-li" href="https://csjdigital.com.br/pv-gdx/" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-gamepad"></i>Game Design Experience</li>
+                </a>
+                <a class="nav-li" href="https://baptixta.github.io/guia-do-game-designer/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-gamepad"></i>Guia do Game Designer</li>
+                </a>
 
-                
+
 
                 <li class="nav-title lang lang-pt">Fala Comigo</li>
                 <li class="nav-title lang lang-en">Let's Talk</li>
 
-                <a class="nav-li" href="https://www.linkedin.com/in/baptixta/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-briefcase"></i> Linkedin</li></a>
-                <a class="nav-li" href="https://www.instagram.com/baptixta/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-camera-retro"></i> Instagram</li></a>                
-                <a class="nav-li" href="https://www.youtube.com/@baptixta" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-video"></i> Youtube</li></a>                
-                <a class="nav-li" href="https://www.tiktok.com/@baptixta1" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-mobile"></i> Tiktok</li></a>                
+                <a class="nav-li" href="https://www.linkedin.com/in/baptixta/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-briefcase"></i> Linkedin</li>
+                </a>
+                <a class="nav-li" href="https://www.instagram.com/baptixta/" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-camera-retro"></i> Instagram</li>
+                </a>
+                <a class="nav-li" href="https://www.youtube.com/@baptixta" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-video"></i> Youtube</li>
+                </a>
+                <a class="nav-li" href="https://www.tiktok.com/@baptixta1" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-mobile"></i> Tiktok</li>
+                </a>
             </ul>
-        </nav>         
+        </nav>
 
         <div class="content">
             <h3 class="title">Rasek</h3>
             <div class="trailer-content">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/O8ABw5drKm8?si=3fsIUwJQa_P5tn3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/O8ABw5drKm8?si=3fsIUwJQa_P5tn3w"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="game-plataforms">
-                    <a href="https://www.instagram.com/rasekgame/" target="_blank" rel="noopener noreferrer"><img src="/img/ps-icon.png" alt="Playstation Icon"></a>
-                    <a href="https://www.instagram.com/rasekgame/" target="_blank" rel="noopener noreferrer"><img src="/img/xbox-icon.png" alt="Xbox Icon"></a>
-                    <a href="https://www.instagram.com/rasekgame/" target="_blank" rel="noopener noreferrer"><img src="/img/switch-icon.png" alt="Switch Icon"></a>
-                    <a href="https://www.instagram.com/rasekgame/" target="_blank" rel="noopener noreferrer"><img src="/img/steam-icon.png" alt="Steam Icon"></a>
+                    <a href="https://www.instagram.com/rasekgame/" target="_blank" rel="noopener noreferrer"><img
+                            src="/img/ps-icon.png" alt="Playstation Icon"></a>
+                    <a href="https://www.instagram.com/rasekgame/" target="_blank" rel="noopener noreferrer"><img
+                            src="/img/xbox-icon.png" alt="Xbox Icon"></a>
+                    <a href="https://www.instagram.com/rasekgame/" target="_blank" rel="noopener noreferrer"><img
+                            src="/img/switch-icon.png" alt="Switch Icon"></a>
+                    <a href="https://www.instagram.com/rasekgame/" target="_blank" rel="noopener noreferrer"><img
+                            src="/img/steam-icon.png" alt="Steam Icon"></a>
                 </div>
-                <p class="text-game">"Rasek é um jogo Free2Play MMORPG em 2D, Pixel Art com câmera top down".</p>
-            </div>            
+                <p class="text-game lang lang-pt">"Rasek é um jogo Free2Play MMORPG em 2D, Pixel Art com câmera top
+                    down".</p>
+                <p class="text-game lang lang-en">"Rasek is a Free2Play 2D Pixel Art MMORPG with a top-down camera".</p>
+            </div>
 
-            <h3 class="title">Responsabilidades</h3>
+            <h3 class="title lang lang-pt">Responsabilidades</h3>
+            <h3 class="title lang lang-en">Responsabilities</h3>
+
             <ul class="list-game">
-                <li class="list-game">🎮 Gameplay Design</li>
-                <li class="list-game">✍️ Design dos sistemas do jogo</li>
-                <li class="list-game">👹 Enemy Design</li>                    
-                <li class="list-game">🔢 Balanceamento</li>
-                <li class="list-game">🖼️ Wireframes/Protótipos animados para auxiliar UI/UX</li>            
-                <li class="list-game">📢 Liderança e alinhamento da equipe de Game Design</li>
+                <li class="list-game lang lang-pt">🎮 Gameplay Design</li>
+                <li class="list-game lang lang-en">🎮 Gameplay Design</li>
+
+                <li class="list-game lang lang-pt">✍️ Design dos sistemas do jogo</li>
+                <li class="list-game lang lang-en">✍️ Game systems design</li>
+
+                <li class="list-game lang lang-pt">👹 Enemy Design</li>
+                <li class="list-game lang lang-en">👹 Enemy Design</li>
+
+                <li class="list-game lang lang-pt">🔢 Balanceamento</li>
+                <li class="list-game lang lang-en">🔢 Balancing</li>
+
+                <li class="list-game lang lang-pt">🖼️ Wireframes/Protótipos animados para auxiliar UI/UX</li>
+                <li class="list-game lang lang-en">🖼️ Wireframes/Animated prototypes to support UI/UX</li>
+
+                <li class="list-game lang lang-pt">📢 Liderança e alinhamento da equipe de Game Design</li>
+                <li class="list-game lang lang-en">📢 Leadership and alignment of the Game Design team</li>
             </ul>
 
-            <h3 class="title">Minha Experiência</h3>
-            <p class="text-game">
-                
+
+            <h3 class="title lang lang-pt">Minha Experiência</h3>
+            <h3 class="title lang lang-en">My Experience</h3>
+
+            <p class="text-game lang lang-pt">
+                Esse é um dos jogos mais desafiadores que trabalhei como game designer. Trabalhar num MMORPG está me
+                fazendo a entender melhor como integrar cada um dos sistemas de forma que eles se conectem e estejam
+                interligados entre eles e fiquem fluídos com a gameplay.
+            </p>
+            <p class="text-game lang lang-en">
+                This is one of the most challenging games I've worked on as a game designer. Working on an MMORPG is
+                helping me better understand how to integrate each system so that they connect and interact with each
+                other while remaining fluid with the gameplay.
             </p>
 
-            <p class="text-game">
-                Esse é um dos jogos mais desafiadores que trabalhei como game designer. Trabalhar num MMORPG está me fazendo a entender melhor como integrar cada um dos sistemas de forma que eles se conectem e estejam interligados entre eles e fiquem fluídos com a gameplay.
+            <p class="text-game lang lang-pt">
+                A quantidade massiva de conteúdo que esse tipo de jogo tem também está me ensinando muito sobre como
+                lidar com diversas situações e melhorar minhas habilidades de balanceamento de gameplay visando todas
+                classes que o jogo tem, missões, inimigos, e todas outras variáveis dessa equação.
             </p>
-
-            <p class="text-game">
-                A quantidade massiva de conteúdo que esse tipo de jogo tem também está me ensinando muito sobre como lidar com diversas situações e melhorar minhas habilidades de balanceamento de gameplay visando todas classes que o jogo tem, missões, inimigos, e todas outras variáveis dessa equação.
+            <p class="text-game lang lang-en">
+                The massive amount of content in this type of game is also teaching me a lot about how to handle various
+                situations and improve my gameplay balancing skills — considering all the classes in the game, missions,
+                enemies, and all the other variables in the equation.
             </p>
         </div>
     </div>
@@ -113,4 +184,5 @@
     <script src="/js/index.js"></script>
     <script src="https://kit.fontawesome.com/11a0e0cedc.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

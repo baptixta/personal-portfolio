@@ -1,110 +1,181 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptixta - Atlas Wars</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="/img/portrait.png" type="img">
-    <link rel="stylesheet" type="text/css" href="/css/loading-bar.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/loading-bar.css" />
     <script type="text/javascript" src="/js/loading-bar.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXEN8TKVGB"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-XXEN8TKVGB');
+    gtag('config', 'G-XXEN8TKVGB');
 </script>
+
 <body>
     <div class="language-switcher">
         <button id="btn-pt" onclick="setLanguage('pt')">🇧🇷 PT</button>
         <button id="btn-en" onclick="setLanguage('en')">🇺🇸 EN</button>
-    </div> 
+    </div>
 
     <div class="all">
-        <div class="menu-responsive"></div>         
+        <div class="menu-responsive"></div>
         <div class="background-blur"></div>
-        <nav>        
-            <div class="close-menu"></div>        
+        <nav>
+            <div class="close-menu"></div>
             <div class="presentation">
                 <h2 class="presentation-title">Baptixta</h2>
                 <img class="portrait" src="/img/portrait.png" alt="BaptiLista contendo todos os atalhosxta Portrait">
                 <img class="game-secret" src="img/game-icon.png" alt="Game Icon">
                 <h3 class="presentation-subtitle">Game/Web Designer</h3>
-                   
-                <div id="hpBar"></div>                             
-            </div>                
+
+                <div id="hpBar"></div>
+            </div>
 
             <ul class="nav-ul">
-                <a class="nav-li" href="/index.html" rel="noopener noreferrer"><li><i class="fa-solid fa-house"></i> Home</li></a>
-                <a class="nav-li" href="/pages/newsletter.html" rel="noopener noreferrer"><li><i class="fa-solid fa-envelope"></i> Newsletter</li></a>
+                <a class="nav-li" href="/index.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-house"></i> Home</li>
+                </a>
+                <a class="nav-li" href="/pages/newsletter.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-envelope"></i> Newsletter</li>
+                </a>
 
                 <li class="nav-title lang lang-pt">Jogos</li>
                 <li class="nav-title lang lang-en">Games</li>
 
-                <a class="nav-li" href="/pages/pimbolas.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-futbol"></i> Pimbolas</li></a>
-                <a class="nav-li" href="/pages/cobrakai2.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-hand-fist"></i> Cobra Kai 2: Dojos Rising</li></a>
-                <a class="nav-li" href="/pages/avalon.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-user-ninja"></i> Avalon</li></a>
-                <a class="nav-li" href="/pages/rasek.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-dungeon"></i> Rasek</li></a>
-                <a class="selected nav-li" href="/pages/atlas-wars.html"  rel="noopener noreferrer"><li><i class="fa-solid fa-explosion"></i> Atlas Wars</li></a>
+                <a class="nav-li" href="/pages/pimbolas.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-futbol"></i> Pimbolas</li>
+                </a>
+                <a class="nav-li" href="/pages/cobrakai2.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-hand-fist"></i> Cobra Kai 2: Dojos Rising</li>
+                </a>
+                <a class="nav-li" href="/pages/avalon.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-user-ninja"></i> Avalon</li>
+                </a>
+                <a class="nav-li" href="/pages/rasek.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-dungeon"></i> Rasek</li>
+                </a>
+                <a class="selected nav-li" href="/pages/atlas-wars.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-explosion"></i> Atlas Wars</li>
+                </a>
 
-                <a class="nav-li lang lang-pt" href="https://baptixta.itch.io/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-arrow-up-right-from-square"></i> Outros</li></a>
-                <a class="nav-li lang lang-en" href="https://baptixta.itch.io/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-arrow-up-right-from-square"></i> Others</li></a>
-                
+                <a class="nav-li lang lang-pt" href="https://baptixta.itch.io/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Outros</li>
+                </a>
+                <a class="nav-li lang lang-en" href="https://baptixta.itch.io/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Others</li>
+                </a>
+
 
                 <li class="nav-title lang lang-pt">Projetos</li>
                 <li class="nav-title lang lang-en">Projects</li>
 
-                <a class="nav-li" href="https://csjdigital.com.br/pv-gdx/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-gamepad"></i>Game Design Experience</li></a>
-                <a class="nav-li" href="https://baptixta.github.io/guia-do-game-designer/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-gamepad"></i>Guia do Game Designer</li></a>
+                <a class="nav-li" href="https://csjdigital.com.br/pv-gdx/" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-gamepad"></i>Game Design Experience</li>
+                </a>
+                <a class="nav-li" href="https://baptixta.github.io/guia-do-game-designer/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-gamepad"></i>Guia do Game Designer</li>
+                </a>
 
-                
+
 
                 <li class="nav-title lang lang-pt">Fala Comigo</li>
                 <li class="nav-title lang lang-en">Let's Talk</li>
 
-                <a class="nav-li" href="https://www.linkedin.com/in/baptixta/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-briefcase"></i> Linkedin</li></a>
-                <a class="nav-li" href="https://www.instagram.com/baptixta/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-camera-retro"></i> Instagram</li></a>                
-                <a class="nav-li" href="https://www.youtube.com/@baptixta" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-video"></i> Youtube</li></a>                
-                <a class="nav-li" href="https://www.tiktok.com/@baptixta1" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-mobile"></i> Tiktok</li></a>                
+                <a class="nav-li" href="https://www.linkedin.com/in/baptixta/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-briefcase"></i> Linkedin</li>
+                </a>
+                <a class="nav-li" href="https://www.instagram.com/baptixta/" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-camera-retro"></i> Instagram</li>
+                </a>
+                <a class="nav-li" href="https://www.youtube.com/@baptixta" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-video"></i> Youtube</li>
+                </a>
+                <a class="nav-li" href="https://www.tiktok.com/@baptixta1" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-mobile"></i> Tiktok</li>
+                </a>
             </ul>
-        </nav>         
+        </nav>
 
         <div class="content">
             <h3 class="title">Atlas Wars</h3>
             <div class="trailer-content">
                 <img src="/img/atlas-wars-fight.gif" alt="Atlas Wars Fight Gif">
                 <div class="game-plataforms">
-                    <a href="https://store.steampowered.com/app/2623340/Atlas_Wars/" target="_blank" rel="noopener noreferrer"><img src="/img/steam-icon.png" alt="Steam Icon"></a>
+                    <a href="https://store.steampowered.com/app/2623340/Atlas_Wars/" target="_blank"
+                        rel="noopener noreferrer"><img src="/img/steam-icon.png" alt="Steam Icon"></a>
+                    <a href="https://store.epicgames.com/pt-BR/p/atlas-wars-5b83bd" target="_blank"
+                        rel="noopener noreferrer"><img src="/img/epic-icon.png" alt="Epic Games Icon"></a>
                 </div>
-                <p class="text-game">"Junte-se ao épico mundo de Atlas Wars, um jogo multiplayer de luta rápido e baseado em habilidades! Escolha heróis únicos, domine habilidades incríveis e lute em arenas loucas e exclusivas. Atlas Wars oferece uma experiência de batalha repleta de ação!".</p>
-            </div>            
+                <p class="text-game lang lang-pt">"Junte-se ao épico mundo de Atlas Wars, um jogo multiplayer de luta
+                    rápido e baseado em habilidades! Escolha heróis únicos, domine habilidades incríveis e lute em
+                    arenas loucas e exclusivas. Atlas Wars oferece uma experiência de batalha repleta de ação!".</p>
 
-            <h3 class="title">Responsabilidades</h3>
+                <p class="text-game lang lang-en">
+                    "Join the epic world of Atlas Wars, a fast-paced skill-based multiplayer brawler! Choose unique
+                    heroes, master awesome abilities, and battle in crazy and unique arenas. Atlas Wars offers an
+                    action-packed brawl experience!"
+                </p>
+            </div>
+
+            <h3 class="title lang lang-pt">Responsabilidades</h3>
+            <h3 class="title lang lang-en">Responsabilities</h3>
+
             <ul class="list-game">
-                <li class="list-game">🎮 Gameplay Design</li>
-                <li class="list-game">💰 Economy Design</li>
-                <li class="list-game">🗺️ Level Design</li>                    
-                <li class="list-game">🔢 Balanceamento</li>
+                <li class="list-game lang lang-pt">🎮 Gameplay Design</li>
+                <li class="list-game lang lang-en">🎮 Gameplay Design</li>
+
+                <li class="list-game lang lang-pt">💰 Economy Design</li>
+                <li class="list-game lang lang-en">💰 Economy Design</li>
+
+                <li class="list-game lang lang-pt">🗺️ Level Design</li>
+                <li class="list-game lang lang-en">🗺️ Level Design</li>
+
+                <li class="list-game lang lang-pt">🔢 Balanceamento</li>
+                <li class="list-game lang lang-en">🔢 Balancing</li>
             </ul>
 
-            <h3 class="title">Minha Experiência</h3>
-            <p class="text-game">
-                
+
+            <h3 class="title lang lang-pt">Minha Experiência</h3>
+            <h3 class="title lang lang-en">My Experience</h3>
+
+            <p class="text-game lang lang-pt">
+                Esse foi o primeiro jogo do estilo "Brawler" que trabalhei, e foram diversos desafios durante o
+                desenvolvimento.
+            </p>
+            <p class="text-game lang lang-en">
+                This was the first "Brawler"-style game I worked on, and there were many challenges during development.
             </p>
 
-            <p class="text-game">
-                Esse foi o primeiro jogo do estilo "Brawler" que trabalhei, e foram diversos desafios durante o desenvolvimento.
+            <p class="text-game lang lang-pt">
+                Por conta da equipe pequena, ressaltamos pontos positivos do jogo e trabalhamos da melhor forma dentro
+                das limitações que tinhamos impostas.
+            </p>
+            <p class="text-game lang lang-en">
+                Due to the small team, we highlighted the game's strengths and worked in the best way possible within
+                the limitations we had.
             </p>
 
-            <p class="text-game">
-                Por conta da equipe pequena, ressaltamos pontos positivos do jogo e trabalhamos da melhor forma dentro das limitações que tinhamos impostas.
+            <p class="text-game lang lang-pt">
+                Por não conseguir montar movesets extensos e complexos como em outros jogos, focamos em uma gameplay
+                dinâmica por meio dos níveis e das interações possíveis com itens, mantendo a gamplay rápida e
+                cativante, além dos sistemas de nível e desbloqueios de personagens para manter o jogador "preso" dentro do jogo.
             </p>
-
-            <p class="text-game">
-                Por não conseguir montar movesets extensos e complexos como em outros jogos, focamos em uma gameplay dinâmica por meio dos níveis e das interações possíveis com itens, mantendo a gamplay rápida e cativante, além dos sistemas de nível e desbloqueios de personagens para manter o jogador "preso" dentro do jogo.
+            <p class="text-game lang lang-en">
+                Since we couldn't create extensive and complex movesets like in other games, we focused on dynamic
+                gameplay through levels and possible item interactions, keeping the gameplay fast and engaging, along
+                with leveling systems and character unlocks to keep the player "hooked" in the game.
             </p>
         </div>
     </div>
@@ -112,4 +183,5 @@
     <script src="/js/index.js"></script>
     <script src="https://kit.fontawesome.com/11a0e0cedc.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
