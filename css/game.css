@@ -7,6 +7,7 @@
     --background-content: #050505;
     --background-bar: #404040;
     --color-highlight: #FF2B58;
+    --color-highlight-detail: #2b2bff;
     --color-highlight-less: #AB2B47;
     --color-title: #fff;
     --color-subtitle: #686868;
@@ -120,7 +121,7 @@ a:hover {
     border-radius: 4px;
     background-color: var(--background-content);
     grid-area: gd;
-    max-height: 350px;
+    max-height: 450px;
     max-width: 189px;   
     z-index: 1;
 }
@@ -222,6 +223,9 @@ a:hover {
     top: 50px;
     filter: drop-shadow(4px 4px 12px #000000);
     transition: all .5s ease;
+    box-shadow: 0 0 20px 5px var(--color-highlight-less), 0 0 10px #ff2b58;
+    border: 2px solid var(--color-highlight);
+    animation: conquista-pop 0.5s;
 }
 
 .conquista > img {
@@ -288,7 +292,7 @@ a:hover {
 }
 
 .gd-stats {
-    position: relative; 
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,9 +309,9 @@ a:hover {
 }
 
 .text-level {
-    margin: 0;
+    margin: 0 !important;
     font-weight: 500;
-    background-color: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
     padding: var(--extra-small-margin);
     margin-top: var(--small-margin);
     border-radius: 4px;
@@ -369,10 +373,6 @@ a:hover {
 
 .item-content:hover > .tooltip {
     opacity: 1;
-}
-
-.can-buy {
-    border: 2px solid var(--color-highlight) !important;
 }
 
 .evo-1 {
@@ -498,4 +498,189 @@ a:hover {
     .click-per-second {
         left: 100px;
     }
+}
+
+/* Power-up visual feedback */
+.powerup-glow {
+  animation: powerup-bg-glow 1s alternate infinite;
+}
+@keyframes powerup-bg-glow {
+  0% { filter: brightness(1) drop-shadow(0 0 10px #ffe066); }
+  100% { filter: brightness(1.1) drop-shadow(0 0 40px #ffe066); }
+}
+.powerup-shake {
+  animation: shake 0.2s infinite;
+}
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-2px, 2px); }
+  100% { transform: translate(0, 0); }
+}
+.powerup-feedback {
+  color: #ffe066 !important;
+  text-shadow: 0 0 10px #ffe066, 0 0 20px #ffb700;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+/* Polimento extra para conquistas e upgrades */
+.item-content.can-buy {
+  box-shadow: 0 0 10px 2px var(--color-highlight);
+  border: 2px solid var(--color-highlight) !important;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.item-content:active {
+  animation: item-press 0.15s;
+}
+@keyframes item-press {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+
+@keyframes conquista-pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.gd-btn {
+  background: var(--color-highlight);
+  color: var(--color-title);
+  border: none;
+  border-radius: 4px;
+  padding: var(--small-padding) var(--small-padding);
+  font-family: 'Archivo', sans-serif;
+  font-size: .85em;
+  font-weight: 700;
+  margin-top: var(--small-margin);
+  margin-bottom: var(--small-margin);
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #1a1a1a44;
+  transition: background 0.3s, opacity 0.3s, transform 0.2s;
+  outline: none;
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+.gd-btn:hover:not(:disabled) {
+  background: var(--color-highlight-less);
+  transform: scale(1.05);
+}
+.gd-btn:active:not(:disabled) {
+  background: var(--color-highlight);
+  transform: scale(0.98);
+}
+.gd-btn.pulsing {
+  animation: gd-btn-pulse 1s infinite alternate;
+}
+@keyframes gd-btn-pulse {
+  0% { box-shadow: 0 0 0 0 #ffe06688; }
+  100% { box-shadow: 0 0 16px 6px #ffe066cc; }
+}
+.gd-btn.cooldown {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.levelup-feedback {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 100%;
+  height: 100%;
+  background: var(--color-title);
+  border: 1px solid var(--color-highlight-detail);
+  color: var(--color-highlight);
+  font-size: .7em;
+  font-weight: 700;
+  border-radius: 3px;
+  box-shadow: 0 0 16px 2px var(--color-highlight-less), 0 0 4px #0008;
+  z-index: 10;
+  opacity: 1;
+  animation: levelup-pop 0.5s;
+  text-align: center;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+@keyframes levelup-pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.levelup-feedback.fadeout {
+  transition: opacity 0.6s;
+  opacity: 0;
+}
+
+.locked {
+  opacity: 0.5;
+  filter: grayscale(0.7) brightness(0.8);
+  position: relative;
+  pointer-events: auto;
+}
+.lock-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 44, 44, 0.918);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.lock-icon {
+  font-size: 2em;
+  color: var(--color-highlight-detail, #2b2bff);
+  text-shadow: 0 0 8px #fff8, 0 0 2px #000a;
+}
+
+.clickme-reminder {
+  background: var(--color-highlight);
+  color: var(--color-title);
+  font-size: 1em;
+  font-weight: 700;
+  padding: 4px 18px;
+  border-radius: 16px;
+  box-shadow: 0 0 8px 2px var(--color-highlight-less), 0 0 2px #0008;
+  z-index: 20;
+  opacity: 1;
+  animation: clickme-pop 0.4s;
+  pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 1px;
+}
+@keyframes clickme-pop {
+  0% { transform: translateY(10px) scale(0.7); opacity: 0; }
+  60% { transform: translateY(-5px) scale(1.1); opacity: .5; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+.clickme-reminder.fadeout {
+  transition: opacity 0.6s;
+  opacity: 0;
+}
+
+#xp-bar-container {
+  width: 80%;
+  height: 8px;
+  background: var(--background-bar);
+  border-radius: 8px;
+  margin: 10px 0 5px;
+  overflow: hidden;
+  position: relative;
+}
+#xp-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-highlight-detail, #2b2bff), var(--color-highlight));
+  border-radius: 8px;
+  transition: width 0.5s cubic-bezier(.4,1.4,.6,1);
+  box-shadow: 0 0 8px 1px var(--color-highlight-less);
 }
