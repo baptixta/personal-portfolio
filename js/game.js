@@ -110,6 +110,7 @@ let gdPointsPerSecond = 0;
 let record = 0;
 let lastShownLevel = 0;
 let lastGdClick = Date.now();
+let earnedAchievements = []; // Array para armazenar conquistas ganhas
 
 // Utilidades DOM
 const gd = document.querySelector('.gd');
@@ -198,7 +199,8 @@ function saveGame() {
     gdPoints,
     gdPointsPerSecond,
     upgrades: upgrades.map(u => ({ amount: u.amount, cost: u.cost })),
-    record: Math.max(record, gdPoints)
+    record: Math.max(record, gdPoints),
+    earnedAchievements: earnedAchievements
   };
   localStorage.setItem('gdSave', JSON.stringify(save));
 }
@@ -223,6 +225,7 @@ function loadGame() {
     gdPoints = save.gdPoints;
     gdPointsPerSecond = save.gdPointsPerSecond;
     record = save.record || 0;
+    earnedAchievements = save.earnedAchievements || [];
     upgrades.forEach((u, i) => {
       u.amount = save.upgrades[i]?.amount || 0;
       u.cost = save.upgrades[i]?.cost || u.cost;
@@ -239,6 +242,7 @@ function resetGame() {
   localStorage.removeItem('gdSave');
   gdPoints = 0;
   gdPointsPerSecond = 0;
+  earnedAchievements = [];
   upgrades.forEach(u => {
     u.amount = 0;
     u.cost = u.id === 'estudo' ? 5 : u.id === 'escrita' ? 10 : u.id === 'documentacao' ? 100 : u.id === 'planilhas' ? 1000 : u.id === 'balanceamento' ? 5000 : 20000;
@@ -281,8 +285,13 @@ function checkLevelAchievements(currentLevel) {
     ];
     const idx = Math.floor(currentLevel / 10) - 1;
     const name = names[idx] || `Nível ${currentLevel}: Game Designer Épico!`;
-    const conquista = new CustomElement('/img/trophy.png', 'Conquista de Nível', name);
-    conquista.appendTo('.easter-egg');
+    const achievementId = `level-${currentLevel}`;
+    if (!earnedAchievements.includes(achievementId)) {
+      earnedAchievements.push(achievementId);
+      const conquista = new CustomElement('/img/trophy.png', 'Conquista de Nível', name);
+      conquista.appendTo('.easter-egg');
+      saveGame();
+    }
   }
 }
 
@@ -311,7 +320,7 @@ function updateUI() {
   gdPointsPerSecond = 0;
   const thresholds = [10, 20, 30, 40, 50]; // thresholds para desbloqueio
   upgrades.forEach((u, idx) => {
-    document.getElementById(`${u.id}-cost`).innerText = u.cost;
+    document.getElementById(`${u.id}-cost`).innerText = formatPoints(u.cost);
     document.getElementById(`${u.id}-amount`).innerText = u.amount;
     if (u.clickBoost) clickTotal += u.amount * u.clickBoost;
     if (u.perSecondBoost) gdPointsPerSecond += u.amount * u.perSecondBoost;
@@ -356,6 +365,10 @@ function updateUI() {
   gdPointsTextPerSecond.innerText = `Por segundo: ${gdPointsPerSecond}`;
   const currentLevel = calculateLevel();
   textLevel.innerText = `Nível ${currentLevel}`;
+  // NOVO: atualiza nome do personagem
+  const characterName = getCharacterName(currentLevel);
+  const textInfo = document.querySelector('.text-info');
+  if (textInfo) textInfo.innerText = characterName;
   if (currentLevel > lastShownLevel) {
     showLevelUpFeedback();
     lastShownLevel = currentLevel;
@@ -431,8 +444,13 @@ class CustomElement {
 function checkAchievements(upgrade) {
   upgrade.achievements.forEach(ach => {
     if (upgrade.amount === ach.amount) {
-      const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', ach.name);
-      conquista.appendTo('.easter-egg');
+      const achievementId = `${upgrade.id}-${ach.amount}`;
+      if (!earnedAchievements.includes(achievementId)) {
+        earnedAchievements.push(achievementId);
+        const conquista = new CustomElement('/img/trophy.png', 'Conquista Desbloqueada', ach.name);
+        conquista.appendTo('.easter-egg');
+        saveGame();
+      }
     }
   });
 }
@@ -489,26 +507,6 @@ setInterval(() => {
   saveGame();
 }, 1000);
 
-// Botão de reset e ranking local
-if (!document.getElementById('reset-btn')) {
-  const resetBtn = document.createElement('button');
-  resetBtn.id = 'reset-btn';
-  resetBtn.className = 'gd-btn';
-  resetBtn.innerText = 'Resetar Jogo';
-  resetBtn.style.margin = '10px 0 0 0';
-  resetBtn.onclick = () => {
-    if (confirm('Tem certeza que deseja resetar seu progresso?')) resetGame();
-  };
-  gdStats.appendChild(resetBtn);
-}
-if (!document.getElementById('record')) {
-  const recordDiv = document.createElement('div');
-  recordDiv.id = 'record';
-  recordDiv.innerText = `Recorde: ${record}`;
-  recordDiv.style.margin = '10px 0 0 0';
-  easterEgg.appendChild(recordDiv);
-}
-
 // Adiciona botão de power-up na interface
 function addPowerupButton() {
   if (!document.getElementById('powerup-btn')) {
@@ -521,6 +519,199 @@ function addPowerupButton() {
   }
 }
 addPowerupButton();
+
+// Modal de conquistas
+function createAchievementModal() {
+  if (document.getElementById('achievement-modal')) return;
+  
+  const modal = document.createElement('div');
+  modal.id = 'achievement-modal';
+  modal.className = 'achievement-modal';
+  modal.style.display = 'none';
+  
+  const modalContent = document.createElement('div');
+  modalContent.className = 'achievement-modal-content';
+  
+  const header = document.createElement('div');
+  header.className = 'achievement-modal-header';
+  
+  const title = document.createElement('h2');
+  title.textContent = '🏆 Conquistas';
+  title.style.margin = '0';
+  title.style.color = 'var(--color-title)';
+  
+  const closeBtn = document.createElement('button');
+  closeBtn.innerHTML = '✕';
+  closeBtn.className = 'achievement-close-btn';
+  closeBtn.onclick = () => {
+    modal.style.display = 'none';
+  };
+  
+  header.appendChild(title);
+  header.appendChild(closeBtn);
+  
+  const achievementsContainer = document.createElement('div');
+  achievementsContainer.className = 'achievements-container';
+  achievementsContainer.id = 'achievements-list';
+  
+  modalContent.appendChild(header);
+  modalContent.appendChild(achievementsContainer);
+  modal.appendChild(modalContent);
+  
+  document.body.appendChild(modal);
+  
+  // Fechar modal ao clicar fora
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+}
+
+function showAchievementModal() {
+  const modal = document.getElementById('achievement-modal');
+  if (!modal) {
+    createAchievementModal();
+  }
+  
+  const achievementsList = document.getElementById('achievements-list');
+  achievementsList.innerHTML = '';
+  
+  if (earnedAchievements.length === 0) {
+    const noAchievements = document.createElement('div');
+    noAchievements.className = 'no-achievements';
+    noAchievements.innerHTML = `
+      <img src="/img/trophy.png" alt="Trophy" style="width: 64px; height: 64px; opacity: 0.3;">
+      <p>Nenhuma conquista ainda!</p>
+      <p>Continue jogando para desbloquear conquistas.</p>
+    `;
+    achievementsList.appendChild(noAchievements);
+  } else {
+    // Conquistas de upgrades
+    upgrades.forEach(upgrade => {
+      upgrade.achievements.forEach(ach => {
+        const achievementId = `${upgrade.id}-${ach.amount}`;
+        const isEarned = earnedAchievements.includes(achievementId);
+        
+        const achievementItem = document.createElement('div');
+        achievementItem.className = `achievement-item ${isEarned ? 'earned' : 'locked'}`;
+        
+        const icon = document.createElement('img');
+        icon.src = isEarned ? '/img/trophy.png' : '/img/trophy.png';
+        icon.alt = 'Trophy';
+        icon.style.opacity = isEarned ? '1' : '0.3';
+        
+        const info = document.createElement('div');
+        info.className = 'achievement-info';
+        
+        const name = document.createElement('h3');
+        name.textContent = ach.name;
+        name.style.margin = '0 0 5px 0';
+        name.style.color = isEarned ? 'var(--color-title)' : '#666';
+        
+        const description = document.createElement('p');
+        description.textContent = `${upgrade.name}: Compre ${ach.amount}x`;
+        description.style.margin = '0';
+        description.style.fontSize = '0.9em';
+        description.style.color = isEarned ? '#ccc' : '#666';
+        
+        info.appendChild(name);
+        info.appendChild(description);
+        
+        achievementItem.appendChild(icon);
+        achievementItem.appendChild(info);
+        achievementsList.appendChild(achievementItem);
+      });
+    });
+    
+    // Conquistas de nível
+    const levelNames = [
+      'Iniciante dos Games',
+      'Aprendiz de GD',
+      'Designer em Ascensão',
+      'Especialista em Upgrades',
+      'Mestre das Planilhas',
+      'Balanceador Supremo',
+      'Lenda do Game Design',
+      'Guru dos Power-ups',
+      'Sábio dos Sistemas',
+      'Deus do Level Design'
+    ];
+    
+    levelNames.forEach((name, index) => {
+      const level = (index + 1) * 10;
+      const achievementId = `level-${level}`;
+      const isEarned = earnedAchievements.includes(achievementId);
+      
+      const achievementItem = document.createElement('div');
+      achievementItem.className = `achievement-item ${isEarned ? 'earned' : 'locked'}`;
+      
+      const icon = document.createElement('img');
+      icon.src = '/img/trophy.png';
+      icon.alt = 'Trophy';
+      icon.style.opacity = isEarned ? '1' : '0.3';
+      
+      const info = document.createElement('div');
+      info.className = 'achievement-info';
+      
+      const nameEl = document.createElement('h3');
+      nameEl.textContent = name;
+      nameEl.style.margin = '0 0 5px 0';
+      nameEl.style.color = isEarned ? 'var(--color-title)' : '#666';
+      
+      const description = document.createElement('p');
+      description.textContent = `Alcance o nível ${level}`;
+      description.style.margin = '0';
+      description.style.fontSize = '0.9em';
+      description.style.color = isEarned ? '#ccc' : '#666';
+      
+      info.appendChild(nameEl);
+      info.appendChild(description);
+      
+      achievementItem.appendChild(icon);
+      achievementItem.appendChild(info);
+      achievementsList.appendChild(achievementItem);
+    });
+  }
+  
+  modal.style.display = 'flex';
+}
+
+// Adiciona botão de conquistas
+function addAchievementButton() {
+  if (!document.getElementById('achievement-btn')) {
+    const achievementBtn = document.createElement('button');
+    achievementBtn.id = 'achievement-btn';
+    achievementBtn.className = 'gd-btn';
+    achievementBtn.innerHTML = '🏆 Conquistas';
+    achievementBtn.onclick = showAchievementModal;
+    gdStats.appendChild(achievementBtn);
+  }
+}
+addAchievementButton();
+
+// Botão de reset e ranking local
+if (!document.getElementById('reset-btn')) {
+  const resetBtn = document.createElement('button');
+  resetBtn.id = 'reset-btn';
+  resetBtn.className = 'gd-btn';
+  resetBtn.innerText = 'Resetar Jogo';
+  resetBtn.style.position = 'fixed';
+  resetBtn.style.top = '10px';
+  resetBtn.style.right = '20px';
+  resetBtn.style.zIndex = '1000';
+  resetBtn.onclick = () => {
+    if (confirm('Tem certeza que deseja resetar seu progresso?')) resetGame();
+  };
+  document.body.appendChild(resetBtn);
+}
+if (!document.getElementById('record')) {
+  const recordDiv = document.createElement('div');
+  recordDiv.id = 'record';
+  recordDiv.innerText = `Recorde: ${record}`;
+  recordDiv.style.margin = '10px 0 0 0';
+  easterEgg.appendChild(recordDiv);
+}
 
 // Animação e opacidade do botão de power-up
 function updatePowerupButtonVisual() {
@@ -644,4 +835,14 @@ function updateXpBar() {
   if (!bar) return;
   const progress = getXpProgress();
   bar.style.width = (progress * 100) + '%';
+}
+
+function getCharacterName(level) {
+  if (level >= 100) return 'Game Designer Lenda';
+  if (level >= 75) return 'Game Designer Senior';
+  if (level >= 50) return 'Game Designer Pleno';
+  if (level >= 30) return 'Game Designer Jr';
+  if (level >= 20) return 'GD Entendedor';
+  if (level >= 10) return 'GD Estudante';
+  return 'Leigo';
 }
