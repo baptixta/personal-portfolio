@@ -846,3 +846,5 @@ function getCharacterName(level) {
   if (level >= 10) return 'GD Estudante';
   return 'Leigo';
 }
+
+
