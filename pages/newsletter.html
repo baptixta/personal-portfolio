@@ -74,21 +74,24 @@
         </nav>       
 
         <div class="content">
-            <div id="substack-feed-embed" class="newsletter-feed"></div>
+            <!-- Substack subscribe widget (same as https://baptixta.substack.com/subscribe) -->
+            <div class="newsletter-subscribe-widget">
+                <iframe
+                    src="https://baptixta.substack.com/embed"
+                    width="100%"
+                    height="320"
+                    frameborder="0"
+                    scrolling="no"
+                    title="Inscreva-se em bom dia, gedê"
+                    class="substack-embed-iframe"
+                ></iframe>
+            </div>
+            <!-- Feed embed code -->
+            <div data-supascribe-embed-id="374335719560" data-supascribe-feed class="newsletter-feed"></div>
 
 
-            <script>
-            window.SubstackFeedWidget = {
-                substackUrl: "baptixta.substack.com",
-                posts: 5,
-                colors: {
-                primary: "#FFFFFF",
-                secondary: "#C5C5C5",
-                background: "#050505",
-                }
-            };
-            </script>
-            <script src="https://substackapi.com/embeds/feed.js" async></script>       
+<!-- Supascribe Script -->
+<script src="https://js.supascribe.com/v1/loader/edssDtLvpWTBXwCOygubmmdpWhh1.js" async></script>         
         </div>
     </div>
 

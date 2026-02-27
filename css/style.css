@@ -273,9 +273,23 @@ strong {
 
 /* newsletter feed */
 
+/* Substack subscribe widget - same as baptixta.substack.com/subscribe */
+.newsletter-subscribe-widget {
+    margin-top: var(--huge-margin);
+    margin-bottom: var(--huge-margin);
+    max-width: 100%;
+}
+
+.newsletter-subscribe-widget .substack-embed-iframe {
+    display: block;
+    border-radius: 8px;
+    background: var(--color-bg);
+}
+
 .newsletter-feed {
     margin-top: var(--huge-margin);
 }
+
 
 /* game page */
 
@@ -334,6 +348,11 @@ strong {
 
 .language-selected {
     background-color: var(--color-highlight) !important;
+}
+
+/* newsletter feed */
+.supascribe-feed-widget {
+    background-color: var(--background-content) !important;
 }
 
 
