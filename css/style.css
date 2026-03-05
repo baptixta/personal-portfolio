@@ -208,17 +208,35 @@ nav > ul > li > i {
 /* hp lifebar */
 
 #hpBar {
-    color: var(--color-text);
-    font-size: 0.72em;
-    align-items: center;
     display: flex;
-    justify-content: center;
-    width: 130px !important;
+    flex-direction: row;
+    align-items: center;
+    width: 130px;
+    gap: 8px;
 }
 
+#hpBar-track {
+    flex: 1;
+    height: 6px;
+    background-color: var(--background-bar);
+    border-radius: 4px;
+    overflow: hidden;
+}
 
-.lifecount {
-    font-weight: 400;
+#hpBar-fill {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-highlight);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+#hpBar-label {
+    color: var(--color-text);
+    font-size: 0.72em;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1;
 }
 
 /* content */
