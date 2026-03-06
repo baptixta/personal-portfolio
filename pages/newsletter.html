@@ -1,96 +1,135 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptixta - Newsletter</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="/img/portrait.png" type="img">
+    <script src="https://unpkg.com/swup@4"></script>
+    <script src="https://unpkg.com/@swup/overlay-theme@2"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXEN8TKVGB"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-XXEN8TKVGB');
+    gtag('config', 'G-XXEN8TKVGB');
 </script>
+
 <body>
     <div class="language-switcher">
         <button id="btn-pt" onclick="setLanguage('pt')">🇧🇷 PT</button>
         <button id="btn-en" onclick="setLanguage('en')">🇺🇸 EN</button>
-    </div> 
+    </div>
 
     <div class="all">
-        <div class="menu-responsive"></div>         
+        <div class="menu-responsive"></div>
         <div class="background-blur"></div>
-        <nav>        
-            <div class="close-menu"></div>        
+        <nav>
+            <div class="close-menu"></div>
             <div class="presentation">
                 <h2 class="presentation-title">Baptixta</h2>
                 <img class="portrait" src="/img/portrait.png" alt="BaptiLista contendo todos os atalhosxta Portrait">
                 <img class="game-secret" src="img/game-icon.png" alt="Game Icon">
                 <h3 class="presentation-subtitle">Game/Web Designer</h3>
-                   
+
                 <div id="hpBar">
                     <div id="hpBar-track">
                         <div id="hpBar-fill"></div>
                     </div>
                     <span id="hpBar-label">100%</span>
-                </div>                             
-            </div>                
+                </div>
+            </div>
 
             <ul class="nav-ul">
-                <a class="nav-li" href="/index.html" rel="noopener noreferrer"><li><i class="fa-solid fa-house"></i> Home</li></a>
-                <a class="selected nav-li" href="/pages/newsletter.html" rel="noopener noreferrer"><li><i class="fa-solid fa-envelope"></i> Newsletter</li></a>
+                <a class="nav-li" href="/index.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-house"></i> Home</li>
+                </a>
+                <a class="selected nav-li" href="/pages/newsletter.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-envelope"></i> Newsletter</li>
+                </a>
 
                 <li class="nav-title lang lang-pt">Jogos</li>
                 <li class="nav-title lang lang-en">Games</li>
 
-                <a class="nav-li" href="/pages/pimbolas.html" rel="noopener noreferrer"><li><i class="fa-solid fa-hand-fist"></i> Pimbolas</li></a>
-                <a class="nav-li" href="/pages/cobrakai2.html" rel="noopener noreferrer"><li><i class="fa-solid fa-hand-fist"></i> Cobra Kai 2: Dojos Rising</li></a>
-                <a class="nav-li" href="/pages/avalon.html" rel="noopener noreferrer"><li><i class="fa-solid fa-user-ninja"></i> Avalon</li></a>
-                <a class="nav-li" href="/pages/chico-bento-roblox.html" rel="noopener noreferrer"><li><i class="fa-solid fa-wheat-awn"></i> Chico Bento (Roblox)</li></a>
-                <a class="nav-li" href="/pages/rasek.html" rel="noopener noreferrer"><li><i class="fa-solid fa-dungeon"></i> Rasek</li></a>
-                <a class="nav-li" href="/pages/atlas-wars.html" rel="noopener noreferrer"><li><i class="fa-solid fa-explosion"></i> Atlas Wars</li></a>
-                
-                <a class="nav-li lang lang-pt" href="https://baptixta.itch.io/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-arrow-up-right-from-square"></i> Outros</li></a>
-                <a class="nav-li lang lang-en" href="https://baptixta.itch.io/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-arrow-up-right-from-square"></i> Others</li></a>
+                <a class="nav-li" href="/pages/pimbolas.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-hand-fist"></i> Pimbolas</li>
+                </a>
+                <a class="nav-li" href="/pages/cobrakai2.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-hand-fist"></i> Cobra Kai 2: Dojos Rising</li>
+                </a>
+                <a class="nav-li" href="/pages/avalon.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-user-ninja"></i> Avalon</li>
+                </a>
+                <a class="nav-li" href="/pages/chico-bento-roblox.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-wheat-awn"></i> Chico Bento (Roblox)</li>
+                </a>
+                <a class="nav-li" href="/pages/rasek.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-dungeon"></i> Rasek</li>
+                </a>
+                <a class="nav-li" href="/pages/atlas-wars.html" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-explosion"></i> Atlas Wars</li>
+                </a>
+
+                <a class="nav-li lang lang-pt" href="https://baptixta.itch.io/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Outros</li>
+                </a>
+                <a class="nav-li lang lang-en" href="https://baptixta.itch.io/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-arrow-up-right-from-square"></i> Others</li>
+                </a>
 
                 <li class="nav-title lang lang-pt">Projetos</li>
                 <li class="nav-title lang lang-en">Projects</li>
 
-                <a class="nav-li" href="https://csjdigital.com.br/pv-gdx/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-gamepad"></i>Game Design Experience</li></a>
-                <a class="nav-li" href="https://baptixta.github.io/guia-do-game-designer/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-gamepad"></i>Guia do Game Designer</li></a>
+                <a class="nav-li" href="https://csjdigital.com.br/pv-gdx/" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-gamepad"></i>Game Design Experience</li>
+                </a>
+                <a class="nav-li" href="https://baptixta.github.io/guia-do-game-designer/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-gamepad"></i>Guia do Game Designer</li>
+                </a>
 
                 <li class="nav-title lang lang-pt">Fala Comigo</li>
                 <li class="nav-title lang lang-en">Let's Talk</li>
 
-                <a class="nav-li" href="https://www.linkedin.com/in/baptixta/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-briefcase"></i> Linkedin</li></a>
-                <a class="nav-li" href="https://www.instagram.com/baptixta/" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-camera-retro"></i> Instagram</li></a>                
-                <a class="nav-li" href="https://www.youtube.com/@baptixta" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-video"></i> Youtube</li></a>                
-                <a class="nav-li" href="https://www.tiktok.com/@baptixta1" target="_blank" rel="noopener noreferrer"><li><i class="fa-solid fa-mobile"></i> Tiktok</li></a>                
+                <a class="nav-li" href="https://www.linkedin.com/in/baptixta/" target="_blank"
+                    rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-briefcase"></i> Linkedin</li>
+                </a>
+                <a class="nav-li" href="https://www.instagram.com/baptixta/" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-camera-retro"></i> Instagram</li>
+                </a>
+                <a class="nav-li" href="https://www.youtube.com/@baptixta" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-video"></i> Youtube</li>
+                </a>
+                <a class="nav-li" href="https://www.tiktok.com/@baptixta1" target="_blank" rel="noopener noreferrer">
+                    <li><i class="fa-solid fa-mobile"></i> Tiktok</li>
+                </a>
             </ul>
-        </nav>       
+        </nav>
 
         <div class="content">
             <div class="newsletter-subscribe-widget">
-                <iframe
-                    src="https://baptixta.substack.com/embed"
-                    width="100%"
-                    height="320"
-                    frameborder="0"
-                    scrolling="no"
-                    title="Inscreva-se em bom dia, gedê"
-                    class="substack-embed-iframe"
-                ></iframe>
+                <iframe src="https://baptixta.substack.com/embed" width="100%" height="320" frameborder="0"
+                    scrolling="no" title="Inscreva-se em bom dia, gedê" class="substack-embed-iframe"></iframe>
             </div>
             <div data-supascribe-embed-id="374335719560" data-supascribe-feed class="newsletter-feed"></div>
-            <script src="https://js.supascribe.com/v1/loader/edssDtLvpWTBXwCOygubmmdpWhh1.js" async></script>         
+            <script src="https://js.supascribe.com/v1/loader/edssDtLvpWTBXwCOygubmmdpWhh1.js" async></script>
         </div>
     </div>
 
+    <script>
+        const swup = new Swup({
+            plugins: [new SwupOverlayTheme({ direction: 'to-bottom' })]
+        });
+    </script>
     <script src="/js/index.js"></script>
     <script src="https://kit.fontawesome.com/11a0e0cedc.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

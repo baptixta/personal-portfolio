@@ -470,3 +470,11 @@ strong {
         padding: 0px var(--small-padding);
     }
 }
+
+/* swup overlay theme */
+body {
+    --swup-overlay-theme-color: #FF2B58;
+    --swup-overlay-theme-duration: 0.45s;
+    --swup-overlay-theme-delay: 0.1s;
+    --swup-overlay-theme-skew: 3deg;
+}

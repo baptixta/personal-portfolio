@@ -1,22 +1,26 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptixta - Easter Egg</title>
     <link rel="stylesheet" href="../css/game.css">
     <link rel="shortcut icon" href="/img/portrait.png" type="img">
-    <link rel="stylesheet" type="text/css" href="/css/loading-bar.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/loading-bar.css" />
     <script type="text/javascript" src="/js/loading-bar.js"></script>
+    <script src="https://unpkg.com/swup@4"></script>
+    <script src="https://unpkg.com/@swup/overlay-theme@2"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXEN8TKVGB"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-XXEN8TKVGB');
+    gtag('config', 'G-XXEN8TKVGB');
 </script>
+
 <body>
     <div class="easter-egg">
         <a href="/index.html">volte pro site normal clicando aqui</a>
@@ -24,26 +28,26 @@
 
         <div class="black-panel"></div>
 
-        <div class="game-box">            
+        <div class="game-box">
             <div class="game-designer">
                 <div class="gd-points">
                     <div class="per-click">
                         <h2 class="points-all">0</h2>
                         <img src="/img/game-icon.png" alt="Price icon">
-                    </div>                    
+                    </div>
                     <h3 class="points-second">Por segundo: 0</h2>
                 </div>
 
                 <div class="gd-stats">
                     <img class="gd" src="/img/gd.png" alt="Game Designer">
                     <p class="text-info">Game Designer</p>
-                    <p class="text-level">Nível 0</p> 
+                    <p class="text-level">Nível 0</p>
                     <div id="xp-bar-container">
                         <div id="xp-bar"></div>
                     </div>
                     <div class="box-tutorial">
                         Clique em mim para ganhar pontos e se tornar um game designer melhor!
-                    </div>                                     
+                    </div>
                 </div>
             </div>
 
@@ -53,15 +57,15 @@
                 <div class="itens">
                     <div class="item">
                         <div class="item-content" id="estudo">
-                            <img src="/img/upgrades/upgrade-study.png" alt="Upgrade Icon">  
-                            <div class="item-stats">                                                              
+                            <img src="/img/upgrades/upgrade-study.png" alt="Upgrade Icon">
+                            <div class="item-stats">
                                 <div class="item-stats-text">
                                     <h2>Estudo</h2>
                                     <div class="item-stats-preco">
                                         <img src="/img/game-icon.png" alt="Price icon">
                                         <p id="estudo-cost">5</p>
-                                    </div>                                    
-                                </div>                                
+                                    </div>
+                                </div>
                             </div>
                             <p class="upgrade-amount" id="estudo-amount">0</p>
                             <div class="tooltip" data-info="tooltip">
@@ -73,35 +77,35 @@
                         </div>
 
                         <div class="item-content" id="escrita">
-                            <img src="/img/upgrades/upgrade-writing.png" alt="Upgrade Icon">  
-                            <div class="item-stats">                                                              
+                            <img src="/img/upgrades/upgrade-writing.png" alt="Upgrade Icon">
+                            <div class="item-stats">
                                 <div class="item-stats-text">
                                     <h2>Escrita</h2>
                                     <div class="item-stats-preco">
                                         <img src="/img/game-icon.png" alt="Price icon">
                                         <p id="escrita-cost">10</p>
-                                    </div>                                    
-                                </div>                                
+                                    </div>
+                                </div>
                             </div>
                             <p class="upgrade-amount" id="escrita-amount">0</p>
                             <div class="tooltip" data-info="tooltip">
                                 <h3>Escrita</h3>
                                 <p>Aumenta a quantidade de pontos ganhos por clique.</p>
-                                <strong id="cliques-escrita"></strong>                                
+                                <strong id="cliques-escrita"></strong>
                             </div>
                             <span class="masterizado">Masterizado 🎮</span>
                         </div>
 
                         <div class="item-content" id="documentacao">
-                            <img src="/img/upgrades/upgrade-document.png" alt="Upgrade Icon">  
-                            <div class="item-stats">                                                              
+                            <img src="/img/upgrades/upgrade-document.png" alt="Upgrade Icon">
+                            <div class="item-stats">
                                 <div class="item-stats-text">
                                     <h2>Documentação</h2>
                                     <div class="item-stats-preco">
                                         <img src="/img/game-icon.png" alt="Price icon">
                                         <p id="documentacao-cost">100</p>
-                                    </div>                                    
-                                </div>                                
+                                    </div>
+                                </div>
                             </div>
                             <p class="upgrade-amount" id="documentacao-amount">0</p>
                             <div class="tooltip" data-info="tooltip">
@@ -113,15 +117,15 @@
                         </div>
 
                         <div class="item-content" id="planilhas">
-                            <img src="/img/upgrades/upgrade-sheets.png" alt="Upgrade Icon">  
-                            <div class="item-stats">                                                              
+                            <img src="/img/upgrades/upgrade-sheets.png" alt="Upgrade Icon">
+                            <div class="item-stats">
                                 <div class="item-stats-text">
                                     <h2>Planilhas</h2>
                                     <div class="item-stats-preco">
                                         <img src="/img/game-icon.png" alt="Price icon">
                                         <p id="planilhas-cost">1K</p>
-                                    </div>                                    
-                                </div>                                
+                                    </div>
+                                </div>
                             </div>
                             <p class="upgrade-amount" id="planilhas-amount">0</p>
                             <div class="tooltip" data-info="tooltip">
@@ -133,15 +137,15 @@
                         </div>
 
                         <div class="item-content" id="balanceamento">
-                            <img src="/img/upgrades/upgrade-balance.png" alt="Upgrade Icon">  
-                            <div class="item-stats">                                                              
+                            <img src="/img/upgrades/upgrade-balance.png" alt="Upgrade Icon">
+                            <div class="item-stats">
                                 <div class="item-stats-text">
                                     <h2>Balanceamento</h2>
                                     <div class="item-stats-preco">
                                         <img src="/img/game-icon.png" alt="Price icon">
                                         <p id="balanceamento-cost">5k</p>
-                                    </div>                                    
-                                </div>                                
+                                    </div>
+                                </div>
                             </div>
                             <p class="upgrade-amount" id="balanceamento-amount">0</p>
                             <div class="tooltip" data-info="tooltip">
@@ -153,15 +157,15 @@
                         </div>
 
                         <div class="item-content" id="iteracao">
-                            <img src="/img/upgrades/upgrade-balance.png" alt="Upgrade Icon">  
-                            <div class="item-stats">                                                              
+                            <img src="/img/upgrades/upgrade-balance.png" alt="Upgrade Icon">
+                            <div class="item-stats">
                                 <div class="item-stats-text">
                                     <h2>Iteração</h2>
                                     <div class="item-stats-preco">
                                         <img src="/img/game-icon.png" alt="Price icon">
                                         <p id="iteracao-cost">20k</p>
-                                    </div>                                    
-                                </div>                                
+                                    </div>
+                                </div>
                             </div>
                             <p class="upgrade-amount" id="iteracao-amount">0</p>
                             <div class="tooltip" data-info="tooltip">
@@ -177,9 +181,13 @@
         </div>
     </div>
 
-
-
+    <script>
+        const swup = new Swup({
+            plugins: [new SwupOverlayTheme({ direction: 'to-bottom' })]
+        });
+    </script>
     <script src="/js/game.js"></script>
     <script src="https://kit.fontawesome.com/11a0e0cedc.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
