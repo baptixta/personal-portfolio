@@ -1,38 +1,42 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>davi baptixta</title>
-<link rel="icon" href="assets/logo.svg">
-<script>
-/* tema inicial: escolha salva ou padrão do sistema (evita "flash") */
-try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch(e){}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,700;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>davi baptixta</title>
+  <link rel="icon" href="assets/logo.svg">
+  <script>
+    /* tema inicial: escolha salva ou padrão do sistema (evita "flash") */
+    try { document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light') } catch (e) { }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,700;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<img class="bg-logo" src="assets/logo.svg" alt="">
-<div class="ctrl">
-  <button class="flag" data-lang="pt" aria-label="Português"><img src="assets/flag-br.svg" alt=""></button>
-  <button class="flag" data-lang="en" aria-label="English"><img src="assets/flag-us.svg" alt=""></button>
-  <button id="theme" aria-label="tema / theme"><i></i></button>
-</div>
-<div class="layout">
-  <aside class="side">
-    <div class="side-top">
-      <a class="brand" href="#/"><img id="avatar" alt=""><span id="name"></span></a>
-    </div>
-    <p id="bio"></p>
-    <div class="social" id="social-top"></div>
-    <button id="burger"></button>
-    <nav id="nav"></nav>
-  </aside>
-  <main id="main"></main>
-</div>
-<script src="app.js"></script>
+  <img class="bg-logo" src="assets/logo.svg" alt="">
+  <div class="ctrl">
+    <button class="flag" data-lang="pt" aria-label="Português"><img src="assets/flag-br.svg" alt=""></button>
+    <button class="flag" data-lang="en" aria-label="English"><img src="assets/flag-us.svg" alt=""></button>
+    <button id="theme" aria-label="tema / theme"><i></i></button>
+  </div>
+  <div class="layout">
+    <aside class="side">
+      <div class="side-top">
+        <a class="brand" href="#/"><img id="avatar" alt=""><span id="name"></span></a>
+      </div>
+      <p id="bio"></p>
+      <div class="social" id="social-top"></div>
+      <button id="burger"></button>
+      <nav id="nav"></nav>
+    </aside>
+    <main id="main"></main>
+  </div>
+  <script src="app.js"></script>
 </body>
+
 </html>

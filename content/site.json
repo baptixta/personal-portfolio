@@ -78,13 +78,13 @@
       },
       "items": [
         {
-          "label": "Game Design Experience",
+          "label": "Game Design Experience ↗",
           "url": "https://csjdigital.com.br/pv-gdx/"
         },
         {
           "label": {
-            "pt": "Guia do Game Designer",
-            "en": "Game Designer's Guide"
+            "pt": "Guia do Game Designer ↗",
+            "en": "Game Designer's Guide ↗"
           },
           "url": "https://baptixta.github.io/guia-do-game-designer/"
         }
@@ -119,7 +119,7 @@
           "page": "sobre"
         },
         {
-          "label": "newsletter",
+          "label": "newsletter ↗",
           "url": "https://baptixta.substack.com"
         }
       ]
