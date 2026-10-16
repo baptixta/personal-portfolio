@@ -1,0 +1,577 @@
+:root {
+  --accent: #FF2B58;
+  --text: #191919;
+  --icon: #BABABA;
+  --bg: #F5F5F5;
+  --muted: #8a8a8a;
+  --line: #d9d9d9;
+  --ph: #d9d9d9
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+html {
+  overflow-x: clip
+}
+
+body {
+  font: 400 16px/1.2 'Archivo', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  overflow-x: hidden
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+img {
+  max-width: 100%;
+  display: block
+}
+
+/* logo de fundo */
+.bg-logo {
+  position: fixed;
+  top: -2vw;
+  right: -4vw;
+  width: 25vw;
+  transform: rotate(35deg);
+  min-width: 200px;
+  opacity: .05;
+  pointer-events: none;
+  z-index: 0
+}
+
+/* loader / transição */
+/* layout */
+.layout {
+  display: grid;
+  grid-template-columns: 22.5vw 1fr;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh
+}
+
+.side {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  overflow: auto;
+  padding: 2.9vw 1vw 40px 2.9vw
+}
+
+.side-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(22px, 2.22vw, 32px);
+  line-height: 1
+}
+
+.brand img {
+  width: 2.2em;
+  height: 2.2em;
+  object-fit: cover;
+  flex: none
+}
+
+.brand b {
+  color: var(--accent);
+  font-weight: 700
+}
+
+#bio {
+  margin-top: 22px;
+  max-width: 260px;
+}
+
+#burger {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--text)
+}
+
+.social {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 18px
+}
+
+.social i {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: var(--icon);
+  -webkit-mask: var(--i) center/contain no-repeat;
+  mask: var(--i) center/contain no-repeat;
+  transition: background .2s
+}
+
+.social a:hover i {
+  background: var(--accent)
+}
+
+.social.big {
+  gap: 36px;
+  margin-top: 28px
+}
+
+.social.big i {
+  width: 32px;
+  height: 32px
+}
+
+#nav {
+  margin-top: 40px
+}
+
+/* conteúdo */
+main {
+  padding: 46px 0 90px
+}
+
+.page {
+  width: min(100%, max(41vw, 480px));
+  margin: 0 auto
+}
+
+h2 {
+  font: italic 700 18px/1 'Archivo', sans-serif;
+  color: var(--accent);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 10px
+}
+
+h3 {
+  font: italic 700 18px/1 'Archivo', sans-serif;
+  color: var(--accent);
+  margin-bottom: 18px
+}
+
+.sec {
+  margin-top: 56px
+}
+
+.sec p {
+  margin-bottom: 16px;
+  line-height: 1.15
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 33% 1fr auto;
+  gap: 10px;
+  padding: 6px 0;
+  align-items: baseline
+}
+
+.row span:nth-child(2) {
+  color: var(--muted)
+}
+
+.row span:last-child:not(:first-child) {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right
+}
+
+.row.c2 {
+  grid-template-columns: 1fr auto
+}
+
+.row.c2 span:last-child {
+  font-size: 12px
+}
+
+/* cartas */
+.hand {
+  display: flex;
+  justify-content: center;
+  padding: 6px 0 30px
+}
+
+.card {
+  position: relative;
+  display: block;
+  width: 28%;
+  margin-left: -4.5%;
+  will-change: transform;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent
+}
+
+.card:first-child {
+  margin-left: 0
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 487/699;
+  user-select: none;
+  -webkit-user-drag: none
+}
+
+/* página de jogo */
+.video {
+  aspect-ratio: 16/9;
+  margin: 22px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ph)
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0
+}
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 26px
+}
+
+.shots img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--ph);
+  transition: transform .2s
+}
+
+.shots a:hover img {
+  transform: translateY(-3px)
+}
+
+.desc {
+  line-height: 1.15
+}
+
+.media {
+  width: 100%;
+  border-radius: 8px;
+  margin: 20px 0
+}
+
+.resp {
+  margin-bottom: 22px
+}
+
+.resp span {
+  display: block;
+  padding-left: 17px
+}
+
+.sec .video {
+  margin-top: 6px
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -6px 0 24px
+}
+
+.links a {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 14px;
+  transition: background .2s, color .2s
+}
+
+.links a:hover {
+  background: var(--accent);
+  color: #fff
+}
+
+.resp.list span {
+  padding-left: 0;
+  margin-bottom: 8px
+}
+
+a.row:hover span:first-child {
+  color: var(--accent)
+}
+
+/* responsivo */
+@media (max-width:900px) {
+  .layout {
+    grid-template-columns: 1fr
+  }
+
+  .side {
+    position: relative;
+    height: auto;
+    padding: 22px 20px 8px;
+    overflow: visible
+  }
+
+  .brand {
+    font-size: 28px
+  }
+
+  #burger {
+    display: block
+  }
+
+  #nav {
+    display: none;
+    margin-top: 26px
+  }
+
+  body.menu #nav {
+    display: block
+  }
+
+  .bg-logo {
+    width: 42vw;
+  }
+
+  main {
+    padding: 30px 20px 70px
+  }
+
+  .page {
+    width: 100%;
+    max-width: 640px
+  }
+}
+
+@media (max-width:560px) {
+  .row {
+    grid-template-columns: 1fr auto;
+    row-gap: 2px
+  }
+
+  .row span:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1/-1
+  }
+
+  .row.c2 span:nth-child(2) {
+    grid-row: auto;
+    grid-column: auto
+  }
+
+  .social.big {
+    gap: 26px
+  }
+}
+
+
+
+/* ===== tema escuro (fundo #1A1A1A, sem preto puro) ===== */
+:root {
+  color-scheme: light
+}
+
+[data-theme=dark] {
+  color-scheme: dark;
+  --text: #ededed;
+  --bg: #1A1A1A;
+  --muted: #8f8f8f;
+  --line: #333;
+  --ph: #2a2a2a
+}
+
+body {
+  transition: background-color .3s, color .3s
+}
+
+h2 {
+  transition: border-color .3s
+}
+
+/* ===== controles fixos: idioma + tema ===== */
+.ctrl {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 8px
+}
+
+.ctrl button {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center
+}
+
+.flag img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  opacity: .35;
+  transition: opacity .2s, transform .2s
+}
+
+.flag.on img,
+.flag:hover img {
+  opacity: 1
+}
+
+.flag:hover img {
+  transform: scale(1.08)
+}
+
+#theme {
+  margin-left: 6px
+}
+
+#theme i {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: var(--icon);
+  --i: url(assets/moon.svg);
+  -webkit-mask: var(--i) center/contain no-repeat;
+  mask: var(--i) center/contain no-repeat;
+  transition: background .2s
+}
+
+[data-theme=dark] #theme i {
+  --i: url(assets/sun.svg)
+}
+
+#theme:hover i {
+  background: var(--accent)
+}
+
+/* ===== transição de página ===== */
+main {
+  overflow-x: clip
+}
+
+.view {
+  transform: none
+}
+
+.view[style*="transform"] {
+  will-change: transform, opacity
+}
+
+/* ===== navbar colapsável ===== */
+.grp {
+  margin-bottom: 20px
+}
+
+.grp .t {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-bottom: 6px;
+  font: 700 18px/1.2 'Archivo', sans-serif;
+  color: var(--text);
+  cursor: pointer
+}
+
+.grp .t svg {
+  color: var(--icon);
+  transition: transform .25s, color .2s
+}
+
+.grp .t:hover svg {
+  color: var(--accent)
+}
+
+.grp.closed .t svg {
+  transform: rotate(-90deg)
+}
+
+.items {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows .3s ease
+}
+
+.items>div {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column
+}
+
+.grp.closed .items {
+  grid-template-rows: 0fr
+}
+
+.grp.closed .items a {
+  visibility: hidden;
+  transition: visibility 0s .3s
+}
+
+.items a {
+  padding: 3px 0 3px 12px;
+  line-height: 18px;
+  transition: color .2s
+}
+
+.items a:hover,
+#nav a.active {
+  color: var(--accent)
+}
+
+#burger {
+  display: none
+}
+
+@media (max-width: 900px) {
+  .side-top {
+    padding-right: 104px
+  }
+
+  .brand {
+    font-size: 24px
+  }
+
+  #burger {
+    display: block;
+    margin-top: 16px;
+    background: none;
+    border: 0;
+    padding: 0;
+    font: 500 15px 'Archivo', sans-serif;
+    color: var(--muted);
+    cursor: pointer
+  }
+
+  .ctrl {
+    top: 12px;
+    right: 12px;
+    gap: 6px
+  }
+}

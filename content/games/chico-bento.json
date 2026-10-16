@@ -1,0 +1,74 @@
+{
+  "title": "Chico Bento (Roblox)",
+  "trailer": "B6LHp8xDFV4",
+  "screenshots": [],
+  "description": {
+    "pt": "Chico Bento e seus amigos chegaram no Roblox! Divirta-se na roça com Chico, Zé Lelé e Rosinha com minigames, missões e muitas recompensas.",
+    "en": "Chico Bento and his friends have arrived on Roblox! Have fun on the farm with Chico, Zé Lelé and Rosinha through minigames, quests and plenty of rewards."
+  },
+  "responsabilidades": [
+    {
+      "title": "game design",
+      "items": [
+        "level design",
+        {
+          "pt": "balanceamento",
+          "en": "balancing"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "features",
+      "blocks": [
+        {
+          "list": [
+            {
+              "pt": "Pesque com Zé Lelé e seus amigos!",
+              "en": "G"
+            },
+            {
+              "pt": "Jogue o Oia a Onça com Chico Bento!",
+              "en": "o"
+            },
+            {
+              "pt": "Fuja da lama com Rosinha sendo o mais rápido!",
+              "en": " "
+            },
+            {
+              "pt": "Compre e cuide de pets!",
+              "en": "f"
+            },
+            {
+              "pt": "Complete missões e colete recompensas!",
+              "en": "i"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "pt": "minha experiência",
+        "en": "my experience"
+      },
+      "blocks": [
+        {
+          "pt": "Esse foi o primeiro projeto onde trabalhei profissionalmente com jogos UGC, mais especificamente dentro da plataforma do Roblox.",
+          "en": "This was the first project where I worked professionally with UGC games, specifically within the Roblox platform."
+        },
+        {
+          "pt": "Durante o processo de desenvolvimento desse jogo pude trabalhar com todo o game design e a pipeline de produção de um jogo UGC, criando o level design para cada um dos minigames que o jogo tem, além de balancear a economia dos itens que são vendidos dentro do jogo.",
+          "en": "During the development of this game, I was able to work on the entire game design and production pipeline of a UGC game, creating the level design for each one of the minigames, as well as balancing the economy of the items sold within the game."
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Roblox",
+      "url": "https://www.roblox.com/pt/games/135842767633539/Chico-Bento"
+    }
+  ]
+}

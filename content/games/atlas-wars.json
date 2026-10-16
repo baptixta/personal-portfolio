@@ -1,0 +1,55 @@
+{
+  "title": "Atlas Wars",
+  "trailer": "",
+  "screenshots": [],
+  "links": [
+    {
+      "label": "Steam",
+      "url": "https://store.steampowered.com/app/2623340/Atlas_Wars/"
+    },
+    {
+      "label": "Epic Games",
+      "url": "https://store.epicgames.com/pt-BR/p/atlas-wars-5b83bd"
+    }
+  ],
+  "description": {
+    "pt": "\"Junte-se ao épico mundo de Atlas Wars, um jogo multiplayer de luta rápido e baseado em habilidades! Escolha heróis únicos, domine habilidades incríveis e lute em arenas loucas e exclusivas. Atlas Wars oferece uma experiência de batalha repleta de ação!\"",
+    "en": "\"Join the epic world of Atlas Wars, a fast-paced skill-based multiplayer brawler! Choose unique heroes, master awesome abilities, and battle in crazy and unique arenas. Atlas Wars offers an action-packed brawl experience!\""
+  },
+  "responsabilidades": [
+    {
+      "title": "game design",
+      "items": [
+        "gameplay design",
+        "economy design",
+        "level design",
+        {
+          "pt": "balanceamento",
+          "en": "balancing"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": {
+        "pt": "minha experiência",
+        "en": "my experience"
+      },
+      "blocks": [
+        {
+          "pt": "Esse foi o primeiro jogo do estilo \"Brawler\" que trabalhei, e foram diversos desafios durante o desenvolvimento.",
+          "en": "This was the first \"Brawler\"-style game I worked on, and there were many challenges during development."
+        },
+        {
+          "pt": "Por conta da equipe pequena, ressaltamos pontos positivos do jogo e trabalhamos da melhor forma dentro das limitações que tinhamos impostas.",
+          "en": "Due to the small team, we highlighted the game's strengths and worked in the best way possible within the limitations we had."
+        },
+        {
+          "pt": "Por não conseguir montar movesets extensos e complexos como em outros jogos, focamos em uma gameplay dinâmica por meio dos níveis e das interações possíveis com itens, mantendo a gameplay rápida e cativante, além dos sistemas de nível e desbloqueios de personagens para manter o jogador \"preso\" dentro do jogo.",
+          "en": "Since we couldn't create extensive and complex movesets like in other games, we focused on dynamic gameplay through levels and possible item interactions, keeping the gameplay fast and engaging, along with leveling systems and character unlocks to keep the player \"hooked\" in the game."
+        }
+      ]
+    }
+  ]
+}

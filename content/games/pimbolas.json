@@ -1,0 +1,90 @@
+{
+  "title": "Pimbolas",
+  "trailer": "1Ir0AuBdNaY?si=4_Q-WjcHhgUj1zDq",
+  "screenshots": [],
+  "description": {
+    "pt": "Pimbolas é um party game multijogador local para você jogar partidas de pebolim frenéticas, em diferentes arenas, usando diversos power-ups para te ajudar a ganhar as partidas e se tornar um craque.",
+    "en": "Pimbolas is a local multiplayer party game where you can play fast-paced foosball matches in different arenas, using various power-ups to help you win and become a true champion."
+  },
+  "responsabilidades": [
+    {
+      "title": "game design",
+      "items": [
+        {
+          "pt": "balanceamento",
+          "en": "balancing"
+        }
+      ]
+    },
+    {
+      "title": "sound design",
+      "items": [
+        "sound effects",
+        {
+          "pt": "músicas",
+          "en": "songs"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "features",
+      "blocks": [
+        {
+          "list": [
+            {
+              "pt": "Mais de 15 power-ups diferentes para intensificar suas partidas",
+              "en": "O"
+            },
+            {
+              "pt": "Diferentes arenas para disputar suas partidas",
+              "en": "v"
+            },
+            {
+              "pt": "Personalize seus jogadores com diferentes itens e cores",
+              "en": "e"
+            },
+            {
+              "pt": "Multiplayer local até 4 jogadores",
+              "en": "r"
+            },
+            {
+              "pt": "Você pode jogar contra o CPU também",
+              "en": " "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "pt": "minha experiência",
+        "en": "my experience"
+      },
+      "blocks": [
+        {
+          "pt": "Esse é o primeiro jogo comercial autoral que estou trabalhando com meus sócios na Nano Knight Studio. Estamos aprendendo muito com esse processo.",
+          "en": "This is the first original commercial game I'm working on with my partners at Nano Knight Studio. We're learning a lot from this process."
+        },
+        {
+          "pt": "Eu estou trabalhando ativamente no game design, na música e no som desse jogo. Mas como somos apenas três pessoas, todos nós participamos de todas as etapas do processo de desenvolvimento.",
+          "en": "I'm actively working on the game design, music, and sound for this game. But since we're just three people, all of us take part in every stage of the development process."
+        },
+        {
+          "pt": "Estamos registrando o processo de desenvolvimento em devlogs no Youtube, caso queira assistir vou deixar o link abaixo.",
+          "en": "We're documenting the development process in devlogs on YouTube. If you'd like to watch, I'll leave the link below."
+        },
+        {
+          "video": "https://www.youtube-nocookie.com/embed/videoseries?list=PLbpN6bv9xede_9ey35JNgnRnLK2TX9JMV"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Steam",
+      "url": "https://store.steampowered.com/app/3621200/Pimbolas/"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": {
+    "pt": "serviços",
+    "en": "services"
+  },
+  "sections": [
+    {
+      "title": {
+        "pt": "consultoria de game design",
+        "en": "hi, i'm baptixta!"
+      },
+      "blocks": [
+        {
+          "pt": "Sou game designer, e escrevo uma newsletter (baptixta.substack.com). Atualmente estou dando aulas no curso de Jogos Digitais na FIAP.",
+          "en": "I'm a game designer, and I write a newsletter (baptixta.substack.com). I'm currently teaching in the Game Dev program at FIAP."
+        },
+        {
+          "pt": "Além disso, sou cofundador do Nano Knight Studio, e atuo como systems designer na Kluge Interactive. Também tenho um curso onde te ensino game design, o Game Design Experience.",
+          "en": "In addition, I'm the co-founder of Nano Knight Studio, and also work as a systems designer in Kluge Interactive. I also run a course where I teach game design — Game Design Experience."
+        },
+        {
+          "pt": "Antes da Dumativa e FIAP, trabalhei na Flux Games no game design dos inimigos e chefões do jogo Cobra Kai 2: Dojos Rising.",
+          "en": "Before working at Dumativa and FIAP, I was at Flux Games, designing enemies and bosses for the game Cobra Kai 2: Dojos Rising."
+        },
+        {
+          "pt": "Antes da Flux Games, trabalhei no game/level design do jogo Avalon Vivo Keyd.",
+          "en": "Before Flux Games, I worked on the game and level design for Avalon Vivo Keyd."
+        },
+        {
+          "pt": "Antes disso trabalhei como Front-End Developer na FIAP, desenvolvendo e iterando o site e sistemas da empresa.",
+          "en": "Before that, I worked as a Front-End Developer at FIAP, developing and iterating on the company's website and systems."
+        }
+      ]
+    }
+  ]
+}

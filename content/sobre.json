@@ -1,0 +1,20 @@
+{
+  "title": {
+    "pt": "sobre mim",
+    "en": "about me"
+  },
+  "sections": [
+    {
+      "title": {
+        "pt": "oi, eu sou o baptixta!",
+        "en": "hi, i'm baptixta!"
+      },
+      "blocks": [
+        {
+          "pt": "Sou game designer, e escrevo uma newsletter. atualmente estou dando aulas no curso de Jogos Digitais na FIAP.",
+          "en": "I'm a game designer, and I write a newsletter. I'm currently teaching in the Game Dev program at FIAP."
+        }
+      ]
+    }
+  ]
+}

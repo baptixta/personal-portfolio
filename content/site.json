@@ -1,0 +1,429 @@
+{
+  "site": {
+    "name": [
+      "davi",
+      "baptixta"
+    ],
+    "avatar": "assets/profile.png",
+    "bio": {
+      "pt": "game designer, cofundador da Nano Knight Studio, professor na FIAP.\natualmente em SP.",
+      "en": "game designer, co-founder of Nano Knight Studio, professor at FIAP.\ncurrently in SP."
+    },
+    "social": [
+      {
+        "name": "LinkedIn",
+        "icon": "linkedin.svg",
+        "url": "https://www.linkedin.com/in/baptixta/"
+      },
+      {
+        "name": "Instagram",
+        "icon": "insta.svg",
+        "url": "https://www.instagram.com/baptixta/"
+      },
+      {
+        "name": "Newsletter",
+        "icon": "substack.svg",
+        "url": "https://baptixta.substack.com"
+      },
+      {
+        "name": "YouTube",
+        "icon": "yt.svg",
+        "url": "https://www.youtube.com/@baptixta"
+      },
+      {
+        "name": "Email",
+        "icon": "email.svg",
+        "url": "mailto:davibaptixta@gmail.com"
+      }
+    ]
+  },
+  "nav": [
+    {
+      "title": {
+        "pt": "coisas que eu trabalhei",
+        "en": "things I've worked on"
+      },
+      "items": [
+        {
+          "label": "Pimbolas",
+          "page": "pimbolas"
+        },
+        {
+          "label": "Cobra Kai 2: Dojo's Rising",
+          "page": "cobra-kai-2"
+        },
+        {
+          "label": "Chico Bento (Roblox)",
+          "page": "chico-bento"
+        },
+        {
+          "label": "Avalon",
+          "page": "avalon"
+        },
+        {
+          "label": "Rasek",
+          "page": "rasek"
+        },
+        {
+          "label": "Atlas Wars",
+          "page": "atlas-wars"
+        }
+        
+      ]
+    },
+    {
+      "title": {
+        "pt": "coisas que eu fiz",
+        "en": "things I've done"
+      },
+      "items": [
+        {
+          "label": "Game Design Experience",
+          "url": "https://csjdigital.com.br/pv-gdx/"
+        },
+        {
+          "label": {
+            "pt": "Guia do Game Designer",
+            "en": "Game Designer's Guide"
+          },
+          "url": "https://baptixta.github.io/guia-do-game-designer/"
+        }
+      ]
+    },
+    {
+      "title": {
+        "pt": "serviços que eu presto",
+        "en": "services I offer"
+      },
+      "items": [
+        {
+          "label": {
+            "pt": "consultoria de game design",
+            "en": "game design consulting"
+          },
+          "page": "services"
+        }
+      ]
+    },
+    {
+      "title": {
+        "pt": "sobre mim",
+        "en": "about me"
+      },
+      "items": [
+        {
+          "label": {
+            "pt": "descubra",
+            "en": "discover"
+          },
+          "page": "sobre"
+        },
+        {
+          "label": "newsletter",
+          "url": "https://baptixta.substack.com"
+        }
+      ]
+    }
+  ],
+  "pages": {
+    "pimbolas": "content/games/pimbolas.json",
+    "cobra-kai-2": "content/games/cobra-kai-2.json",
+    "chico-bento": "content/games/chico-bento.json",
+    "avalon": "content/games/avalon.json",
+    "sobre": "content/sobre.json",
+    "rasek": "content/games/rasek.json",
+    "atlas-wars": "content/games/atlas-wars.json",
+    "services": "content/services.json"
+  },
+  "ui": {
+    "resp": {
+      "pt": "responsabilidades",
+      "en": "responsibilities"
+    },
+    "menu": "menu"
+  },
+  "home": {
+    "cards": [
+      {
+        "title": "Pimbolas",
+        "img": "assets/pimbolas.png",
+        "page": "pimbolas"
+      },
+      {
+        "title": "Cobra Kai 2: Dojo's Rising",
+        "img": "assets/ck2.png",
+        "page": "cobra-kai-2"
+      },
+      {
+        "title": "Chico Bento (Roblox)",
+        "img": "assets/chico_bento.png",
+        "page": "chico-bento"
+      },
+      {
+        "title": "Avalon",
+        "img": "assets/avalon.png",
+        "page": "avalon"
+      }
+    ],
+    "sections": [
+      {
+        "title": {
+          "pt": "Trampo",
+          "en": "Work"
+        },
+        "rows": [
+          [
+            "Nano Knight Studio",
+            {
+              "pt": "cofundador, game/sound designer",
+              "en": "co-founder, game/sound designer"
+            },
+            {
+              "pt": "2020 - Agora",
+              "en": "2020 - Present"
+            }
+          ],
+          [
+            "FIAP",
+            "professor",
+            {
+              "pt": "2024 - Agora",
+              "en": "2024 - Present"
+            }
+          ],
+          [
+            "Mother Tech",
+            "gameplay designer",
+            "2026 - 2026"
+          ],
+          [
+            "Dumativa",
+            "game designer",
+            "2022 - 2024"
+          ],
+          [
+            "Flux Games",
+            "game designer",
+            "2021 - 2022"
+          ],
+          [
+            "Vivo Keyd",
+            "game/level designer",
+            "2018 - 2021"
+          ],
+          [
+            "FIAP",
+            "front-end developer",
+            "2018 - 2021"
+          ]
+        ]
+      },
+      {
+        "title": {
+          "pt": "Educação",
+          "en": "Education"
+        },
+        "rows": [
+          [
+            "FIAP",
+            {
+              "pt": "pós-tech, digital product management",
+              "en": "graduate program, digital product management"
+            },
+            {
+              "pt": "2020 - Agora",
+              "en": "2020 - Present"
+            }
+          ],
+          [
+            "FIAP",
+            {
+              "pt": "tecnólogo, jogos digitais",
+              "en": "associate degree, digital games"
+            },
+            {
+              "pt": "2024 - Agora",
+              "en": "2024 - Present"
+            }
+          ],
+          [
+            "Cultura Inglesa",
+            {
+              "pt": "inglês avançado",
+              "en": "advanced English"
+            },
+            {
+              "pt": "2026 - Agora",
+              "en": "2026 - Present"
+            }
+          ]
+        ]
+      },
+      {
+        "title": {
+          "pt": "Participações",
+          "en": "Appearances"
+        },
+        "rows": [
+          {
+            "cols": [
+              "FIAPCAST",
+              "#34 - BASTIDORES DOS INDIE GAMES",
+              "Jul 2026"
+            ],
+            "url": "https://youtu.be/HGwBcW7H90c?si=0ifAxHISaQZYnfkv"
+          },
+          {
+            "cols": [
+              "FIAP Decode",
+              "#81 - Portátil, Rayssa em jogo, Baldur's Gate 3",
+              {
+                "pt": "Mai 2025",
+                "en": "May 2025"
+              }
+            ],
+            "url": "https://open.spotify.com/episode/1jQKave3FqHcbe1Sx2tXm7?si=1943a457545c4291"
+          },
+          {
+            "cols": [
+              "Hipsters.Tech",
+              "#438 - Dev. de Jogos",
+              "Nov 2024"
+            ],
+            "url": "https://open.spotify.com/episode/1jQKave3FqHcbe1Sx2tXm7?si=1943a457545c4291"
+          },
+          {
+            "cols": [
+              "FIAP Decode",
+              "#66 - BGS, Pokémons hackeados, jogo BR no Atari",
+              {
+                "pt": "Out 2024",
+                "en": "Oct 2024"
+              }
+            ],
+            "url": "https://www.youtube.com/live/3gN2gTiEBdY?si=_Gi1Vi-h2TsjTzHL"
+          },
+          {
+            "cols": [
+              "Semana de S.I (USP Leste)",
+              "G.D: Enfrentando desafios",
+              {
+                "pt": "Out 2024",
+                "en": "Oct 2024"
+              }
+            ],
+            "url": "https://www.youtube.com/live/x4wTBaHlyfo?si=L-0FcPMwn7_ojCah&t=5666"
+          },
+          {
+            "cols": [
+              "Game Design de Bolso",
+              "#69 - Combat Design é só luta?",
+              "Jul 2024"
+            ],
+            "url": "https://open.spotify.com/episode/03ReYFXB0NuuUKy6MNqExi?si=a64bfbda090043a0"
+          },
+          {
+            "cols": [
+              "Game Design de Bolso",
+              "#59 - Carreira: Game Designer",
+              {
+                "pt": "Fev 2024",
+                "en": "Feb 2024"
+              }
+            ],
+            "url": "https://open.spotify.com/episode/0roZ1pcRq6Pfpwe0uupKMd?si=c7c5e8dcc22e4317"
+          },
+          {
+            "cols": [
+              "Game Design de Bolso",
+              "#50 - Dúvidas da indústria de jogos",
+              {
+                "pt": "Set 2023",
+                "en": "Sep 2023"
+              }
+            ],
+            "url": "https://open.spotify.com/episode/1MZcdLlDzn1ZXLP5QX6vFL?si=93c0668e7c7b4d14"
+          },
+          {
+            "cols": [
+              "The Gamer Inside Brasil",
+              "Fall Effect - Entrevista com Davi Baptista",
+              {
+                "pt": "Ago 2023",
+                "en": "Aug 2023"
+              }
+            ],
+            "url": "https://youtu.be/p8czhkl19s4?si=f7pwzFXFDBgL1guH"
+          },
+          {
+            "cols": [
+              "Clécio Espindola",
+              "Gamedev Talk #19 | Davi Baptista - Game Designer",
+              {
+                "pt": "Ago 2023",
+                "en": "Aug 2023"
+              }
+            ],
+            "url": "https://www.youtube.com/live/dKZrpgrBXgI?si=qJEb7COlQB6uadwb"
+          },
+          {
+            "cols": [
+              "Game Design de Bolso",
+              "#47 - Faculdade de jogos vale a pena?",
+              {
+                "pt": "Ago 2023",
+                "en": "Aug 2023"
+              }
+            ],
+            "url": "https://open.spotify.com/episode/3W3WPQHKRQXfHINSIgPHkv?si=23aae0d41f1f44e9"
+          },
+          {
+            "cols": [
+              "Full Sail Brazil",
+              "O que é um Game Designer? | com Davi Baptista",
+              "Jul 2023"
+            ],
+            "url": "https://youtu.be/tZwKZlx_KsE?si=grbXfmyQcNed0cK5"
+          },
+          {
+            "cols": [
+              "Fábrica de Jogos",
+              "Fábrica Entrevista #01 2023 - Davi Baptista",
+              "Mar 2023"
+            ],
+            "url": "https://www.youtube.com/live/WAmk9un9NwI?si=JQdsiiYrvYtBRfBy"
+          },
+          {
+            "cols": [
+              "Fatec Carapicuiba",
+              "Davi Arcos Baptista: Game Design",
+              "Jun 2022"
+            ],
+            "url": "https://www.youtube.com/live/p-rJhp1KMmg?si=dzPXiIkuwiICFEvW"
+          },
+          {
+            "cols": [
+              "Game Design de Bolso",
+              "#16 - O que é uma Game Jam?",
+              {
+                "pt": "Mai 2022",
+                "en": "May 2022"
+              }
+            ],
+            "url": "https://open.spotify.com/episode/4UEdJkPlGrxtfMXaBFE6QI?si=0a714b4bcdc24c41"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": {
+      "pt": "contato",
+      "en": "contact"
+    },
+    "text": {
+      "pt": "precisa de um game designer/consultor pro seu jogo? vamos conversar.\nescolha o lugar que você preferir e é só me mandar uma mensagem.",
+      "en": "need a game designer/consultant for your game? let's talk.\npick the place you prefer and just send me a message."
+    }
+  }
+}

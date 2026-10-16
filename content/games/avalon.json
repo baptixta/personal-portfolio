@@ -1,0 +1,54 @@
+{
+  "title": "Avalon",
+  "trailer": "2Djle3zJ1c4",
+  "screenshots": [],
+  "description": {
+    "pt": "\"Avalon é um jogo de plataforma retrô com muitas aventuras. Com seus gráficos incríveis e estilo de pixel art, Avalon mistura o antigo e o novo em um jogo. Lute com seu guerreiro contra o mal e traga a paz de volta. Descubra todos os mistérios deste universo incrível!\"",
+    "en": "\"Avalon is a retro platformer full of adventures. With its stunning graphics and pixel art style, Avalon blends the old and the new into one game. Fight evil with your warrior and bring peace back. Uncover all the mysteries of this incredible universe!\""
+  },
+  "responsabilidades": [
+    {
+      "title": "game design",
+      "items": [
+        "enemy/boss design",
+        "level design",
+        {
+          "pt": "balanceamento",
+          "en": "balancing"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": {
+        "pt": "minha experiência",
+        "en": "my experience"
+      },
+      "blocks": [
+        {
+          "pt": "Esse foi o primeiro projeto comercial que eu trabalhei. Por trabalharmos numa equipe pequena (4 pessoas), eu construí o GDD (Game Design Document) inteiro e criei, balanceei e iterei as mecânicas e sistemas do jogo do começo ao fim com o programador.",
+          "en": "This was the first commercial project I worked on. Since we were a small team (4 people), I built the entire GDD (Game Design Document) and created, balanced, and iterated the game’s mechanics and systems from start to finish alongside the programmer."
+        },
+        {
+          "pt": "Além disso, foi a primeira vez que tive a oportunidade de criar fases (fiz quase todas as fases do jogo), e pude colocar em prática a ideia de ir apresentando mecânicas aos poucos conforme as fases avançam, e ir dificultando aos poucos.",
+          "en": "It was also the first time I had the opportunity to design levels (I created almost all of them), and I was able to apply the idea of gradually introducing mechanics as the player progresses, slowly increasing the difficulty."
+        },
+        {
+          "pt": "Foi uma experiência muito divertida.",
+          "en": "It was a very fun experience."
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "itch.io",
+      "url": "https://keydstudio.itch.io/avalon"
+    },
+    {
+      "label": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.keydstudio.avalonvivokeyd&hl=pt_BR&gl=US"
+    }
+  ]
+}

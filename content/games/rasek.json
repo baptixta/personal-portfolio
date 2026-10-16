@@ -1,0 +1,66 @@
+{
+  "title": "Rasek",
+  "trailer": "O8ABw5drKm8",
+  "screenshots": [],
+  "links": [
+    {
+      "label": {
+        "pt": "Instagram do jogo",
+        "en": "Game's Instagram"
+      },
+      "url": "https://www.instagram.com/rasekgame/"
+    }
+  ],
+  "description": {
+    "pt": "\"Rasek é um jogo Free2Play MMORPG em 2D, Pixel Art com câmera top down\".",
+    "en": "\"Rasek is a Free2Play 2D Pixel Art MMORPG with a top-down camera\"."
+  },
+  "responsabilidades": [
+    {
+      "title": "game design",
+      "items": [
+        "gameplay design",
+        {
+          "pt": "design dos sistemas do jogo",
+          "en": "game systems design"
+        },
+        "enemy design",
+        {
+          "pt": "balanceamento",
+          "en": "balancing"
+        },
+        {
+          "pt": "liderança e alinhamento da equipe de game design",
+          "en": "leadership and alignment of the game design team"
+        }
+      ]
+    },
+    {
+      "title": "ui/ux",
+      "items": [
+        {
+          "pt": "wireframes/protótipos animados para auxiliar UI/UX",
+          "en": "wireframes/animated prototypes to support UI/UX"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": {
+        "pt": "minha experiência",
+        "en": "my experience"
+      },
+      "blocks": [
+        {
+          "pt": "Esse é um dos jogos mais desafiadores que trabalhei como game designer. Trabalhar num MMORPG está me fazendo a entender melhor como integrar cada um dos sistemas de forma que eles se conectem e estejam interligados entre eles e fiquem fluídos com a gameplay.",
+          "en": "This is one of the most challenging games I've worked on as a game designer. Working on an MMORPG is helping me better understand how to integrate each system so that they connect and interact with each other while remaining fluid with the gameplay."
+        },
+        {
+          "pt": "A quantidade massiva de conteúdo que esse tipo de jogo tem também está me ensinando muito sobre como lidar com diversas situações e melhorar minhas habilidades de balanceamento de gameplay visando todas classes que o jogo tem, missões, inimigos, e todas outras variáveis dessa equação.",
+          "en": "The massive amount of content in this type of game is also teaching me a lot about how to handle various situations and improve my gameplay balancing skills — considering all the classes in the game, missions, enemies, and all the other variables in the equation."
+        }
+      ]
+    }
+  ]
+}
