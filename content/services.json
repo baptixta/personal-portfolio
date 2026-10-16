@@ -46,6 +46,13 @@
       ]
     },
     {
+      "gallery": {
+        "img": "assets/evolucao.png",
+        "alt": "evolução",
+        "width": "100%"
+      }
+    },
+    {
       "title": {
         "pt": "como funciona?",
         "en": "how does it work?"
@@ -68,6 +75,13 @@
           "en": "**04. Follow-up**\n\nWe discuss recommendations with the team and, depending on the engagement model, review implemented changes, assess new builds, and explore further opportunities for improvement."
         }
       ]
+    },
+    {
+      "gallery": {
+        "img": "assets/evolucao2.png",
+        "alt": "evolução",
+        "width": "100%"
+      }
     },
     {
       "title": {

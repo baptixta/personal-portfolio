@@ -8,12 +8,20 @@
   },
   "responsabilidades": [
     {
-      "title": "game design",
+      "title": "**game design**",
       "items": [
-        "level design",
+        "• level design",
         {
-          "pt": "balanceamento",
-          "en": "balancing"
+          "pt": "• sistemas de progressão",
+          "en": "• progression systems"
+        },
+        {
+          "pt": "• balanceamento",
+          "en": "• balancing"
+        },
+        {
+          "pt": "• live-ops e retenção",
+          "en": "• retention and live-ops"
         }
       ]
     }
@@ -25,24 +33,24 @@
         {
           "list": [
             {
-              "pt": "Pesque com Zé Lelé e seus amigos!",
-              "en": "G"
+              "pt": "• Pesque com Zé Lelé e seus amigos!",
+              "en": "• Go fishing with Zé Lelé and his friends!"
             },
             {
-              "pt": "Jogue o Oia a Onça com Chico Bento!",
-              "en": "o"
+              "pt": "• Jogue o Oia a Onça com Chico Bento!",
+              "en": "• Play Oia a Onça with Chico Bento!"
             },
             {
-              "pt": "Fuja da lama com Rosinha sendo o mais rápido!",
-              "en": " "
+              "pt": "• Fuja da lama com Rosinha sendo o mais rápido!",
+              "en": "• Run from the mud with Rosinha and be the fastest!"
             },
             {
-              "pt": "Compre e cuide de pets!",
-              "en": "f"
+              "pt": "• Compre e cuide de pets!",
+              "en": "• Buy and take care of pets!"
             },
             {
-              "pt": "Complete missões e colete recompensas!",
-              "en": "i"
+              "pt": "• Complete missões e colete recompensas!",
+              "en": "• Complete quests and collect rewards!"
             }
           ]
         }

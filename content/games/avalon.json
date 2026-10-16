@@ -8,13 +8,13 @@
   },
   "responsabilidades": [
     {
-      "title": "game design",
+      "title": "**game design**",
       "items": [
-        "enemy/boss design",
-        "level design",
+        "• enemy/boss design",
+        "• level design",
         {
-          "pt": "balanceamento",
-          "en": "balancing"
+          "pt": "• balanceamento",
+          "en": "• balancing"
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "title": "Atlas Wars",
-  "trailer": "",
+  "trailer": "rCbqVuOVXUc",
   "screenshots": [],
   "links": [
     {
@@ -18,14 +18,14 @@
   },
   "responsabilidades": [
     {
-      "title": "game design",
+      "title": "**game design**",
       "items": [
-        "gameplay design",
-        "economy design",
-        "level design",
+        "• gameplay design",
+        "• economy design",
+        "• level design",
         {
-          "pt": "balanceamento",
-          "en": "balancing"
+          "pt": "• balanceamento",
+          "en": "• balancing"
         }
       ]
     }

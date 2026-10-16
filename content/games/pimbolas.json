@@ -2,15 +2,15 @@
   "title": "Pimbolas",
   "trailer": "1Ir0AuBdNaY?si=4_Q-WjcHhgUj1zDq",
   "screenshots": [
-    "assets/pimbolas/print-1.png",
-    "assets/pimbolas/print-2.png",
-    "assets/pimbolas/print-3.png",
-    "assets/pimbolas/print-4.png",
-    "assets/pimbolas/print-5.png",
-    "assets/pimbolas/print-6.png",
-    "assets/pimbolas/print-7.png",
-    "assets/pimbolas/print-8.png",
-    "assets/pimbolas/print-9.png"
+    "assets/pimbolas/print-1.jpg",
+    "assets/pimbolas/print-2.jpg",
+    "assets/pimbolas/print-3.jpg",
+    "assets/pimbolas/print-4.jpg",
+    "assets/pimbolas/print-5.jpg",
+    "assets/pimbolas/print-6.jpg",
+    "assets/pimbolas/print-7.jpg",
+    "assets/pimbolas/print-8.jpg",
+    "assets/pimbolas/print-9.jpg"
   ],
   "description": {
     "pt": "Pimbolas é um party game multijogador local para você jogar partidas de pebolim frenéticas, em diferentes arenas, usando diversos power-ups para te ajudar a ganhar as partidas e se tornar um craque.",
@@ -18,21 +18,32 @@
   },
   "responsabilidades": [
     {
-      "title": "game design",
+      "title": "**game design**",
       "items": [
         {
-          "pt": "balanceamento",
-          "en": "balancing"
+          "pt": "• sistema de progressão",
+          "en": "• progression system"
+        },
+        {
+          "pt": "• balanceamento",
+          "en": "• balancing"
+        },
+        {
+          "pt": "• level design",
+          "en": "• level design"
         }
       ]
     },
     {
-      "title": "sound design",
+      "title": "**sound design**",
       "items": [
-        "sound effects",
         {
-          "pt": "músicas",
-          "en": "songs"
+          "pt": "• efeitos sonoros",
+          "en": "• sound effects"
+        },
+        {
+          "pt": "• músicas",
+          "en": "• songs"
         }
       ]
     }
@@ -44,24 +55,24 @@
         {
           "list": [
             {
-              "pt": "Mais de 15 power-ups diferentes para intensificar suas partidas",
-              "en": "O"
+              "pt": "• Mais de 15 power-ups diferentes para intensificar suas partidas",
+              "en": "• Over 15 different power-ups to spice up your matches"
             },
             {
-              "pt": "Diferentes arenas para disputar suas partidas",
-              "en": "v"
+              "pt": "• Diferentes arenas para disputar suas partidas",
+              "en": "• Various arenas to compete in"
             },
             {
-              "pt": "Personalize seus jogadores com diferentes itens e cores",
-              "en": "e"
+              "pt": "• Personalize seus jogadores com diferentes itens e cores",
+              "en": "• Customize your players with different items and colors"
             },
             {
-              "pt": "Multiplayer local até 4 jogadores",
-              "en": "r"
+              "pt": "• Multiplayer local até 4 jogadores",
+              "en": "• Local multiplayer for up to 4 players"
             },
             {
-              "pt": "Você pode jogar contra o CPU também",
-              "en": " "
+              "pt": "• Você pode jogar contra o CPU também",
+              "en": "• Play against the CPU as well"
             }
           ]
         }

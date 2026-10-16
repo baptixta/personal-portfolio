@@ -5,14 +5,54 @@
   },
   "sections": [
     {
-      "title": {
-        "pt": "oi, eu sou o baptixta!",
-        "en": "hi, i'm baptixta!"
-      },
       "blocks": [
         {
-          "pt": "Sou game designer, e escrevo uma newsletter. atualmente estou dando aulas no curso de Jogos Digitais na FIAP.",
-          "en": "I'm a game designer, and I write a newsletter. I'm currently teaching in the Game Dev program at FIAP."
+          "gallery": [
+            {
+              "img": "assets/skate.gif",
+              "alt": { "pt": "andando de skate", "en": "Skateboarding" }
+            },
+            {
+              "img": "assets/me.jpg",
+              "alt": { "pt": "eu e Panamá", "en": "me and Panamá" }
+            }
+          ]
+        },
+        {
+          "pt": "sou game designer e professor.",
+          "en": "I'm a game designer and a professor."
+        },
+        {
+          "pt": "já trabalhei com **design de sistemas**, **mecânicas**, **combate**, **game feel** e **level design**.",
+          "en": "I've worked with **systems design**, **mechanics**, **combat**, **game feel** and **level design**."
+        },
+        {
+          "pt": "com o passar dos anos tive o privilégio de mexer um pouco em várias das áreas do game design, aprender e evoluir com diferentes projetos e visões, com diferentes pessoas.",
+          "en": "Over the years, I've had the privilege of working in several areas of game design, learning and growing through different projects and perspectives, with different people."
+        },
+        {
+          "pt": "por meio dos jogos consigo fazer a parada que eu mais amo nesse mundo: criar.",
+          "en": "Through games, I get to do the thing I love most in this world: create."
+        },
+        {
+          "gallery": [
+            {
+              "img": "assets/cafezin.png",
+              "alt": { "pt": "café", "en": "coffee" }
+            },
+            {
+              "img": "assets/discos.jpg",
+              "alt": { "pt": "discos", "en": "records" }
+            }
+          ]
+        },
+        {
+          "pt": "além do profissional, também curto muito andar de skate, ler, ouvir música e ir em shows, e tomar um cafézinho em lugares maneiros.",
+          "en": "Beyond work, I also really enjoy skateboarding, reading, listening to music, going to shows, and having a coffee at cool places."
+        },
+        {
+          "pt": "adoro conhecer lugares e pessoas novas. é muito bom viver.",
+          "en": "I love getting to know new places and new people. It's great to be alive."
         }
       ]
     }

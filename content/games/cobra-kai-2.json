@@ -1,21 +1,31 @@
 {
   "title": "Cobra Kai 2: Dojo's Rising",
   "trailer": "IQ0HB7sPSx0",
-  "screenshots": [],
+  "screenshots": [
+    "assets/ck2/print-1.jpg",
+    "assets/ck2/print-2.jpg",
+    "assets/ck2/print-3.jpg",
+    "assets/ck2/print-4.jpg",
+    "assets/ck2/print-5.jpg",
+    "assets/ck2/print-6.jpg"
+  ],
   "description": {
     "pt": "\"Recrute... Treine... Lute! O All Valley Aguarda!\n\nEagle Fang, Cobra Kai, Miyagi-do – Qual é seu dojo? Tal escolha inicia a sua jornada, mas cabe a você recrutar a equipe mais poderosa enquanto domina seu estilo de luta e batalha para solidificar o LEGADO do seu dojo como All Valley Karate Grand Champion!\"",
     "en": "\"Recruit…Train…Fight! The All Valley Awaits!\n\nEagle Fang, Cobra Kai, Miyagi-do – Which is your dojo? Your in-game choice is only the beginning of your journey. You must then recruit the most powerful team to join your dojo, master your fighting style, and battle your way towards solidifying your dojo's LEGACY as the All Valley Karate Tournament Grand Champion!\""
   },
   "responsabilidades": [
     {
-      "title": "game design",
+      "title": "**game design**",
       "items": [
-        "AI Enemy System",
-        "AI Boss System",
-        "enemy and boss design",
+        "• AI Enemy System",
+        "• AI Boss System",
         {
-          "pt": "balanceamento",
-          "en": "balancing"
+          "pt": "• design de inimigos e chefões",
+          "en": "• enemy and boss design"
+        },
+        {
+          "pt": "• balanceamento",
+          "en": "• balancing"
         }
       ]
     }
@@ -42,28 +52,28 @@
         {
           "list": [
             {
-              "pt": "Design: documentação de tudo sobre o inimigo",
-              "en": "Design: documentation of everything about the enemy"
+              "pt": "• **Design**: documentação de tudo sobre o inimigo",
+              "en": "• **Design**: documentation of everything about the enemy"
             },
             {
-              "pt": "Criação da arte: gravação de movimentos/visual do personagem a partir do briefing",
-              "en": "Art creation: recording of character movements/appearance based on the briefing"
+              "pt": "• **Criação da arte**: gravação de movimentos/visual do personagem a partir do briefing",
+              "en": "• **Art creation**: recording of character movements/appearance based on the briefing"
             },
             {
-              "pt": "Implementação do comportamento da IA: dentro da Unity, a partir do sistema construído pela equipe",
-              "en": "AI behavior implementation: inside Unity, based on the system built by the team"
+              "pt": "• **Implementação do comportamento da IA**: dentro da Unity, a partir do sistema construído pela equipe",
+              "en": "• **AI behavior implementation**: inside Unity, based on the system built by the team"
             },
             {
-              "pt": "Implementação dos golpes: dentro da Unity, a partir do sistema construído pela equipe",
-              "en": "Attack implementation: inside Unity, based on the system built by the team"
+              "pt": "• **Implementação dos golpes**: dentro da Unity, a partir do sistema construído pela equipe",
+              "en": "• **Attack implementation**: inside Unity, based on the system built by the team"
             },
             {
-              "pt": "Iteração: pequenas mudanças feitas para melhorar o funcionamento",
-              "en": "Iteration: small changes made to improve functionality"
+              "pt": "• **Iteração**: pequenas mudanças feitas para melhorar o funcionamento",
+              "en": "• **Iteration**: small changes made to improve functionality"
             },
             {
-              "pt": "Finalização: entrega do inimigo completo",
-              "en": "Finalization: delivery of the complete enemy"
+              "pt": "• **Finalização**: entrega do inimigo completo",
+              "en": "• **Finalization**: delivery of the complete enemy"
             }
           ]
         }
