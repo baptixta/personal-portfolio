@@ -3,9 +3,10 @@
     "pt": "consultoria de game design",
     "en": "game design consulting"
   },
-  "cards": {
-    "title": "Consultoria",
-    "img": "assets/consultoria.svg"
+  "gallery": {
+    "img": "assets/consultoria.svg",
+    "alt": "consultoria",
+    "width": "100%"
   },
   "sections": [
     {
@@ -15,7 +16,7 @@
       },
       "blocks": [
         {
-          "pt": "Ajudo estúdios a identificar problemas, explorar soluções e melhorar a experiência dos seus jogos através de consultoria de game design. O trabalho é adaptado às necessidades de cada projeto, desde análises pontuais até o acompanhamento contínuo do desenvolvimento.",
+          "pt": "ajudo estúdios a identificar problemas, explorar soluções e melhorar a experiência dos seus jogos através de consultoria de game design. o trabalho é adaptado às necessidades de cada projeto, desde análises pontuais até o acompanhamento contínuo do desenvolvimento.",
           "en": "I help studios identify problems, explore solutions, and improve their games through game design consulting. The work is tailored to each project's needs, from focused reviews to ongoing development support."
         }
       ]
@@ -27,19 +28,19 @@
       },
       "blocks": [
         {
-          "pt": "→ **Game Feel & Gameplay**\n\nAnálise das mecânicas e interações do jogo para identificar oportunidades de tornar a experiência mais satisfatória, responsiva e divertida.",
+          "pt": "→ **game feel & gameplay**\n\nanálise das mecânicas e interações do jogo para identificar oportunidades de tornar a experiência mais satisfatória, responsiva e divertida.",
           "en": "→ **Game Feel & Gameplay**\n\nAnalyzing game mechanics and interactions to identify opportunities to make the experience more satisfying, responsive, and fun."
         },
         {
-          "pt": "→ **Onboarding & UX**\n\nMelhorias na forma como o jogador aprende, entende e interage com as mecânicas e sistemas do jogo.",
-          "en": "→ **Onboarding & UX**\n\nImproving how players learn, understand, and interact with the game's mechanics and systems."
+          "pt": "→ **onboarding & ux**\n\nmelhorias na forma como o jogador aprende, entende e interage com as mecânicas e sistemas do jogo.",
+          "en": "→ **onboarding & UX**\n\nimproving how players learn, understand, and interact with the game's mechanics and systems."
         },
         {
-          "pt": "→ **Systems & Balance**\n\nAnálise de sistemas, progressão, economia, balanceamento e interações entre mecânicas.",
+          "pt": "→ **systems & balance**\n\nanálise de sistemas, progressão, economia, balanceamento e interações entre mecânicas.",
           "en": "→ **Systems & Balance**\n\nAnalyzing systems, progression, economy, balance, and interactions between mechanics."
         },
         {
-          "pt": "→ **Game Design Geral**\n\nUma segunda opinião sobre decisões de design, identificação de problemas e sugestões para melhorar a experiência do jogador.",
+          "pt": "→ **game design geral**\n\numa segunda opinião sobre decisões de design, identificação de problemas e sugestões para melhorar a experiência do jogador.",
           "en": "→ **General Game Design**\n\nA second opinion on design decisions, identifying problems, and suggesting ways to improve the player experience."
         }
       ]
@@ -51,19 +52,19 @@
       },
       "blocks": [
         {
-          "pt": "**01. Conversa inicial**\n\nComeçamos entendendo o projeto, o estágio de desenvolvimento e os principais desafios do estúdio. A partir disso, definimos onde a consultoria pode gerar mais valor.",
+          "pt": "**01. conversa inicial**\n\ncomeçamos entendendo o projeto, o estágio de desenvolvimento e os principais desafios do estúdio. a partir disso, definimos onde a consultoria pode gerar mais valor.",
           "en": "**01. Initial conversation**\n\nWe start by understanding the project, its stage of development, and the studio's main challenges. From there, we define where consulting can provide the most value."
         },
         {
-          "pt": "**02. Análise do jogo**\n\nJogo e analiso o projeto para entender suas mecânicas, sistemas e experiência atual. O objetivo é identificar problemas, oportunidades e pontos que merecem mais atenção.",
+          "pt": "**02. análise do jogo**\n\njogo e analiso o projeto para entender suas mecânicas, sistemas e experiência atual. o objetivo é identificar problemas, oportunidades e pontos que merecem mais atenção.",
           "en": "**02. Game analysis**\n\nI play and analyze the project to understand its mechanics, systems, and current player experience. The goal is to identify problems, opportunities, and areas that deserve closer attention."
         },
         {
-          "pt": "**03. Feedback & Documentação**\n\nOrganizo as observações em feedbacks e sugestões de melhoria, utilizando documentação escrita e visual para facilitar a compreensão, discussão e implementação das ideias pela equipe.",
+          "pt": "**03. feedback & documentação**\n\norganizo as observações em feedbacks e sugestões de melhoria, utilizando documentação escrita e visual para facilitar a compreensão, discussão e implementação das ideias pela equipe.",
           "en": "**03. Feedback & Documentation**\n\nI organize observations into feedback and improvement suggestions, using written and visual documentation to help the team understand, discuss, and implement ideas."
         },
         {
-          "pt": "**04. Acompanhamento**\n\nDiscutimos as recomendações com a equipe e, dependendo do modelo de contratação, acompanhamos as mudanças implementadas, revisamos novas versões e exploramos outras oportunidades de melhoria.",
+          "pt": "**04. acompanhamento**\n\ndiscutimos as recomendações com a equipe e, dependendo do modelo de contratação, acompanhamos as mudanças implementadas, revisamos novas versões e exploramos outras oportunidades de melhoria.",
           "en": "**04. Follow-up**\n\nWe discuss recommendations with the team and, depending on the engagement model, review implemented changes, assess new builds, and explore further opportunities for improvement."
         }
       ]
@@ -75,19 +76,19 @@
       },
       "blocks": [
         {
-          "pt": "**Consultoria pontual**\n\nPara discutir questões específicas, analisar mecânicas ou obter uma segunda opinião sobre decisões de game design.",
+          "pt": "**consultoria pontual**\n\npara discutir questões específicas, analisar mecânicas ou obter uma segunda opinião sobre decisões de game design.",
           "en": "**One-off consulting**\n\nFor discussing specific issues, reviewing mechanics, or getting a second opinion on game design decisions."
         },
         {
-          "pt": "**Pacote de horas**\n\nPara realizar uma análise mais estruturada do jogo, documentar feedbacks e trabalhar nas principais oportunidades de melhoria.",
+          "pt": "**pacote de horas**\n\npara realizar uma análise mais estruturada do jogo, documentar feedbacks e trabalhar nas principais oportunidades de melhoria.",
           "en": "**Hourly packages**\n\nFor a more structured game review, documented feedback, and work on the most important opportunities for improvement."
         },
         {
-          "pt": "**Acompanhamento contínuo**\n\nPara acompanhar o desenvolvimento, discutir decisões de design e revisar as melhorias implementadas ao longo do tempo.",
+          "pt": "**acompanhamento contínuo**\n\npara acompanhar o desenvolvimento, discutir decisões de design e revisar as melhorias implementadas ao longo do tempo.",
           "en": "**Ongoing consulting**\n\nFor ongoing development support, discussing design decisions, and reviewing improvements over time."
         },
         {
-          "pt": "O formato, o escopo e o investimento são definidos em conjunto, de acordo com as necessidades do projeto.",
+          "pt": "o formato, o escopo e o investimento são definidos em conjunto, de acordo com as necessidades do projeto.",
           "en": "The format, scope, and investment are agreed upon together, according to the project's needs."
         }
       ]
@@ -99,52 +100,35 @@
       },
       "blocks": [
         {
-          "pt": "Ao longo da minha trajetória, tive a oportunidade de colaborar com diferentes estúdios e projetos de jogos.",
-          "en": "Throughout my career, I've had the opportunity to collaborate with different game studios and projects."
+          "pt": "ao longo da minha trajetória, tive a oportunidade de colaborar com diferentes estúdios, empresas e projetos de jogos.",
+          "en": "Throughout my career, I've had the opportunity to collaborate with different game studios, companies and projects."
         }
       ],
-      "images": [
+      "logos": [
         {
-          "alt": {
-            "pt": "Logo do estúdio ou parceiro 1",
-            "en": "Studio or partner logo 1"
-          },
-          "src": ""
+          "name": "sebrae",
+          "img": "assets/logos/sebrae.svg",
+          "url": "https://sebrae.com.br/"
         },
         {
-          "alt": {
-            "pt": "Logo do estúdio ou parceiro 2",
-            "en": "Studio or partner logo 2"
-          },
-          "src": ""
+          "name": "adesampa",
+          "img": "assets/logos/ade-sampa.svg",
+          "url": "https://adesampa.com.br/"
         },
         {
-          "alt": {
-            "pt": "Logo do estúdio ou parceiro 3",
-            "en": "Studio or partner logo 3"
-          },
-          "src": ""
+          "name": "playbor",
+          "img": "assets/logos/playbor.svg",
+          "url": "https://playbor.com.br/"
         },
         {
-          "alt": {
-            "pt": "Logo do estúdio ou parceiro 4",
-            "en": "Studio or partner logo 4"
-          },
-          "src": ""
+          "name": "mother tech",
+          "img": "assets/logos/mother.svg",
+          "url": "https://mother.tech/"
         },
         {
-          "alt": {
-            "pt": "Logo do estúdio ou parceiro 5",
-            "en": "Studio or partner logo 5"
-          },
-          "src": ""
-        },
-        {
-          "alt": {
-            "pt": "Logo do estúdio ou parceiro 6",
-            "en": "Studio or partner logo 6"
-          },
-          "src": ""
+          "name": "stone shard games",
+          "img": "assets/logos/stone-shard.svg",
+          "url": "https://stoneshardgames.com/"
         }
       ]
     }

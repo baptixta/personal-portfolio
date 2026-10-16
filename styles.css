@@ -205,16 +205,18 @@ h3 {
 
 /* cartas */
 .hand {
+  --n: 4;
   display: flex;
   justify-content: center;
   padding: 6px 0 30px
 }
 
 .card {
+  --w: min(calc(100% / (.84 * var(--n, 4) + .16)), 30%);
   position: relative;
   display: block;
-  width: 28%;
-  margin-left: -4.5%;
+  width: var(--w);
+  margin-left: calc(-.16 * var(--w));
   will-change: transform;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent
@@ -224,11 +226,31 @@ h3 {
   margin-left: 0
 }
 
+.card.nolink {
+  cursor: default
+}
+
 .card img {
   width: 100%;
-  aspect-ratio: 487/699;
+  height: auto;
   user-select: none;
   -webkit-user-drag: none
+}
+
+/* botão voltar no título da página */
+h2.back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: inherit
+}
+
+h2.back svg {
+  transition: transform .2s
+}
+
+h2.back a:hover svg {
+  transform: translateX(-4px)
 }
 
 /* página de jogo */
@@ -575,4 +597,70 @@ main {
     right: 12px;
     gap: 6px
   }
+}
+/* imagens estáticas */
+.fig {
+  margin: 30px 0
+}
+
+.fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fig figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted)
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+  gap: 12px;
+  margin: 20px 0
+}
+
+.gallery .fig {
+  margin: 0
+}
+
+/* grid de logos de parceiros */
+.gallery.logos {
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr))
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76px;
+  padding: 14px 18px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  transition: border-color .2s, transform .2s
+}
+
+.logo img {
+  width: 100%;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: .65;
+  transition: opacity .2s
+}
+
+[data-theme=dark] .logo img {
+  filter: grayscale(1) invert(1)
+}
+
+a.logo:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px)
+}
+
+a.logo:hover img {
+  opacity: 1
 }
