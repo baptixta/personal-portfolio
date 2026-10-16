@@ -168,8 +168,8 @@
     "sections": [
       {
         "title": {
-          "pt": "Trampo",
-          "en": "Work"
+          "pt": "trampo",
+          "en": "work"
         },
         "rows": [
           [
@@ -220,8 +220,8 @@
       },
       {
         "title": {
-          "pt": "Educação",
-          "en": "Education"
+          "pt": "educação",
+          "en": "education"
         },
         "rows": [
           [
@@ -261,8 +261,8 @@
       },
       {
         "title": {
-          "pt": "Participações",
-          "en": "Appearances"
+          "pt": "participações",
+          "en": "appearances"
         },
         "rows": [
           {
