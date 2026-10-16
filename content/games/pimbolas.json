@@ -1,7 +1,17 @@
 {
   "title": "Pimbolas",
   "trailer": "1Ir0AuBdNaY?si=4_Q-WjcHhgUj1zDq",
-  "screenshots": [],
+  "screenshots": [
+    "assets/pimbolas/print-1.png",
+    "assets/pimbolas/print-2.png",
+    "assets/pimbolas/print-3.png",
+    "assets/pimbolas/print-4.png",
+    "assets/pimbolas/print-5.png",
+    "assets/pimbolas/print-6.png",
+    "assets/pimbolas/print-7.png",
+    "assets/pimbolas/print-8.png",
+    "assets/pimbolas/print-9.png"
+  ],
   "description": {
     "pt": "Pimbolas é um party game multijogador local para você jogar partidas de pebolim frenéticas, em diferentes arenas, usando diversos power-ups para te ajudar a ganhar as partidas e se tornar um craque.",
     "en": "Pimbolas is a local multiplayer party game where you can play fast-paced foosball matches in different arenas, using various power-ups to help you win and become a true champion."
