@@ -94,13 +94,28 @@ export function createRenderer(D, lang) {
   /* ---------- páginas ---------- */
   const home = () => {
     const h = D.home;
-    const secs = h.sections.map(s => `<section class="sec"><h2>${rich(s.title)}</h2>${s.rows.map(r => {
-      r = Array.isArray(r) ? { cols: r } : r;
-      const inner = r.cols.map(x => `<span>${rich(x)}</span>`).join('');
-      return r.url
-        ? `<a class="row c${r.cols.length}" href="${esc(r.url)}" target="_blank" rel="noopener">${inner}</a>`
-        : `<div class="row c${r.cols.length}">${inner}</div>`;
-    }).join('')}</section>`).join('');
+    // logo quadrado ao lado do nome: por linha ("logo") ou pelo nome da empresa em home.logos
+    const secs = h.sections.map(s => {
+      const rows = s.rows.map(r => {
+        r = Array.isArray(r) ? { cols: r } : r;
+        const name = String(t(r.cols[0]) ?? '');
+        return { ...r, name, logo: r.logo || (h.logos || {})[name] };
+      });
+      const has = rows.some(r => r.logo); // reserva o espaço do logo em todas as linhas da seção
+      const body = rows.map(r => {
+        const cells = r.cols.map((x, i) => {
+          if (i || !has) return `<span>${rich(x)}</span>`;
+          const sq = r.logo
+            ? `<img class="sq" src="${esc(u(r.logo))}" alt="${esc(r.name)}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'sq',textContent:this.alt.charAt(0)}))">`
+            : '<span class="sq ghost" aria-hidden="true"></span>';
+          return `<span class="co">${sq}<span>${rich(x)}</span></span>`;
+        }).join('');
+        return r.url
+          ? `<a class="row c${r.cols.length}" href="${esc(r.url)}" target="_blank" rel="noopener">${cells}</a>`
+          : `<div class="row c${r.cols.length}">${cells}</div>`;
+      }).join('');
+      return `<section class="sec${has ? ' has-logo' : ''}"><h2>${rich(s.title)}</h2>${body}</section>`;
+    }).join('');
     return `<div class="page"><h1 class="sr-only">${esc((h.seo && h.seo.h1) || fullName)}</h1>${hand(h.cards)}${secs}${contact()}</div>`;
   };
 

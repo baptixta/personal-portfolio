@@ -211,27 +211,9 @@
             }
           ],
           [
-            "Kluge Interactive",
-            "game designer [contract]",
-            {
-              "pt": "2026 - Agora",
-              "en": "2026 - Present"
-            }
-          ],
-          [
             "Mother Tech",
-            "gameplay designer [contract]",
+            "gameplay designer",
             "2026 - 2026"
-          ],
-          [
-            "Kluge Interactive",
-            "systems designer [contract]",
-            "2025 - 2026"
-          ],
-          [
-            "Trexx",
-            "game designer [contract]",
-            "2025 - 2025"
           ],
           [
             "Dumativa",
@@ -465,6 +447,17 @@
         "pt": "Davi Baptixta, game designer e consultor de game design",
         "en": "Davi Baptixta, game designer and game design consultant"
       }
+    },
+    "logos": {
+      "Nano Knight Studio": "assets/companies/nano-knight-studio.svg",
+      "FIAP": "assets/companies/fiap.svg",
+      "Mother Tech": "assets/companies/mother-tech.svg",
+      "Kluge Interactive": "assets/companies/kluge-interactive.svg",
+      "Trexx": "assets/companies/trexx.svg",
+      "Dumativa": "assets/companies/dumativa.svg",
+      "Flux Games": "assets/companies/flux-games.svg",
+      "Vivo Keyd": "assets/companies/vivo-keyd.svg",
+      "Cultura Inglesa": "assets/companies/cultura-inglesa.svg"
     }
   },
   "contact": {

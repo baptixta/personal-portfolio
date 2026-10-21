@@ -187,11 +187,11 @@ h2.sub {
   align-items: baseline
 }
 
-.row span:nth-child(2) {
+.row > span:nth-child(2) {
   color: var(--muted)
 }
 
-.row span:last-child:not(:first-child) {
+.row > span:last-child:not(:first-child) {
   font-size: 12px;
   color: var(--muted);
   text-align: right
@@ -201,7 +201,7 @@ h2.sub {
   grid-template-columns: 1fr auto
 }
 
-.row.c2 span:last-child {
+.row.c2 > span:last-child {
   font-size: 12px
 }
 
@@ -339,7 +339,7 @@ h2.sub {
   margin-bottom: 8px
 }
 
-a.row:hover span:first-child {
+a.row:hover > span:first-child {
   color: var(--accent)
 }
 
@@ -393,12 +393,12 @@ a.row:hover span:first-child {
     row-gap: 2px
   }
 
-  .row span:nth-child(2) {
+  .row > span:nth-child(2) {
     grid-row: 2;
     grid-column: 1/-1
   }
 
-  .row.c2 span:nth-child(2) {
+  .row.c2 > span:nth-child(2) {
     grid-row: auto;
     grid-column: auto
   }
@@ -686,4 +686,72 @@ h2.sub {
   height: 25px;
   display: grid;
   place-items: center
+}
+
+/* logo quadrado ao lado do nome (trampo/educação). Tamanho: mude --logo (máx. 50px) */
+:root {
+  --logo: 30px
+}
+
+.row {
+  position: relative
+}
+
+.co {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0
+}
+
+.sq {
+  flex: none;
+  width: var(--logo);
+  height: var(--logo);
+  border-radius: 7px;
+  object-fit: cover;
+  background: var(--ph);
+  display: grid;
+  place-items: center;
+  font: 700 13px/1 'Archivo', sans-serif;
+  color: var(--muted)
+}
+
+.sq.ghost {
+  visibility: hidden
+}
+
+.sec.has-logo .row {
+  min-height: calc(var(--logo) + 8px);
+  align-items: center
+}
+
+/* desktop: o logo "pendura" na margem esquerda, sem empurrar o texto (o alinhamento dos títulos é mantido) */
+@media (min-width: 901px) {
+  .sec.has-logo .co .sq {
+    position: absolute;
+    left: calc(-1 * (var(--logo) + 16px));
+    top: 50%;
+    transform: translateY(-50%)
+  }
+}
+
+/* tablet: logo na própria linha, com mais espaço para o nome */
+@media (max-width: 900px) {
+  .sec.has-logo .row.c3 {
+    grid-template-columns: 42% 1fr auto
+  }
+}
+
+/* celular: cargo na segunda linha, alinhado com o nome (depois do logo) */
+@media (max-width: 560px) {
+  .sec.has-logo .row.c3 {
+    grid-template-columns: 1fr auto;
+    row-gap: 0
+  }
+
+  .sec.has-logo .row.c3 > span:nth-child(2) {
+    padding-left: calc(var(--logo) + 10px);
+    margin-top: -4px
+  }
 }
