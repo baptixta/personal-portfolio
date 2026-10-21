@@ -154,7 +154,8 @@ main {
   margin: 0 auto
 }
 
-h2 {
+h2,
+h1.back {
   font: italic 700 18px/1 'Archivo', sans-serif;
   color: var(--accent);
   padding-bottom: 12px;
@@ -162,7 +163,8 @@ h2 {
   margin-bottom: 10px
 }
 
-h3 {
+h3,
+h2.sub {
   font: italic 700 18px/1 'Archivo', sans-serif;
   color: var(--accent);
   margin-bottom: 18px
@@ -238,18 +240,18 @@ h3 {
 }
 
 /* botão voltar no título da página */
-h2.back a {
+.back a {
   display: inline-flex;
   align-items: center;
   gap: 9px;
   color: inherit
 }
 
-h2.back svg {
+.back svg {
   transition: transform .2s
 }
 
-h2.back a:hover svg {
+.back a:hover svg {
   transform: translateX(-4px)
 }
 
@@ -663,4 +665,25 @@ a.logo:hover {
 
 a.logo:hover img {
   opacity: 1
+}
+/* títulos semânticos (h1 por página, h2 nas seções) com o mesmo visual de antes */
+h2.sub {
+  border: 0;
+  padding: 0
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap
+}
+
+.ctrl a.flag {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center
 }

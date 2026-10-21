@@ -146,5 +146,16 @@
         }
       ]
     }
-  ]
+  ],
+  "seo": {
+    "type": "service",
+    "title": {
+      "pt": "Consultoria de Game Design para Estúdios | Davi Baptixta",
+      "en": "Game Design Consulting for Game Studios | Davi Baptixta"
+    },
+    "description": {
+      "pt": "Consultoria de game design para estúdios e desenvolvedores de jogos: game feel, gameplay, onboarding, sistemas e balanceamento, com feedback documentado.",
+      "en": "Game design consulting for studios and game developers: game feel, gameplay, onboarding, systems and balance reviews, with documented feedback."
+    }
+  }
 }

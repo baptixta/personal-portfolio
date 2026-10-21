@@ -35,7 +35,27 @@
         "icon": "email.svg",
         "url": "mailto:davibaptixta@gmail.com"
       }
-    ]
+    ],
+    "url": "https://baptixta.com",
+    "seo": {
+      "image": "assets/profile.png",
+      "googleVerification": "",
+      "alternateNames": [
+        "Davi Baptista",
+        "Davi Arcos Baptista",
+        "baptixta"
+      ],
+      "knowsAbout": [
+        "Game design",
+        "Game design consulting",
+        "Systems design",
+        "Game balancing",
+        "Game feel",
+        "Level design",
+        "Combat design",
+        "Onboarding and UX"
+      ]
+    }
   },
   "nav": [
     {
@@ -68,7 +88,6 @@
           "label": "Atlas Wars",
           "page": "atlas-wars"
         }
-        
       ]
     },
     {
@@ -414,7 +433,21 @@
           }
         ]
       }
-    ]
+    ],
+    "seo": {
+      "title": {
+        "pt": "Davi Baptixta — Game Designer e Consultor de Game Design",
+        "en": "Davi Baptixta — Game Designer & Game Design Consultant"
+      },
+      "description": {
+        "pt": "Game designer, professor na FIAP e cofundador da Nano Knight Studio. Consultoria de game design: game feel, balanceamento, sistemas e onboarding.",
+        "en": "Game designer, professor at FIAP and co-founder of Nano Knight Studio. Game design consulting: game feel, balancing, systems and onboarding."
+      },
+      "h1": {
+        "pt": "Davi Baptixta, game designer e consultor de game design",
+        "en": "Davi Baptixta, game designer and game design consultant"
+      }
+    }
   },
   "contact": {
     "title": {

@@ -10,11 +10,17 @@
           "gallery": [
             {
               "img": "assets/skate.gif",
-              "alt": { "pt": "andando de skate", "en": "Skateboarding" }
+              "alt": {
+                "pt": "andando de skate",
+                "en": "Skateboarding"
+              }
             },
             {
               "img": "assets/me.jpg",
-              "alt": { "pt": "eu e Panamá", "en": "me and Panamá" }
+              "alt": {
+                "pt": "eu e Panamá",
+                "en": "me and Panamá"
+              }
             }
           ]
         },
@@ -38,11 +44,17 @@
           "gallery": [
             {
               "img": "assets/cafezin.png",
-              "alt": { "pt": "café", "en": "coffee" }
+              "alt": {
+                "pt": "café",
+                "en": "coffee"
+              }
             },
             {
               "img": "assets/discos.jpg",
-              "alt": { "pt": "discos", "en": "records" }
+              "alt": {
+                "pt": "discos",
+                "en": "records"
+              }
             }
           ]
         },
@@ -56,5 +68,15 @@
         }
       ]
     }
-  ]
+  ],
+  "seo": {
+    "title": {
+      "pt": "Sobre Davi Baptixta — game designer e professor",
+      "en": "About Davi Baptixta — game designer and professor"
+    },
+    "description": {
+      "pt": "Conheça Davi Baptixta: game designer e professor com experiência em design de sistemas, mecânicas, combate, game feel e level design.",
+      "en": "Meet Davi Baptixta: a game designer and professor with experience in systems design, mechanics, combat, game feel and level design."
+    }
+  }
 }
