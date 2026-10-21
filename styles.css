@@ -710,7 +710,6 @@ h2.sub {
   height: var(--logo);
   border-radius: 7px;
   object-fit: cover;
-  background: var(--ph);
   display: grid;
   place-items: center;
   font: 700 13px/1 'Archivo', sans-serif;
