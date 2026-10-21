@@ -449,14 +449,14 @@
       }
     },
     "logos": {
-      "Nano Knight Studio": "assets/companies/nano-knight-studio.svg",
-      "FIAP": "assets/companies/fiap.svg",
-      "Mother Tech": "assets/companies/mother-tech.svg",
-      "Kluge Interactive": "assets/companies/kluge-interactive.svg",
-      "Trexx": "assets/companies/trexx.svg",
-      "Dumativa": "assets/companies/dumativa.svg",
-      "Flux Games": "assets/companies/flux-games.svg",
-      "Vivo Keyd": "assets/companies/vivo-keyd.svg",
+      "Nano Knight Studio": "assets/logos/work/nano-knight.png",
+      "FIAP": "assets/logos/work/fiap.ico",
+      "Mother Tech": "assets/logos/work/mother.svg",
+      "Kluge Interactive": "assets/logos/work/kluge.webp",
+      "Trexx": "assets/logos/work/trexx.png",
+      "Dumativa": "assets/logos/work/dumativa.jpg",
+      "Flux Games": "assets/logos/work/flux-games.png",
+      "Vivo Keyd": "assets/logos/work/vivo-keyd.webp",
       "Cultura Inglesa": "assets/companies/cultura-inglesa.svg"
     }
   },
