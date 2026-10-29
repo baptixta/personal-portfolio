@@ -1258,3 +1258,14 @@ h2.sub {
 .aba > .sec {
   margin-top: 64px
 }
+
+.alm-catdesc {
+  margin-top: 22px;
+  color: var(--muted);
+  line-height: 1.35
+}
+
+.alm-catdesc + .alm-grid,
+.alm-catdesc:not([hidden]) ~ .alm-grid {
+  margin-top: 16px
+}

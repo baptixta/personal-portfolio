@@ -25,7 +25,7 @@ if (!D.site.url) { console.error('❌ falta "site.url" em content/site.json (ex.
 const pages = Object.fromEntries(Object.entries(D.pages).map(([k, p]) => [k, read(p)]));
 // fichas do almanaque ficam num JSON à parte (o app.js faz o mesmo no navegador)
 for (const p of Object.values(pages))
-  if (p.almanaque && p.almanaque.file) p.almanaque.refs = read(p.almanaque.file).refs;
+  if (p.almanaque && p.almanaque.file) Object.assign(p.almanaque, read(p.almanaque.file));
 const keys = ['', ...Object.keys(pages)];
 const base = D.site.url.replace(/\/$/, '');
 

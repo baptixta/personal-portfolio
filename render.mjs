@@ -199,6 +199,7 @@ export function createRenderer(D, lang) {
       <input class="alm-q" type="search" placeholder="${esc(L.search)}" aria-label="${esc(L.search)}">
       <div class="chips">${chip('cat', '', esc(L.all), refs.length, true)}${cats.map(([k, n]) => chip('cat', k, esc(k), n)).join('')}</div>
       ${tags.length ? `<details class="tagbox"><summary>tags ${chevron}</summary><div class="chips tagchips">${tags.map(([k]) => chip('tag', k, '#' + esc(k))).join('')}</div></details>` : ''}
+      ${Object.entries(A.categories || {}).map(([k, v]) => `<p class="alm-catdesc" data-for="${esc(k)}" hidden>${nl(v)}</p>`).join('')}
       <div class="alm-grid">${refs.map(ficha).join('')}</div>
       <p class="alm-empty" hidden>${rich(L.empty)}</p>
       <dialog class="alm-dlg" aria-label="${esc(L.almanaque)}"><div class="alm-bar"><button class="alm-close">${arrow}<span>${rich(L.close)}</span></button></div><div class="alm-body"></div></dialog></div>`;

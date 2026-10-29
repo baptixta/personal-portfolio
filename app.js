@@ -36,7 +36,7 @@ if (!legacy && !redirecting) {
       try {
         const p = await (await fetch('/' + D.pages[k])).json();
         // guia: as fichas do almanaque ficam num JSON à parte
-        if (p.almanaque && p.almanaque.file) p.almanaque.refs = (await (await fetch('/' + p.almanaque.file)).json()).refs;
+        if (p.almanaque && p.almanaque.file) Object.assign(p.almanaque, await (await fetch('/' + p.almanaque.file)).json());
         cache[k] = p;
       } catch (e) { return null; }
     }
@@ -68,8 +68,9 @@ if (!legacy && !redirecting) {
       n += ok;
     });
     $('.alm-empty').hidden = n > 0;
-    document.querySelectorAll('.alm [data-cat]').forEach(b => b.setAttribute('aria-pressed', b.dataset.cat === alm.cat));
-    document.querySelectorAll('.alm [data-tag]').forEach(b => b.setAttribute('aria-pressed', alm.tags.has(b.dataset.tag)));
+    document.querySelectorAll('.alm-catdesc').forEach(p => p.hidden = p.dataset.for !== alm.cat);
+    document.querySelectorAll('.alm .chip[data-cat]').forEach(b => b.setAttribute('aria-pressed', b.dataset.cat === alm.cat));
+    document.querySelectorAll('.alm .chip[data-tag]').forEach(b => b.setAttribute('aria-pressed', alm.tags.has(b.dataset.tag)));
   }
   function openFicha(f) {
     const d = $('.alm-dlg');
