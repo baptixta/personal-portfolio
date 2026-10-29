@@ -1185,3 +1185,76 @@ h2.sub {
 .tagbox .chips {
   margin-top: 10px
 }
+
+/* níveis do guia em dropdown */
+.nivel {
+  margin-top: 14px
+}
+
+.tabs + .aba .nivel:first-child {
+  margin-top: 36px
+}
+
+.nivel > details > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0 14px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer
+}
+
+.nivel > details > summary::-webkit-details-marker {
+  display: none
+}
+
+.nivel h2 {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 22px
+}
+
+.nivel > details > summary svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+  transform: rotate(-90deg);
+  transition: transform .25s
+}
+
+.nivel > details[open] > summary svg {
+  transform: none
+}
+
+.nivel > details > summary:hover h2 span {
+  color: var(--accent)
+}
+
+.nivel-body {
+  padding: 4px 0 18px 16px
+}
+
+.nivel > details[open] > .nivel-body {
+  animation: nivel-in .3s ease-out
+}
+
+@keyframes nivel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px)
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .nivel > details[open] > .nivel-body {
+    animation: none
+  }
+}
+
+.aba > .sec {
+  margin-top: 64px
+}

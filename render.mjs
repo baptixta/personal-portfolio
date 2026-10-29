@@ -174,7 +174,8 @@ export function createRenderer(D, lang) {
       ${arr(tp.links).length ? `<h3>${rich(L.related)}</h3><div class="reflinks">${arr(tp.links).map(l =>
         `<a class="row c2" href="${esc(l.url)}" target="_blank" rel="noopener"><span>${rich(l.label)}</span><span>${rich(l.type || host(l.url))}</span></a>`).join('')}</div>` : ''}
     </div></details>`;
-    const levels = arr(p.levels).map(lv => `<section class="sec nivel"><h2>${rich(lv.title)}${lv.subtitle ? ` <span>· ${rich(lv.subtitle)}</span>` : ''}</h2>${arr(lv.topics).map(topic).join('')}</section>`).join('');
+    // cada nível é um dropdown (fechado), com os tópicos dentro
+    const levels = arr(p.levels).map(lv => `<section class="nivel"><details><summary><h2>${rich(lv.title)}${lv.subtitle ? ` <span>· ${rich(lv.subtitle)}</span>` : ''}</h2>${chevron}</summary><div class="nivel-body">${arr(lv.topics).map(topic).join('')}</div></details></section>`).join('');
     const c = p.cta;
     const cta = c ? `<section class="sec"><h2>${rich(c.title)}</h2>${c.text ? `<p>${nl(c.text)}</p>` : ''}${c.video ? `<div class="video"><iframe src="${/^https?:/.test(c.video) ? esc(c.video) : 'https://www.youtube-nocookie.com/embed/' + esc(c.video)}" allowfullscreen loading="lazy" title="${esc(c.title)}"></iframe></div>` : ''}${c.button ? `<div class="links"><a href="${esc(c.button.url)}" target="_blank" rel="noopener">${rich(c.button.label)} ↗</a></div>` : ''}</section>` : '';
 
