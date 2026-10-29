@@ -164,7 +164,7 @@ export function createRenderer(D, lang) {
 
   const guia = p => {
     const L = Object.assign({
-      guia: 'guia', almanaque: 'almanaque', related: lang === 'pt' ? 'conteúdos relacionados' : 'related content',
+      guia: lang === 'pt' ? 'guia' : 'guide', almanaque: lang === 'pt' ? 'almanaque' : 'almanac', related: lang === 'pt' ? 'conteúdos relacionados' : 'related content',
       search: lang === 'pt' ? 'buscar por chefe, jogo, mecânica…' : 'search by boss, game, mechanic…',
       all: lang === 'pt' ? 'todas' : 'all', empty: lang === 'pt' ? 'nada encontrado. tente outro termo ou limpe os filtros.' : 'nothing found. try another term or clear the filters.',
       links: lang === 'pt' ? 'vídeos, artigos e prints' : 'videos, articles and screenshots', close: lang === 'pt' ? 'voltar' : 'back'
@@ -180,14 +180,18 @@ export function createRenderer(D, lang) {
     const cta = c ? `<section class="sec"><h2>${rich(c.title)}</h2>${c.text ? `<p>${nl(c.text)}</p>` : ''}${c.video ? `<div class="video"><iframe src="${/^https?:/.test(c.video) ? esc(c.video) : 'https://www.youtube-nocookie.com/embed/' + esc(c.video)}" allowfullscreen loading="lazy" title="${esc(c.title)}"></iframe></div>` : ''}${c.button ? `<div class="links"><a href="${esc(c.button.url)}" target="_blank" rel="noopener">${rich(c.button.label)} ↗</a></div>` : ''}</section>` : '';
 
     const A = p.almanaque || {};
+    // categoria e tags também podem vir como { pt, en } (tags: { pt: [...], en: [...] })
+    const cat = r => String(t(r.category) || '—'), tagsOf = r => arr(t(r.tags));
     const refs = arr(A.refs).slice().sort((a, b) => norm(a.category).localeCompare(norm(b.category)) || norm(a.title).localeCompare(norm(b.title)));
     const count = (list, f) => list.reduce((m, r) => (arr(f(r)).forEach(k => m.set(k, (m.get(k) || 0) + 1)), m), new Map());
-    const cats = [...count(refs, r => r.category || '—')].sort((a, b) => a[0].localeCompare(b[0]));
-    const tags = [...count(refs, r => r.tags)].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const cats = [...count(refs, cat)].sort((a, b) => a[0].localeCompare(b[0]));
+    const tags = [...count(refs, tagsOf)].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    // descrições: lista [{ name, text }] ou objeto { "nome": "texto" }
+    const catdesc = Array.isArray(A.categories) ? A.categories.map(c => [String(t(c.name)), c.text]) : Object.entries(A.categories || {});
     const ficha = r => {
       const links = arr(r.links).filter(l => /^https?:\/\//i.test(l.url || ''));
-      const tg = arr(r.tags).map(x => `<span class="tag">#${esc(x)}</span>`).join('');
-      return `<article class="ficha" tabindex="0" role="button" aria-haspopup="dialog" data-cat="${esc(r.category || '—')}" data-tags="${esc(arr(r.tags).join(' '))}" data-q="${esc(norm([r.title, r.game, r.category, r.summary, r.body, arr(r.tags).join(' ')].join(' ')))}">
+      const tg = tagsOf(r).map(x => `<span class="tag">#${esc(x)}</span>`).join('');
+      return `<article class="ficha" tabindex="0" role="button" aria-haspopup="dialog" data-cat="${esc(cat(r))}" data-tags="${esc(tagsOf(r).join(' '))}" data-q="${esc(norm([t(r.title), t(r.game), cat(r), t(r.summary), t(r.body), tagsOf(r).join(' ')].join(' ')))}">
         <span class="cap">${esc(r.game || r.category || '')}</span><h3>${rich(r.title)}</h3>${r.summary ? `<p>${rich(r.summary)}</p>` : ''}<span class="tags">${tg}</span>
         <div class="ficha-full" hidden><span class="cap">${esc(r.category || '')}</span><h2 class="ficha-t">${rich(r.title)}</h2>${r.game ? `<span class="cap">${esc(r.game)}</span>` : ''}
           <div class="tags">${tg}</div>${r.summary ? `<p class="summary">${rich(r.summary)}</p>` : ''}<div class="prose">${prose(r.body)}</div>
@@ -199,7 +203,7 @@ export function createRenderer(D, lang) {
       <input class="alm-q" type="search" placeholder="${esc(L.search)}" aria-label="${esc(L.search)}">
       <div class="chips">${chip('cat', '', esc(L.all), refs.length, true)}${cats.map(([k, n]) => chip('cat', k, esc(k), n)).join('')}</div>
       ${tags.length ? `<details class="tagbox"><summary>tags ${chevron}</summary><div class="chips tagchips">${tags.map(([k]) => chip('tag', k, '#' + esc(k))).join('')}</div></details>` : ''}
-      ${Object.entries(A.categories || {}).map(([k, v]) => `<p class="alm-catdesc" data-for="${esc(k)}" hidden>${nl(v)}</p>`).join('')}
+      ${catdesc.map(([k, v]) => `<p class="alm-catdesc" data-for="${esc(k)}" hidden>${nl(v)}</p>`).join('')}
       <div class="alm-grid">${refs.map(ficha).join('')}</div>
       <p class="alm-empty" hidden>${rich(L.empty)}</p>
       <dialog class="alm-dlg" aria-label="${esc(L.almanaque)}"><div class="alm-bar"><button class="alm-close">${arrow}<span>${rich(L.close)}</span></button></div><div class="alm-body"></div></dialog></div>`;
