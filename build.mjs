@@ -2,9 +2,19 @@
    Uso:  node build.mjs   (precisa de Node 18+, sem dependências) */
 import fs from 'node:fs';
 import path from 'node:path';
+import { execSync } from 'node:child_process';
 import { createRenderer } from './render.mjs';
 
 const OUT = 'dist';
+
+/* guia do game designer: o conteúdo mora no repo baptixta/guia-do-game-designer.
+   No GitHub Actions ele é baixado em guia/ pelo workflow; localmente, se a pasta não existir, é clonada aqui. */
+const GUIA = 'guia';
+const GUIA_REPO = 'https://github.com/baptixta/guia-do-game-designer.git';
+if (!fs.existsSync(GUIA)) {
+  try { execSync(`git clone --depth 1 ${GUIA_REPO} ${GUIA}`, { stdio: 'inherit' }); }
+  catch (e) { console.error(`\n❌ não consegui baixar o guia (${GUIA_REPO}). Clone o repo na pasta ${GUIA}/ e rode de novo.\n`); process.exit(1); }
+}
 const read = p => {
   try { return JSON.parse(fs.readFileSync(p, 'utf8')); }
   catch (e) { console.error(`\n❌ JSON inválido em ${p}: ${e.message}\n`); process.exit(1); }
@@ -13,6 +23,9 @@ const read = p => {
 const D = read('content/site.json');
 if (!D.site.url) { console.error('❌ falta "site.url" em content/site.json (ex.: "https://baptixta.com")'); process.exit(1); }
 const pages = Object.fromEntries(Object.entries(D.pages).map(([k, p]) => [k, read(p)]));
+// fichas do almanaque ficam num JSON à parte (o app.js faz o mesmo no navegador)
+for (const p of Object.values(pages))
+  if (p.almanaque && p.almanaque.file) p.almanaque.refs = read(p.almanaque.file).refs;
 const keys = ['', ...Object.keys(pages)];
 const base = D.site.url.replace(/\/$/, '');
 
@@ -20,6 +33,9 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 for (const f of ['assets', 'content', 'styles.css', 'app.js', 'render.mjs', 'CNAME'])
   if (fs.existsSync(f)) fs.cpSync(f, path.join(OUT, f), { recursive: true });
+// do guia, só os dados e as imagens (o resto do repo não vai para o site)
+for (const f of ['guia.json', 'almanaque.json', 'images/cover.png'])
+  if (fs.existsSync(path.join(GUIA, f))) fs.cpSync(path.join(GUIA, f), path.join(OUT, GUIA, f), { recursive: true });
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const verify = (D.site.seo && D.site.seo.googleVerification)

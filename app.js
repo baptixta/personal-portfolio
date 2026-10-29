@@ -33,9 +33,67 @@ if (!legacy && !redirecting) {
   async function load(k) {
     if (!k || !D.pages[k]) return null;
     if (!cache[k]) {
-      try { cache[k] = await (await fetch('/' + D.pages[k])).json(); } catch (e) { return null; }
+      try {
+        const p = await (await fetch('/' + D.pages[k])).json();
+        // guia: as fichas do almanaque ficam num JSON à parte
+        if (p.almanaque && p.almanaque.file) p.almanaque.refs = (await (await fetch('/' + p.almanaque.file)).json()).refs;
+        cache[k] = p;
+      } catch (e) { return null; }
     }
     return cache[k];
+  }
+
+  /* ---------- guia do game designer: abas, busca e filtros do almanaque, gaveta da ficha ---------- */
+  const alm = { cat: '', tags: new Set(), q: '' };
+  function tab(id, push) {
+    const t = document.getElementById('tab-' + id);
+    if (!t) return;
+    document.querySelectorAll('.guia [role=tab]').forEach(b => {
+      const on = b === t;
+      b.setAttribute('aria-selected', on);
+      b.tabIndex = on ? 0 : -1;
+      document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (push) history.replaceState(history.state, '', location.pathname + (id === 'guia' ? '' : '#' + id));
+  }
+  function filter() {
+    const g = $('.alm-grid');
+    if (!g) return;
+    const words = alm.q.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    g.querySelectorAll('.ficha').forEach(f => {
+      const tags = f.dataset.tags.split(' ');
+      const ok = (!alm.cat || f.dataset.cat === alm.cat) && [...alm.tags].every(x => tags.includes(x)) && words.every(w => f.dataset.q.includes(w));
+      f.hidden = !ok;
+      n += ok;
+    });
+    $('.alm-empty').hidden = n > 0;
+    document.querySelectorAll('.alm [data-cat]').forEach(b => b.setAttribute('aria-pressed', b.dataset.cat === alm.cat));
+    document.querySelectorAll('.alm [data-tag]').forEach(b => b.setAttribute('aria-pressed', alm.tags.has(b.dataset.tag)));
+  }
+  function openFicha(f) {
+    const d = $('.alm-dlg');
+    d.querySelector('.alm-body').innerHTML = f.querySelector('.ficha-full').innerHTML;
+    d.showModal();
+    d.querySelector('.alm-body').scrollTop = 0;
+  }
+  function guia() {
+    if (!$('.guia')) return;
+    alm.cat = ''; alm.tags.clear(); alm.q = '';
+    tab(location.hash === '#almanaque' ? 'almanaque' : 'guia');
+    const q = $('.alm-q');
+    if (q) q.oninput = () => { alm.q = q.value; filter(); };
+    const d = $('.alm-dlg');
+    if (d) d.onclick = e => { if (e.target === d || e.target.closest('.alm-close')) d.close(); };
+    // tilt leve nas fichas, seguindo o mouse
+    if (!reduce) document.querySelectorAll('.ficha').forEach(f => {
+      f.onpointermove = e => {
+        const r = f.getBoundingClientRect();
+        f.style.setProperty('--ry', ((e.clientX - r.left) / r.width - .5) * 8 + 'deg');
+        f.style.setProperty('--rx', ((e.clientY - r.top) / r.height - .5) * -8 + 'deg');
+      };
+      f.onpointerleave = () => { f.style.removeProperty('--rx'); f.style.removeProperty('--ry'); };
+    });
   }
 
   /* ---------- cartas estilo Balatro: flutuação idle + hover com tilt, escala e "juice" ---------- */
@@ -88,6 +146,7 @@ if (!legacy && !redirecting) {
     document.head.insertAdjacentHTML('beforeend', R.headHTML(k, p));
     document.body.classList.remove('menu');
     cards();
+    guia();
   }
 
   /* transição: a página atual sai para a direita e a nova entra vindo da direita */
@@ -155,6 +214,17 @@ if (!legacy && !redirecting) {
       b.setAttribute('aria-expanded', !g.classList.contains('closed'));
       return;
     }
+    const tb = e.target.closest('.guia [role=tab]');
+    if (tb) { tab(tb.dataset.tab, true); return; }
+    const chip = e.target.closest('.alm .chip');
+    if (chip) {
+      if ('cat' in chip.dataset) alm.cat = chip.dataset.cat;
+      else alm.tags.has(chip.dataset.tag) ? alm.tags.delete(chip.dataset.tag) : alm.tags.add(chip.dataset.tag);
+      filter();
+      return;
+    }
+    const f = e.target.closest('.ficha');
+    if (f && !e.target.closest('a')) { openFicha(f); return; }
     const a = e.target.closest('a[href]');
     if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     if (a.target === '_blank' || a.origin !== location.origin || a.hasAttribute('download')) return;
@@ -162,6 +232,17 @@ if (!legacy && !redirecting) {
     e.preventDefault();
     if (a.hasAttribute('data-back') && cur > 0) { history.back(); return; }
     navigate(a.pathname);
+  });
+  // teclado: Enter/Espaço abrem a ficha, setas trocam de aba
+  document.addEventListener('keydown', e => {
+    const f = e.target.closest && e.target.closest('.ficha');
+    if (f && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openFicha(f); return; }
+    const tb = e.target.closest && e.target.closest('.guia [role=tab]');
+    if (tb && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+      const all = [...document.querySelectorAll('.guia [role=tab]')];
+      const n = all[(all.indexOf(tb) + (e.key === 'ArrowRight' ? 1 : all.length - 1)) % all.length];
+      tab(n.dataset.tab, true); n.focus();
+    }
   });
   addEventListener('popstate', go);
 
@@ -171,4 +252,5 @@ if (!legacy && !redirecting) {
   if (history.state == null) history.replaceState({ i: 0 }, '');
   cur = history.state.i;
   cards(); // o conteúdo já está na página (pré-renderizado)
+  guia();
 }

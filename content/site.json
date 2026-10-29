@@ -102,10 +102,10 @@
         },
         {
           "label": {
-            "pt": "Guia do Game Designer ↗",
-            "en": "Game Designer's Guide ↗"
+            "pt": "Guia do Game Designer",
+            "en": "Game Designer's Guide"
           },
-          "url": "https://baptixta.github.io/guia-do-game-designer/"
+          "page": "guia-game-designer"
         }
       ]
     },
@@ -152,7 +152,8 @@
     "sobre": "content/sobre.json",
     "rasek": "content/games/rasek.json",
     "atlas-wars": "content/games/atlas-wars.json",
-    "services": "content/services.json"
+    "services": "content/services.json",
+    "guia-game-designer": "guia/guia.json"
   },
   "ui": {
     "resp": {

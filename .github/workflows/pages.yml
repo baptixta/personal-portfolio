@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # disparado pelo repo baptixta/guia-do-game-designer a cada push na main dele
+  repository_dispatch:
+    types: [guia-updated]
 permissions:
   contents: read
   pages: write
@@ -15,6 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # conteúdo do guia do game designer (baptixta.com/guia-game-designer/)
+      - uses: actions/checkout@v4
+        with:
+          repository: baptixta/guia-do-game-designer
+          path: guia
       - uses: actions/setup-node@v4
         with:
           node-version: 20

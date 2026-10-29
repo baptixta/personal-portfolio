@@ -754,3 +754,434 @@ h2.sub {
     margin-top: -4px
   }
 }
+
+/* ===== guia do game designer ===== */
+:root {
+  --card: #fff;
+  --soft: #FFE3E9
+}
+
+[data-theme=dark] {
+  --card: #242424;
+  --soft: #3A1219
+}
+
+.guia [hidden] {
+  display: none !important
+}
+
+.guia > .desc {
+  margin: 18px 0 26px
+}
+
+/* abas: mesmo visual dos botões-pílula de links */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px
+}
+
+.tabs button {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: none;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font: 500 15px 'Archivo', sans-serif;
+  cursor: pointer;
+  transition: background .2s, color .2s
+}
+
+.tabs button:hover {
+  background: var(--soft)
+}
+
+.tabs button[aria-selected=true] {
+  background: var(--accent);
+  color: #fff
+}
+
+.guia :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px
+}
+
+/* níveis e tópicos */
+.nivel h2 span {
+  color: var(--muted);
+  font-weight: 400
+}
+
+.topic {
+  border-bottom: 1px solid var(--line)
+}
+
+.topic summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  font: 700 18px/1.2 'Archivo', sans-serif;
+  cursor: pointer;
+  transition: color .2s
+}
+
+.topic summary::-webkit-details-marker {
+  display: none
+}
+
+.topic summary svg {
+  flex: none;
+  color: var(--icon);
+  transform: rotate(-90deg);
+  transition: transform .25s, color .2s
+}
+
+.topic summary:hover,
+.topic summary:hover svg {
+  color: var(--accent)
+}
+
+.topic[open] summary svg {
+  transform: none
+}
+
+.topic-body {
+  padding: 2px 0 22px;
+  line-height: 1.35
+}
+
+.topic-body p {
+  margin-bottom: 12px
+}
+
+.topic-body ul,
+.alm-body ul {
+  padding-left: 20px;
+  margin-bottom: 14px
+}
+
+.topic-body li,
+.alm-body li {
+  margin-bottom: 6px
+}
+
+.topic-body li::marker,
+.alm-body li::marker {
+  color: var(--accent)
+}
+
+.topic-body li ul {
+  margin: 6px 0 4px
+}
+
+.topic-body h3 {
+  margin: 18px 0 8px
+}
+
+.reflinks .row {
+  border-bottom: 1px solid var(--line);
+  padding: 9px 0;
+  transition: color .2s
+}
+
+.reflinks .row:last-child {
+  border-bottom: 0
+}
+
+.reflinks .row > span:last-child {
+  color: var(--muted)
+}
+
+/* almanaque */
+.alm > .desc {
+  margin: 22px 0 18px
+}
+
+.alm-q {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  font: 400 16px 'Archivo', sans-serif
+}
+
+.alm-q:focus {
+  border-color: var(--accent);
+  outline: 0
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font: 500 14px 'Archivo', sans-serif;
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background .2s
+}
+
+.chip small {
+  color: var(--muted);
+  font-size: 12px
+}
+
+.chip:hover {
+  border-color: var(--accent)
+}
+
+.chip[aria-pressed=true] {
+  background: var(--soft);
+  border-color: var(--soft);
+  color: var(--accent)
+}
+
+.tagchips .chip {
+  font-size: 13px;
+  padding: 3px 10px;
+  color: var(--muted)
+}
+
+.alm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 18px;
+  margin-top: 26px
+}
+
+/* fichas: cartas com flutuação leve e tilt no hover */
+.ficha {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 16px 20px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 2px 6px rgba(0, 0, 0, .08);
+  cursor: pointer;
+  transform: perspective(700px) translateY(var(--lift, 0)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .25s ease-out, box-shadow .25s ease-out;
+  animation: ficha-idle 6s ease-in-out infinite
+}
+
+.ficha:nth-child(2n) {
+  animation-delay: -2s
+}
+
+.ficha:nth-child(3n) {
+  animation-delay: -4s
+}
+
+.ficha:hover,
+.ficha:focus-visible {
+  --lift: -6px;
+  animation-play-state: paused;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .1), 0 18px 36px -6px rgba(0, 0, 0, .16)
+}
+
+@keyframes ficha-idle {
+  50% {
+    translate: 0 -3px
+  }
+}
+
+.ficha h3 {
+  font: 700 18px/1.25 'Archivo', sans-serif;
+  font-style: normal;
+  color: var(--text);
+  margin: 0
+}
+
+.ficha p {
+  font-size: 15px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden
+}
+
+.cap {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--muted)
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: auto;
+  padding-top: 4px
+}
+
+.tag {
+  font-size: 13px;
+  color: var(--muted)
+}
+
+.alm-empty {
+  margin-top: 26px;
+  color: var(--muted)
+}
+
+/* gaveta da ficha: entra pela direita, como a transição de página */
+.alm-dlg {
+  margin: 0 0 0 auto;
+  width: min(600px, 100%);
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  border: 0;
+  background: var(--bg);
+  color: var(--text);
+  flex-direction: column
+}
+
+.alm-dlg[open] {
+  display: flex;
+  animation: alm-in .45s cubic-bezier(.16, 1, .3, 1)
+}
+
+.alm-dlg::backdrop {
+  background: rgba(17, 17, 17, .45)
+}
+
+@keyframes alm-in {
+  from {
+    transform: translateX(100%)
+  }
+}
+
+.alm-bar {
+  padding: 18px 28px 6px
+}
+
+.alm-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font: italic 700 18px 'Archivo', sans-serif;
+  color: var(--accent)
+}
+
+.alm-close svg {
+  transition: transform .2s
+}
+
+.alm-close:hover svg {
+  transform: translateX(-4px)
+}
+
+.alm-body {
+  overflow-y: auto;
+  padding: 14px 44px 60px;
+  line-height: 1.4
+}
+
+.alm-body h2.ficha-t {
+  font: 700 32px/1.1 'Archivo', sans-serif;
+  color: var(--text);
+  border: 0;
+  padding: 0;
+  margin: 4px 0 2px
+}
+
+.alm-body .tags {
+  margin: 12px 0 24px
+}
+
+.alm-body .summary {
+  font-size: 18px;
+  line-height: 1.45;
+  margin-bottom: 26px
+}
+
+.alm-body h4 {
+  font: italic 700 18px 'Archivo', sans-serif;
+  color: var(--accent);
+  margin: 26px 0 10px
+}
+
+.alm-body .prose p {
+  margin-bottom: 12px
+}
+
+.alm-body .reflinks {
+  margin-top: 30px
+}
+
+@media (max-width:560px) {
+  .alm-bar {
+    padding: 14px 18px 4px
+  }
+
+  .alm-body {
+    padding: 10px 18px 48px
+  }
+
+  .alm-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .ficha {
+    animation: none;
+    transition: box-shadow .2s
+  }
+
+  .alm-dlg[open] {
+    animation: none
+  }
+}
+
+.tagbox summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font: 500 14px 'Archivo', sans-serif;
+  color: var(--muted);
+  cursor: pointer
+}
+
+.tagbox summary::-webkit-details-marker {
+  display: none
+}
+
+.tagbox summary svg {
+  transform: rotate(-90deg);
+  transition: transform .25s
+}
+
+.tagbox[open] summary svg {
+  transform: none
+}
+
+.tagbox summary:hover {
+  color: var(--accent)
+}
+
+.tagbox .chips {
+  margin-top: 10px
+}

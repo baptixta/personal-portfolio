@@ -140,7 +140,78 @@ export function createRenderer(D, lang) {
     ${contact()}</div>`;
   };
 
-  const view = (key, p) => `<div class="view">${p ? page(p) : home()}</div>`;
+  /* ---------- guia do game designer (conteúdo vem do repo baptixta/guia-do-game-designer) ---------- */
+  // lista aninhada: [ "texto" | { text, list: [...] } ]
+  const ulist = l => `<ul>${arr(l).map(i => typeof i === 'object' && !isText(i)
+    ? `<li>${rich(i.text)}${i.list ? ulist(i.list) : ''}</li>` : `<li>${rich(i)}</li>`).join('')}</ul>`;
+  // notas das fichas: "## título" vira subtítulo, "- item" vira lista, o resto vira parágrafo
+  const prose = s => {
+    let h = '', ul = false, para = [];
+    const flush = () => { if (para.length) { h += `<p>${rich(para.join(' '))}</p>`; para = []; } };
+    const close = () => { if (ul) { h += '</ul>'; ul = false; } };
+    for (const raw of String(t(s) ?? '').split(/\r?\n/)) {
+      const l = raw.trim();
+      if (!l) { flush(); close(); }
+      else if (l.startsWith('## ')) { flush(); close(); h += `<h4>${rich(l.slice(3))}</h4>`; }
+      else if (/^[-*•] /.test(l)) { flush(); if (!ul) { h += '<ul>'; ul = true; } h += `<li>${rich(l.slice(2))}</li>`; }
+      else { close(); para.push(l); }
+    }
+    flush(); close();
+    return h;
+  };
+  const host = x => { try { return new URL(x).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+  const norm = s => String(t(s) ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+  const guia = p => {
+    const L = Object.assign({
+      guia: 'guia', almanaque: 'almanaque', related: lang === 'pt' ? 'conteúdos relacionados' : 'related content',
+      search: lang === 'pt' ? 'buscar por chefe, jogo, mecânica…' : 'search by boss, game, mechanic…',
+      all: lang === 'pt' ? 'todas' : 'all', empty: lang === 'pt' ? 'nada encontrado. tente outro termo ou limpe os filtros.' : 'nothing found. try another term or clear the filters.',
+      links: lang === 'pt' ? 'vídeos, artigos e prints' : 'videos, articles and screenshots', close: lang === 'pt' ? 'voltar' : 'back'
+    }, p.ui, p.tabs);
+    const topic = tp => `<details class="topic"><summary><span>${rich(tp.title)}</span>${chevron}</summary><div class="topic-body">
+      ${arr(tp.text).map(x => `<p>${nl(x)}</p>`).join('')}${tp.list ? ulist(tp.list) : ''}
+      ${arr(tp.links).length ? `<h3>${rich(L.related)}</h3><div class="reflinks">${arr(tp.links).map(l =>
+        `<a class="row c2" href="${esc(l.url)}" target="_blank" rel="noopener"><span>${rich(l.label)}</span><span>${rich(l.type || host(l.url))}</span></a>`).join('')}</div>` : ''}
+    </div></details>`;
+    const levels = arr(p.levels).map(lv => `<section class="sec nivel"><h2>${rich(lv.title)}${lv.subtitle ? ` <span>· ${rich(lv.subtitle)}</span>` : ''}</h2>${arr(lv.topics).map(topic).join('')}</section>`).join('');
+    const c = p.cta;
+    const cta = c ? `<section class="sec"><h2>${rich(c.title)}</h2>${c.text ? `<p>${nl(c.text)}</p>` : ''}${c.video ? `<div class="video"><iframe src="${/^https?:/.test(c.video) ? esc(c.video) : 'https://www.youtube-nocookie.com/embed/' + esc(c.video)}" allowfullscreen loading="lazy" title="${esc(c.title)}"></iframe></div>` : ''}${c.button ? `<div class="links"><a href="${esc(c.button.url)}" target="_blank" rel="noopener">${rich(c.button.label)} ↗</a></div>` : ''}</section>` : '';
+
+    const A = p.almanaque || {};
+    const refs = arr(A.refs).slice().sort((a, b) => norm(a.category).localeCompare(norm(b.category)) || norm(a.title).localeCompare(norm(b.title)));
+    const count = (list, f) => list.reduce((m, r) => (arr(f(r)).forEach(k => m.set(k, (m.get(k) || 0) + 1)), m), new Map());
+    const cats = [...count(refs, r => r.category || '—')].sort((a, b) => a[0].localeCompare(b[0]));
+    const tags = [...count(refs, r => r.tags)].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const ficha = r => {
+      const links = arr(r.links).filter(l => /^https?:\/\//i.test(l.url || ''));
+      const tg = arr(r.tags).map(x => `<span class="tag">#${esc(x)}</span>`).join('');
+      return `<article class="ficha" tabindex="0" role="button" aria-haspopup="dialog" data-cat="${esc(r.category || '—')}" data-tags="${esc(arr(r.tags).join(' '))}" data-q="${esc(norm([r.title, r.game, r.category, r.summary, r.body, arr(r.tags).join(' ')].join(' ')))}">
+        <span class="cap">${esc(r.game || r.category || '')}</span><h3>${rich(r.title)}</h3>${r.summary ? `<p>${rich(r.summary)}</p>` : ''}<span class="tags">${tg}</span>
+        <div class="ficha-full" hidden><span class="cap">${esc(r.category || '')}</span><h2 class="ficha-t">${rich(r.title)}</h2>${r.game ? `<span class="cap">${esc(r.game)}</span>` : ''}
+          <div class="tags">${tg}</div>${r.summary ? `<p class="summary">${rich(r.summary)}</p>` : ''}<div class="prose">${prose(r.body)}</div>
+          ${links.length ? `<div class="reflinks"><h4>${rich(L.links)}</h4>${links.map(l => `<a class="row c2" href="${esc(l.url)}" target="_blank" rel="noopener"><span>${rich(l.label || host(l.url))}</span><span>${esc(host(l.url))}</span></a>`).join('')}</div>` : ''}
+        </div></article>`;
+    };
+    const chip = (kind, val, label, n, on) => `<button class="chip" data-${kind}="${esc(val)}" aria-pressed="${!!on}">${label}${n != null ? ` <small>${n}</small>` : ''}</button>`;
+    const alm = `<div class="alm">${A.intro ? `<p class="desc">${nl(A.intro)}</p>` : ''}
+      <input class="alm-q" type="search" placeholder="${esc(L.search)}" aria-label="${esc(L.search)}">
+      <div class="chips">${chip('cat', '', esc(L.all), refs.length, true)}${cats.map(([k, n]) => chip('cat', k, esc(k), n)).join('')}</div>
+      ${tags.length ? `<details class="tagbox"><summary>tags ${chevron}</summary><div class="chips tagchips">${tags.map(([k]) => chip('tag', k, '#' + esc(k))).join('')}</div></details>` : ''}
+      <div class="alm-grid">${refs.map(ficha).join('')}</div>
+      <p class="alm-empty" hidden>${rich(L.empty)}</p>
+      <dialog class="alm-dlg" aria-label="${esc(L.almanaque)}"><div class="alm-bar"><button class="alm-close">${arrow}<span>${rich(L.close)}</span></button></div><div class="alm-body"></div></dialog></div>`;
+
+    const tab = (id, label, on) => `<button role="tab" id="tab-${id}" aria-controls="aba-${id}" aria-selected="${on}" data-tab="${id}"${on ? '' : ' tabindex="-1"'}>${rich(label)}</button>`;
+    return `<div class="page guia"><h1 class="back"><a href="${href()}" data-back>${arrow}<span>${rich(p.title)}</span></a></h1>
+    ${p.intro ? `<p class="desc">${nl(p.intro)}</p>` : ''}
+    <div class="tabs" role="tablist">${tab('guia', L.guia, true)}${refs.length ? tab('almanaque', L.almanaque, false) : ''}</div>
+    <div class="aba" id="aba-guia" role="tabpanel" aria-labelledby="tab-guia">${levels}${cta}</div>
+    ${refs.length ? `<div class="aba" id="aba-almanaque" role="tabpanel" aria-labelledby="tab-almanaque" hidden>${alm}</div>` : ''}
+    ${contact()}</div>`;
+  };
+
+  const view = (key, p) => `<div class="view">${p ? (p.levels ? guia(p) : page(p)) : home()}</div>`;
 
   /* ---------- SEO ---------- */
   const plain = x => String(t(x) ?? '').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
@@ -149,7 +220,7 @@ export function createRenderer(D, lang) {
   const seo = (key, p) => {
     const S = (key ? p && p.seo : D.home.seo) || {};
     const ss = site.seo || {};
-    const firstText = () => { for (const s of arr(p && p.sections)) for (const b of arr(s.blocks)) if (isText(b)) return plain(b); return ''; };
+    const firstText = () => { if (p && p.intro) return plain(p.intro); for (const s of arr(p && p.sections)) for (const b of arr(s.blocks)) if (isText(b)) return plain(b); return ''; };
     const title = plain(S.title) || (key ? `${plain(p.title)} | ${fullName}` : fullName);
     const desc = clip(plain(S.description) || plain(p && p.description) || firstText() || plain(site.bio));
     const url = base + href(key);
@@ -173,6 +244,7 @@ export function createRenderer(D, lang) {
         { '@type': 'ListItem', position: 2, name: plain(p.title), item: url }] });
       if (S.type === 'service') g.push({ '@type': 'ProfessionalService', name: plain(p.title), description: desc, url, image, inLanguage, provider: { '@id': personId }, serviceType: 'Game design consulting', areaServed: 'Worldwide' });
       else if (p && 'trailer' in p) g.push({ '@type': 'VideoGame', name: plain(p.title), description: desc, url, image, inLanguage, contributor: { '@id': personId }, sameAs: arr(p.links).map(l => l.url) });
+      else if (p && p.levels) g.push({ '@type': 'LearningResource', name: plain(p.title), description: desc, url, image, inLanguage: 'pt-BR', isAccessibleForFree: true, learningResourceType: 'guide', teaches: 'game design', author: { '@id': personId } });
       else if (key === 'sobre') g.push({ '@type': 'ProfilePage', url, name: title, inLanguage, mainEntity: { '@id': personId } });
     }
     return { title, desc, url, image, ld: { '@context': 'https://schema.org', '@graph': g } };
