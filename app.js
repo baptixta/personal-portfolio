@@ -228,7 +228,7 @@ if (!legacy && !redirecting) {
     if (f && !e.target.closest('a')) { openFicha(f); return; }
     const a = e.target.closest('a[href]');
     if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    if (a.target === '_blank' || a.origin !== location.origin || a.hasAttribute('download')) return;
+    if (a.target === '_blank' || a.origin !== location.origin || a.hasAttribute('download') || a.hasAttribute('data-full')) return;
     if (a.dataset.lang) store.set('lang', a.dataset.lang);
     e.preventDefault();
     if (a.hasAttribute('data-back') && cur > 0) { history.back(); return; }

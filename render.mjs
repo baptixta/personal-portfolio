@@ -84,6 +84,9 @@ export function createRenderer(D, lang) {
     return `<div class="grp${shut ? ' closed' : ''}" data-i="${i}"><button class="t" aria-expanded="${!shut}"><span>${rich(g.title)}</span>${chevron}</button>
       <div class="items"><div>${g.items.map(it => it.page
       ? `<a href="${href(it.page)}"${it.page === key ? ' class="active"' : ''}>${rich(it.label)}</a>`
+      // url começando com "/" é página à parte do site (ex.: o radar): abre na mesma guia, fora da navegação do app.js
+      : it.url.startsWith('/')
+      ? `<a href="${esc(it.url)}" data-full>${rich(it.label)}</a>`
       : `<a href="${esc(it.url)}" target="_blank" rel="noopener">${rich(it.label)}</a>`).join('')}</div></div></div>`;
   }).join('')}</nav>`;
 

@@ -82,6 +82,12 @@ for (const lang of ['pt', 'en']) {
   }
 }
 
+// radar de eventos: página à parte, com layout próprio; os dados de radar/eventos.json entram no HTML
+const RADAR = 'radar-de-eventos-games-br';
+const radarData = JSON.stringify(read('radar/eventos.json')).replace(/</g, '\\u003c');
+fs.mkdirSync(path.join(OUT, RADAR), { recursive: true });
+fs.writeFileSync(path.join(OUT, RADAR, 'index.html'), fs.readFileSync('radar/index.html', 'utf8').replace('__RADAR_DATA__', () => radarData));
+
 // sitemap com alternativas de idioma (hreflang)
 const loc = (key, lang) => base + (lang === 'en' ? '/en/' : '/') + (key ? key + '/' : '');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -92,6 +98,9 @@ ${['pt', 'en'].flatMap(lang => keys.map(key => `  <url>
     <xhtml:link rel="alternate" hreflang="en" href="${loc(key, 'en')}"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${loc(key, 'pt')}"/>
   </url>`)).join('\n')}
+  <url>
+    <loc>${base}/${RADAR}/</loc>
+  </url>
 </urlset>
 `;
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), sitemap);

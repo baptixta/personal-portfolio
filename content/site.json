@@ -97,15 +97,22 @@
       },
       "items": [
         {
-          "label": "Game Design Experience ↗",
-          "url": "https://csjdigital.com.br/pv-gdx/"
-        },
-        {
           "label": {
             "pt": "Guia do Game Designer",
             "en": "Game Designer's Guide"
           },
           "page": "guia-game-designer"
+        },
+        {
+          "label": "Game Design Experience ↗",
+          "url": "https://csjdigital.com.br/pv-gdx/"
+        },
+        {
+          "label": {
+            "pt": "radar de eventos de games br",
+            "en": "BR game events radar"
+          },
+          "url": "/radar-de-eventos-games-br/"
         }
       ]
     },

@@ -1,0 +1,53 @@
+{
+  "atualizado": "2026-10-31",
+  "acompanhados": [
+    { "t": "eai", "n": "EAI Jogos", "s": "Encontro mensal de quem faz jogos, em São Paulo", "u": "https://linktr.ee/eaiJogos" },
+    { "t": "gamescom", "n": "gamescom latam", "s": "Feira com a área de negócios e o BIG Festival", "u": "https://latam.gamescom.global/pt/" },
+    { "t": "bgs", "n": "BGS", "s": "Brasil Game Show, feira anual de games", "u": "https://www.brasilgameshow.com.br/ingressos/" }
+  ],
+  "eventos": [
+    { "t": "eai", "d": "2026-11-28", "a": "EAI Jogos", "n": "Edição de novembro · 14 jogos e palestras", "v": "Ibrawork", "c": "São Paulo", "uf": "SP", "h": "14h30", "u": "https://www.sympla.com.br/evento/eai-jogos-edicao-de-novembro/3631485" },
+    { "t": "gamescom", "d": "2027-04-22", "ate": "2027-04-25", "a": "gamescom latam 2027", "v": "Distrito Anhembi", "c": "São Paulo", "uf": "SP", "u": "https://latam.gamescom.global/pt/" },
+    { "t": "bgs", "d": "2027-10-09", "ate": "2027-10-12", "a": "Brasil Game Show 2027", "v": "Distrito Anhembi", "c": "São Paulo", "uf": "SP", "u": "https://www.brasilgameshow.com.br/ingressos/" },
+
+    { "t": "indie", "d": "2026-10-31", "a": "MAGE: Maranhão Gamedev Event", "n": "Encontro de desenvolvedores", "v": "Sebraelab", "c": "São Luís", "uf": "MA", "h": "16h", "u": "https://www.sympla.com.br/evento/mage-maranhao-gamedev-event-10-2026/3629569" },
+    { "t": "indie", "d": "2026-11-01", "a": "IndieCon 3", "n": "Convenção carioca de jogos independentes", "v": "Biblioteca Parque Estadual", "c": "Rio de Janeiro", "uf": "RJ", "h": "12h", "u": "https://www.sympla.com.br/evento/indiecon-3-convencao-carioca-de-jogos-independentes/3425659" },
+    { "t": "indie", "d": "2026-11-06", "ate": "2026-11-08", "a": "GameJamPlus Rondônia", "n": "Game jam híbrida", "v": "Sebrae", "c": "Porto Velho", "uf": "RO", "h": "18h45", "u": "https://www.sympla.com.br/evento/gamejamplus-rondonia-play/3614579" },
+    { "t": "indie", "d": "2026-11-07", "a": "RetroSC", "n": "Edição de 10 anos", "v": "Sesc Cacupé", "c": "Florianópolis", "uf": "SC", "h": "9h", "u": "https://www.sympla.com.br/evento/18o-retro-sc-floripa-o-maior-evento-retrogamer-do-sul-do-pais-edicao-10-anos/3468700" },
+    { "t": "indie", "d": "2026-11-07", "a": "Retrô Expo", "n": "Games clássicos e colecionáveis", "v": "Biblioteca Parque Estadual", "c": "Rio de Janeiro", "uf": "RJ", "h": "12h", "u": "https://www.sympla.com.br/evento/retro-expo-edicao-de-aniversario-2026/3396858" },
+    { "t": "indie", "d": "2026-11-13", "ate": "2026-11-15", "a": "GameJam+ Tocantins", "v": "CNA Palmas 21", "c": "Palmas", "uf": "TO", "h": "19h", "u": "https://www.sympla.com.br/evento/game-jam-plus-tocantins/3630620" },
+    { "t": "indie", "d": "2026-11-13", "ate": "2026-11-15", "a": "7ª Game Jam Fadergs", "n": "Abertura online", "v": "Galeria Luza", "c": "Porto Alegre", "uf": "RS", "h": "22h30", "u": "https://www.sympla.com.br/evento/7a-game-jam-fadergs/3617568" },
+    { "t": "indie", "d": "2026-11-14", "a": "Evento Game Club", "n": "2ª edição", "v": "Faculdade Senac", "c": "Blumenau", "uf": "SC", "h": "9h", "free": true, "u": "https://www.sympla.com.br/evento/evento-game-club-2a-edicao/3540509" },
+    { "t": "indie", "d": "2026-11-14", "a": "Jahu Game Show", "n": "2ª edição", "v": "Centro de Convenções", "c": "Jaú", "uf": "SP", "h": "10h", "u": "https://www.sympla.com.br/evento/jahu-game-show/3631229" },
+    { "t": "indie", "d": "2026-11-14", "a": "Memory Card Geek Festival", "v": "Etec Jorge Street", "c": "São Caetano do Sul", "uf": "SP", "h": "10h", "u": "https://www.sympla.com.br/evento/memory-card-geek-festival/3610391" },
+    { "t": "indie", "d": "2026-11-15", "a": "Game Expo Rio", "n": "Feira, conferência e Indie Spotlight", "v": "Club Municipal", "c": "Rio de Janeiro", "uf": "RJ", "h": "11h", "u": "https://www.gameexporio.com.br/" },
+    { "t": "indie", "d": "2026-11-20", "ate": "2026-11-22", "a": "C3 Expo", "n": "Retrogames e Classic Tetris", "v": "STATE Innovation Center", "c": "São Paulo", "uf": "SP", "u": "https://c3expo.com.br/" },
+    { "t": "indie", "d": "2026-11-28", "ate": "2026-11-29", "a": "Toki Play", "n": "Games e cultura japonesa", "v": "Bunkyo", "c": "São Paulo", "uf": "SP", "h": "10h", "u": "https://www.sympla.com.br/evento/toki-play-festival-de-games-e-cultura-japonesa-na-liberdade/3547705" },
+    { "t": "indie", "d": "2026-11-28", "ate": "2026-11-29", "a": "Caatingeek", "n": "6ª edição", "v": "Sesc Serra Talhada", "c": "Serra Talhada", "uf": "PE", "h": "12h", "free": true, "u": "https://www.sympla.com.br/evento/caatingeek-2026-inscricao-gratuita/3615030" },
+    { "t": "indie", "d": "2026-11-29", "a": "CWB Game Festival", "n": "6ª edição, com área indie", "v": "Clay Highway Bar", "c": "Curitiba", "uf": "PR", "h": "13h", "u": "https://www.sympla.com.br/evento/cwb-game-festival-6-edicao/3560294" },
+    { "t": "indie", "d": "2026-12-03", "ate": "2026-12-06", "a": "CCXP", "n": "Área de games CCXPlay", "v": "São Paulo Expo", "c": "São Paulo", "uf": "SP", "u": "https://www.ccxp.com.br" },
+    { "t": "indie", "d": "2026-12-05", "a": "Super Gamer Brasil", "v": "Escola Santa Bárbara", "c": "Rio de Janeiro", "uf": "RJ", "h": "12h", "u": "https://www.sympla.com.br/evento/super-gamer-brasil/3570098" },
+    { "t": "indie", "d": "2026-12-05", "ate": "2026-12-06", "a": "Arena Comic Fest", "n": "Torneios e arenas de jogos", "v": "Polo Caruaru", "c": "Caruaru", "uf": "PE", "h": "9h30", "u": "https://www.arenacomicfest.com.br/" },
+    { "t": "indie", "d": "2026-12-06", "a": "Retrogamerday", "v": "ECIT Prof. Luis de Azevedo Soares", "c": "Santa Rita", "uf": "PB", "h": "12h", "u": "https://www.gameagenda.com.br/eventos/retrogamerday-dezembro-2026" },
+    { "t": "indie", "d": "2026-12-06", "a": "Baixada Geek", "n": "5ª edição, com arena de videogame", "v": "Complexo Cultural Mário Marques", "c": "Nova Iguaçu", "uf": "RJ", "u": "https://www.sympla.com.br/evento/baixada-geek-5deg-edicao/3593931" },
+    { "t": "indie", "d": "2026-12-12", "a": "Games & Guaraná", "n": "2ª edição, só jogos indie brasileiros", "v": "Hub Green Sampa", "c": "São Paulo", "uf": "SP", "h": "10h", "free": true, "u": "https://www.sympla.com.br/evento/games-guarana/3638446" },
+    { "t": "indie", "d": "2026-12-12", "ate": "2026-12-13", "a": "Geek Ribeirão Fest", "n": "Arenas de games e RPG", "v": "Centro de Convenções", "c": "Ribeirão Preto", "uf": "SP", "h": "11h", "u": "https://www.gameagenda.com.br/eventos/geek-ribeirao-fest-2026" },
+    { "t": "indie", "d": "2026-12-19", "ate": "2026-12-20", "a": "Expo Game Andradina", "v": "Associação dos Funcionários da Penitenciária", "c": "Andradina", "uf": "SP", "h": "9h", "u": "https://www.sympla.com.br/evento/expo-game-andradina/3578718" },
+    { "t": "indie", "d": "2027-01-21", "ate": "2027-01-24", "a": "EP Games", "n": "Free play e eSports", "v": "Shopping Iguatemi", "c": "Campinas", "uf": "SP", "u": "https://epgames.com.br" },
+    { "t": "indie", "d": "2027-02-27", "ate": "2027-02-28", "a": "Nerd Experience", "n": "Games, anime, RPG e cinema", "v": "Expominas", "c": "Belo Horizonte", "uf": "MG", "u": "https://nerdexperience.com.br" },
+    { "t": "indie", "d": "2027-03-26", "ate": "2027-03-28", "a": "EVO Brazil", "n": "Campeonato de jogos de luta", "v": "Expo Center Norte", "c": "São Paulo", "uf": "SP", "u": "https://www.omelete.com.br/games/evo-brazil-2027-data-jogos-mais-tudo-sobre" },
+    { "t": "indie", "d": "2027-05-14", "ate": "2027-05-16", "a": "Brasília Game Festival", "v": "Local a confirmar", "c": "Brasília", "uf": "DF", "u": "https://brasiliagamefestival.com.br/" }
+  ],
+  "fontes": [
+    { "n": "EAI Jogos", "u": "https://linktr.ee/eaiJogos", "s": "Lido na Sympla e no Linktree. Só a edição de novembro está publicada. O Instagram só mostra parte dos posts sem login" },
+    { "n": "gamescom latam", "u": "https://latam.gamescom.global/pt/", "s": "Lido no site. Datas de 2027 confirmadas; a Omelete informa o Distrito Anhembi como local. Data própria do BIG Festival 2027 não encontrada" },
+    { "n": "BGS", "u": "https://www.brasilgameshow.com.br/", "s": "Datas e local de 2027 vêm da imprensa especializada, com ingressos à venda no site oficial. Expositores ainda não divulgados" },
+    { "n": "Sympla", "u": "https://www.sympla.com.br/eventos/games-e-geek", "s": "Busca nacional por game jam, jogos independentes, feira de games, retrogames e termos parecidos. O Game Fest Minas foi cancelado e ficou de fora" },
+    { "n": "GameAgenda", "u": "https://www.gameagenda.com.br/eventos/nacionais", "s": "Lido no site, calendário nacional. Eventos só de anime ou cosplay ficaram de fora" },
+    { "n": "Hadouken", "u": "https://hadouken.wordpress.com/2026/07/22/agenda-gamer-2026-dicas-de-eventos-no-brasil-para-ficar-de-olho-ate-o-fim-do-ano/", "s": "Lido no site, agenda de julho de 2026" },
+    { "n": "Festival Jogatório", "u": "https://hadouken.wordpress.com/2026/07/22/agenda-gamer-2026-dicas-de-eventos-no-brasil-para-ficar-de-olho-ate-o-fim-do-ano/", "s": "Sem data encontrada para a próxima edição" },
+    { "n": "Global Game Jam", "u": "https://globalgamejam.org/", "s": "Sedes brasileiras de 2027 ainda não encontradas, e as fontes divergem sobre a data" },
+    { "n": "Brasília Game Festival", "u": "https://brasiliagamefestival.com.br/", "s": "Lido no site, que traz 14 a 16 de maio de 2027 mas ainda mistura informações de 2026. Confirme o local" },
+    { "n": "Outros estados", "u": "https://www.sympla.com.br/eventos/games-e-geek", "s": "Estados fora do filtro não tiveram evento de games encontrado nesta leitura. Isso não garante que não exista nenhum" }
+  ]
+}
