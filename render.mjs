@@ -168,7 +168,7 @@ export function createRenderer(D, lang) {
   const guia = p => {
     const L = Object.assign({
       guia: lang === 'pt' ? 'guia' : 'guide', almanaque: lang === 'pt' ? 'referências' : 'references', related: lang === 'pt' ? 'conteúdos relacionados' : 'related content',
-      search: lang === 'pt' ? 'buscar por jogo, canal, podcast…' : 'search by game, channel, podcast…',
+      search: lang === 'pt' ? 'buscar por jogo, canal, podcast, livro, artigo…' : 'search by game, channel, podcast, book, article…',
       all: lang === 'pt' ? 'todas' : 'all', empty: lang === 'pt' ? 'nada encontrado. tente outro termo ou limpe os filtros.' : 'nothing found. try another term or clear the filters.',
       links: lang === 'pt' ? 'vídeos, artigos e prints' : 'videos, articles and screenshots', close: lang === 'pt' ? 'voltar' : 'back'
     }, p.ui, p.tabs);
