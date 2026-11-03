@@ -41,6 +41,7 @@ try { const t = localStorage.getItem('theme'); if (t) document.documentElement.d
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { overflow-x: clip; }
 body { margin: 0; background: var(--surface); color: var(--ink); font: 400 16px/24px var(--font-sans); min-height: 100vh; }
 a { color: inherit; text-decoration: none; }
@@ -107,8 +108,72 @@ section > h2 .muted { font: 500 13px/18px var(--font-sans); letter-spacing: .02e
 .pick { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); }
 .src { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: var(--space-4); padding-block: var(--space-2); border-top: 1px solid var(--line); }
 
+/* cadastrar evento */
+.cta {
+  display: inline-flex; align-items: center; gap: var(--space-2); padding: 10px 16px; border-radius: 999px;
+  background: var(--accent); color: #fff; font: 700 15px/20px var(--font-sans); box-shadow: var(--shadow-card); transition: transform .2s, box-shadow .2s;
+}
+.cta:hover { color: #fff; transform: translateY(-2px); box-shadow: var(--shadow-card-hover); }
+.cta svg { flex: none; }
+.invite {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3) var(--space-6);
+  padding: var(--space-4) var(--space-6); background: var(--surface-raised); border-radius: var(--radius-lg); box-shadow: var(--shadow-card);
+}
+.invite p { min-width: 0; }
+.invite b { display: block; }
+.invite .link { color: var(--accent-text); font-weight: 700; white-space: nowrap; }
+.invite .link:hover { text-decoration: underline; }
+.badge { color: var(--accent-text); }
+
+dialog {
+  width: min(640px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); padding: 0; border: 0; border-radius: var(--radius-lg);
+  background: var(--surface-raised); color: var(--ink); box-shadow: var(--shadow-card-hover);
+}
+dialog::backdrop { background: #111111a6; backdrop-filter: blur(2px); }
+dialog[open] { animation: rise .25s ease-out; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+.sheet { display: flex; flex-direction: column; gap: var(--space-6); padding: var(--space-8); }
+.sheet header { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-4); }
+.sheet h2 { font: 700 24px/28px var(--font-sans); margin: 0 0 var(--space-1); }
+.close { font-size: 24px; line-height: 1; padding: 4px; }
+fieldset { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-4); min-width: 0; }
+legend { font: 700 13px/18px var(--font-sans); letter-spacing: .02em; text-transform: lowercase; color: var(--ink-muted); padding: 0; margin-bottom: var(--space-3); }
+.f { grid-column: span 6; display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+.f.half { grid-column: span 3; }
+.f.third { grid-column: span 2; }
+.f label, .f > span { font: 500 14px/20px var(--font-sans); }
+.f small { color: var(--ink-muted); font-size: 13px; line-height: 18px; }
+.f input:not([type=radio], [type=checkbox]), .f select, .f textarea {
+  width: 100%; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--ink); font: 400 16px/22px var(--font-sans);
+}
+.f textarea { resize: vertical; min-height: 64px; }
+.f input:focus-visible, .f select:focus-visible, .f textarea:focus-visible, .check input:focus-visible { outline: 0; border-color: var(--accent); box-shadow: var(--focus-ring); }
+.f input[aria-invalid="true"], .f select[aria-invalid="true"] { border-color: var(--accent-text); }
+.seg { display: flex; gap: var(--space-2); }
+.seg label { flex: 1; display: flex; align-items: center; justify-content: center; gap: var(--space-2); padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+.seg label:has(input:checked) { border-color: var(--accent); color: var(--accent-text); font-weight: 700; }
+.seg input { accent-color: var(--accent); }
+.check { display: flex; gap: var(--space-3); align-items: flex-start; font-size: 14px; line-height: 20px; }
+.check input { flex: none; width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--accent); }
+.lgpd { padding: var(--space-4); border-radius: 8px; background: var(--surface); font-size: 13px; line-height: 19px; color: var(--ink-muted); display: flex; flex-direction: column; gap: var(--space-2); }
+.lgpd b { color: var(--ink); }
+.lgpd a { color: var(--accent-text); text-decoration: underline; }
+.isca { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.send { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
+.send .cta { border: 0; cursor: pointer; }
+.send .cta[disabled] { opacity: .6; cursor: progress; transform: none; }
+.status { font-size: 14px; line-height: 20px; }
+.status.erro { color: var(--accent-text); }
+.status ul { margin: var(--space-1) 0 0; padding-left: 18px; }
+.done { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+.done h3 { font: 700 20px/24px var(--font-sans); margin: 0; }
+.cf-turnstile { min-height: 65px; }
+
 @media (max-width: 900px) {
   .page { grid-template-columns: minmax(0, 1fr); }
+  .sheet { padding: var(--space-6) var(--space-4); }
+  .f.half, .f.third { grid-column: span 6; }
   aside { position: static; height: auto; overflow: visible; padding: var(--space-12) var(--space-4) 0; }
   .foot { margin-top: 0; }
   main { padding: var(--space-12) var(--space-4); }
@@ -120,7 +185,7 @@ section > h2 .muted { font: 500 13px/18px var(--font-sans); letter-spacing: .02e
   .src { grid-template-columns: minmax(0, 1fr); gap: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .expo { animation: none; transition: none; }
+  .expo, .cta, dialog[open] { animation: none; transition: none; }
   .expo:hover { transform: none; }
 }
 </style>
@@ -136,6 +201,7 @@ section > h2 .muted { font: 500 13px/18px var(--font-sans); letter-spacing: .02e
       <span class="caption">criado por <a href="https://baptixta.com" class="credit">@baptixta</a></span>
     </div>
     <p>eventos de games no Brasil inteiro: EAI Jogos, gamescom latam, BGS e os independentes de cada estado.</p>
+    <button type="button" class="cta" data-cadastrar hidden><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>cadastrar evento</button>
     <div class="stack">
       <a href="#proximas" id="nav-next"></a>
       <a href="#agenda" id="nav-agenda"></a>
@@ -176,6 +242,10 @@ section > h2 .muted { font: 500 13px/18px var(--font-sans); letter-spacing: .02e
     </section>
     <section id="agenda">
       <h2><span>Agenda</span><span class="muted" id="agenda-range"></span></h2>
+      <div class="invite" data-convite hidden>
+        <p><b>conhece um evento que não está aqui?</b><span class="caption">cadastre você mesmo. ele passa por uma checagem automática e entra no radar em poucos minutos.</span></p>
+        <button type="button" class="link" data-cadastrar>cadastrar evento →</button>
+      </div>
       <div id="agenda-list"></div>
     </section>
     <section id="fontes">
@@ -185,7 +255,104 @@ section > h2 .muted { font: 500 13px/18px var(--font-sans); letter-spacing: .02e
   </main>
 </div>
 
+<dialog id="cadastro" aria-labelledby="cadastro-titulo">
+  <form class="sheet" id="form-evento" novalidate>
+    <header>
+      <div>
+        <h2 id="cadastro-titulo">cadastrar evento</h2>
+        <p class="caption">o evento passa por uma checagem automática e, se estiver tudo certo, entra no radar em poucos minutos.</p>
+      </div>
+      <button type="button" class="close" data-fechar aria-label="fechar">×</button>
+    </header>
+
+    <fieldset>
+      <legend>o evento</legend>
+      <div class="f">
+        <label for="ev-a">nome do evento *</label>
+        <input id="ev-a" name="a" required maxlength="80" placeholder="ex.: game jam da comunidade x 2027" autocomplete="off">
+      </div>
+      <div class="f">
+        <label for="ev-n">descrição curta</label>
+        <input id="ev-n" name="n" maxlength="120" placeholder="ex.: 3ª edição, com mostra de jogos e palestras" autocomplete="off">
+        <small>até 120 caracteres. sem links aqui.</small>
+      </div>
+      <div class="f">
+        <span>entrada</span>
+        <label class="check"><input type="checkbox" name="free"> gratuita</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>onde e quando</legend>
+      <div class="f">
+        <span id="ev-mod">modalidade *</span>
+        <div class="seg" role="radiogroup" aria-labelledby="ev-mod">
+          <label><input type="radio" name="modalidade" value="presencial" checked> presencial</label>
+          <label><input type="radio" name="modalidade" value="online"> online</label>
+        </div>
+      </div>
+      <div class="f" data-presencial>
+        <label for="ev-v">local *</label>
+        <input id="ev-v" name="v" required maxlength="80" placeholder="ex.: centro de convenções" autocomplete="off">
+      </div>
+      <div class="f half" data-presencial>
+        <label for="ev-c">cidade *</label>
+        <input id="ev-c" name="c" required maxlength="60" autocomplete="address-level2">
+      </div>
+      <div class="f half" data-presencial>
+        <label for="ev-uf">estado *</label>
+        <select id="ev-uf" name="uf" required><option value="">selecione</option></select>
+      </div>
+      <div class="f third">
+        <label for="ev-d">começa em *</label>
+        <input id="ev-d" name="d" type="date" required>
+      </div>
+      <div class="f third">
+        <label for="ev-ate">termina em</label>
+        <input id="ev-ate" name="ate" type="date">
+      </div>
+      <div class="f third">
+        <label for="ev-h">horário</label>
+        <input id="ev-h" name="h" type="time">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>fonte</legend>
+      <div class="f">
+        <label for="ev-u">link oficial *</label>
+        <input id="ev-u" name="u" type="url" required maxlength="300" placeholder="https://" inputmode="url" autocomplete="off">
+        <small>site, página de ingresso (Sympla, por exemplo) ou post da organização. o link precisa estar no ar.</small>
+      </div>
+    </fieldset>
+
+    <div class="lgpd">
+      <span><b>seus dados e a LGPD.</b> o formulário não pede nome, e-mail nem nenhum dado seu. tudo o que você preencher aqui é sobre o evento e fica <b>público</b> no radar.</span>
+      <span>para evitar abuso, o Cloudflare Turnstile confere que você não é um robô e o seu endereço IP é usado só no momento do envio, para limitar envios repetidos. ele não é guardado nem publicado. o tratamento se baseia no legítimo interesse de manter o radar seguro (art. 7º, IX, da Lei nº 13.709/2018).</span>
+      <span>para corrigir ou remover um evento, ou para qualquer pedido sobre dados, escreva para <a href="mailto:davibaptixta@gmail.com">davibaptixta@gmail.com</a>.</span>
+    </div>
+
+    <div class="f">
+      <label class="check"><input type="checkbox" name="consentimento" required> confirmo que as informações estão corretas, que podem ser publicadas e que li o aviso acima. *</label>
+    </div>
+
+    <div class="isca" aria-hidden="true"><label>deixe em branco <input name="site" tabindex="-1" autocomplete="off"></label></div>
+    <div id="ev-turnstile" class="cf-turnstile"></div>
+
+    <div class="send">
+      <button type="submit" class="cta">publicar evento</button>
+      <div class="status" id="ev-status" role="status" aria-live="polite"></div>
+    </div>
+  </form>
+  <div class="sheet done" id="ev-ok" hidden>
+    <h3>evento enviado e aprovado!</h3>
+    <p id="ev-ok-txt"></p>
+    <div class="send"><button type="button" class="cta" data-fechar>ver o radar</button><button type="button" data-mais>cadastrar outro</button></div>
+  </div>
+</dialog>
+
 <script type="application/json" id="radar-data">__RADAR_DATA__</script>
+<script type="application/json" id="radar-config">__RADAR_CONFIG__</script>
 <script>
 const DATA = JSON.parse(document.getElementById("radar-data").textContent);
 const MES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
@@ -200,7 +367,7 @@ const short = iso => { const p = parts(iso); return `${p.d} ${MES[p.m]}${p.y !==
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
 
 const events = DATA.eventos.filter(e => num(e.ate || e.d) >= today).sort((a,b) => (a.d+(a.h||"")).localeCompare(b.d+(b.h||"")));
-const place = e => `${e.v} · ${e.c}/${e.uf}`;
+const place = e => e.uf === "online" ? "online" : `${e.v} · ${e.c}/${e.uf}`;
 
 let days = 0, track = "", uf = "", onlyFree = false;
 try { const v = localStorage.getItem("radar-games-days"); if (v !== null && ["0","30","90"].includes(v)) days = Number(v); } catch (e) {}
@@ -217,7 +384,7 @@ function renderAgenda() {
     const p = parts(k), rel = num(k) === today ? "hoje" : num(k) === today + DAY ? "amanhã" : SEM[p.w];
     return `<div class="day"><div><span>${short(k)}</span> <span class="muted">${rel}</span></div><div class="rows">` + by.get(k).map(e => `
       <a class="show" href="${esc(e.u)}" target="_blank" rel="noopener">
-        <span class="w"><span>${esc(e.a)}</span>${e.n || e.free || (e.ate && e.ate !== e.d) ? `<span class="caption">${[e.n && esc(e.n), e.ate && e.ate !== e.d && `até ${short(e.ate)}`, e.free && "grátis"].filter(Boolean).join(" · ")}</span>` : ""}</span>
+        <span class="w"><span>${esc(e.a)}</span>${e.n || e.free || e.via || (e.ate && e.ate !== e.d) ? `<span class="caption">${[e.n && esc(e.n), e.ate && e.ate !== e.d && `até ${short(e.ate)}`, e.free && "grátis", e.via === "comunidade" && `<span class="badge">enviado pela comunidade</span>`].filter(Boolean).join(" · ")}</span>` : ""}</span>
         <span class="v caption">${esc(place(e))}</span>
         <span class="t caption">${e.h ? esc(e.h) : ""} ↗</span>
       </a>`).join("") + `</div></div>`;
@@ -277,6 +444,106 @@ document.querySelectorAll(".expo").forEach(c => {
   c.onpointerleave = () => { c.style.removeProperty("--rx"); c.style.removeProperty("--ry"); };
 });
 renderAgenda();
+
+/* cadastrar evento: o formulário fala com o worker radar-eventos (pasta worker/ do repo), que confere e publica.
+   sem api configurada no site.json, o botão nem aparece */
+const CFG = JSON.parse(document.getElementById("radar-config").textContent || "{}");
+const dlg = document.getElementById("cadastro"), form = document.getElementById("form-evento");
+const statusEl = document.getElementById("ev-status"), sendBtn = form.querySelector("[type=submit]");
+const UF_NOMES = { AC: "Acre", AL: "Alagoas", AM: "Amazonas", AP: "Amapá", BA: "Bahia", CE: "Ceará", DF: "Distrito Federal", ES: "Espírito Santo", GO: "Goiás", MA: "Maranhão", MG: "Minas Gerais", MS: "Mato Grosso do Sul", MT: "Mato Grosso", PA: "Pará", PB: "Paraíba", PE: "Pernambuco", PI: "Piauí", PR: "Paraná", RJ: "Rio de Janeiro", RN: "Rio Grande do Norte", RO: "Rondônia", RR: "Roraima", RS: "Rio Grande do Sul", SC: "Santa Catarina", SE: "Sergipe", SP: "São Paulo", TO: "Tocantins" };
+let tsId = null, tsToken = "";
+
+if (CFG.api && CFG.turnstile) document.querySelectorAll("[data-cadastrar], [data-convite]").forEach(b => b.hidden = false);
+document.getElementById("ev-uf").insertAdjacentHTML("beforeend", Object.entries(UF_NOMES).map(([k, n]) => `<option value="${k}">${k} · ${n}</option>`).join(""));
+form.d.min = todayIso;
+form.d.addEventListener("change", () => { form.ate.min = form.d.value || todayIso; });
+
+function modalidade() {
+  const online = form.modalidade.value === "online";
+  form.querySelectorAll("[data-presencial]").forEach(el => { el.hidden = online; el.querySelectorAll("input, select").forEach(i => i.disabled = online); });
+}
+form.querySelectorAll("[name=modalidade]").forEach(r => r.addEventListener("change", modalidade));
+
+function carregarTurnstile() {
+  const render = () => {
+    if (tsId !== null) { window.turnstile.reset(tsId); tsToken = ""; return; }
+    tsId = window.turnstile.render("#ev-turnstile", {
+      sitekey: CFG.turnstile, language: "pt-br", theme: document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+      callback: t => { tsToken = t; }, "expired-callback": () => { tsToken = ""; }, "error-callback": () => { tsToken = ""; }
+    });
+  };
+  if (window.turnstile) return render();
+  window.radarTurnstile = render;
+  const s = document.createElement("script");
+  s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=radarTurnstile";
+  s.async = true;
+  document.head.append(s);
+}
+
+function abrir() {
+  document.getElementById("ev-ok").hidden = true;
+  form.hidden = false;
+  dlg.showModal();
+  if (tsId === null) carregarTurnstile();
+}
+document.querySelectorAll("[data-cadastrar]").forEach(b => b.addEventListener("click", abrir));
+dlg.addEventListener("click", e => { if (e.target === dlg || e.target.closest("[data-fechar]")) dlg.close(); });
+document.querySelector("[data-mais]").addEventListener("click", () => { form.reset(); modalidade(); status(""); abrir(); carregarTurnstile(); });
+
+function status(msg, erros) {
+  statusEl.className = "status" + (erros ? " erro" : "");
+  statusEl.innerHTML = esc(msg) + (erros && erros.length ? `<ul>${erros.map(m => `<li>${esc(m)}</li>`).join("")}</ul>` : "");
+}
+
+// conferência rápida no navegador; a de verdade acontece no worker
+function conferir() {
+  const faltas = [];
+  form.querySelectorAll("[aria-invalid]").forEach(el => el.removeAttribute("aria-invalid"));
+  const exige = (el, msg) => { if (!el.disabled && !el.value.trim()) { el.setAttribute("aria-invalid", "true"); faltas.push(msg); } };
+  exige(form.a, "preencha o nome do evento");
+  exige(form.v, "preencha o local");
+  exige(form.c, "preencha a cidade");
+  exige(form.uf, "escolha o estado");
+  exige(form.d, "informe a data de início");
+  exige(form.u, "informe o link oficial");
+  if (form.u.value.trim() && !/^https:\/\/[^\s/]+\.[^\s]+$/i.test(form.u.value.trim())) { form.u.setAttribute("aria-invalid", "true"); faltas.push("o link precisa começar com https://"); }
+  if (form.d.value && form.d.value < todayIso) { form.d.setAttribute("aria-invalid", "true"); faltas.push("a data de início já passou"); }
+  if (form.ate.value && form.d.value && form.ate.value < form.d.value) { form.ate.setAttribute("aria-invalid", "true"); faltas.push("o término vem antes do início"); }
+  if (!form.consentimento.checked) faltas.push("marque que você concorda com a publicação");
+  return faltas;
+}
+
+form.addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const faltas = conferir();
+  if (faltas.length) { status("confira antes de enviar:", faltas); const el = form.querySelector("[aria-invalid]"); if (el) el.focus(); return; }
+  if (!tsToken) { status("espere a verificação anti-robô terminar (logo acima do botão) e envie de novo.", []); return; }
+  const dados = Object.fromEntries(new FormData(form));
+  dados.free = form.free.checked;
+  dados.consentimento = form.consentimento.checked;
+  dados.turnstile = tsToken;
+  sendBtn.disabled = true;
+  status("verificando o evento… isso leva alguns segundos.");
+  let r, d;
+  try {
+    r = await fetch(CFG.api, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(dados) });
+    d = await r.json();
+  } catch (err) {
+    d = { ok: false, motivos: ["não conseguimos enviar agora. confira sua conexão e tente de novo."] };
+  }
+  sendBtn.disabled = false;
+  // o token do turnstile vale para um envio só
+  if (window.turnstile && tsId !== null) { window.turnstile.reset(tsId); tsToken = ""; }
+  if (!d.ok) { status("o evento não foi publicado:", d.motivos || ["tente de novo em alguns minutos."]); return; }
+  status("");
+  if (d.evento) { events.push(d.evento); events.sort((a, b) => (a.d + (a.h || "")).localeCompare(b.d + (b.h || ""))); renderAgenda(); }
+  document.getElementById("ev-ok-txt").textContent = d.evento
+    ? `“${d.evento.a}” já aparece na agenda desta página e entra no site publicado em cerca de 2 minutos. obrigado por ajudar o radar!`
+    : "obrigado por ajudar o radar!";
+  form.reset(); modalidade();
+  form.hidden = true;
+  document.getElementById("ev-ok").hidden = false;
+});
 </script>
 </body>
 </html>

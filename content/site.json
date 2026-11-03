@@ -37,6 +37,10 @@
       }
     ],
     "url": "https://baptixta.com",
+    "radar": {
+      "api": "https://radar-eventos.baptixtaradar.workers.dev/",
+      "turnstile": "0x4AAAAAAFycYviZWiFW5Vrw"
+    },
     "analytics": {
       "cloudflare": "79fca017eae34ba899641d60f70d8298"
     },

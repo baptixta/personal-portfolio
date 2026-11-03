@@ -1,2 +1,4 @@
 dist/
 guia/
+.wrangler/
+node_modules/

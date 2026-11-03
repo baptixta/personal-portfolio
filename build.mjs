@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
 import { createRenderer } from './render.mjs';
+import { validar } from './radar/validar.mjs';
 
 const OUT = 'dist';
 
@@ -89,9 +90,21 @@ for (const lang of ['pt', 'en']) {
 
 // radar de eventos: página à parte, com layout próprio; os dados de radar/eventos.json entram no HTML
 const RADAR = 'radar-de-eventos-games-br';
-const radarData = JSON.stringify(read('radar/eventos.json')).replace(/</g, '\\u003c');
+const radar = read('radar/eventos.json');
+// eventos enviados pelo formulário: o worker já conferiu, mas o build confere de novo (nada fora das regras vai para o ar).
+// a data não é checada aqui: eventos que já passaram continuam no arquivo e a página só esconde
+const recusados = radar.eventos.filter(e => e.via === 'comunidade')
+  .map(e => [e, validar(e, '2000-01-01').filter(m => !/próximos 2 anos/.test(m))]).filter(([, erros]) => erros.length);
+if (recusados.length) {
+  recusados.forEach(([e, erros]) => console.error(`❌ radar/eventos.json: "${e.a}" (${e.d}): ${erros.join('; ')}`));
+  process.exit(1);
+}
+const radarData = JSON.stringify(radar).replace(/</g, '\\u003c');
+// formulário "cadastrar evento": endereço do worker e chave pública do Turnstile (site.radar em content/site.json)
+const radarConfig = JSON.stringify({ api: (D.site.radar && D.site.radar.api) || '', turnstile: (D.site.radar && D.site.radar.turnstile) || '' }).replace(/</g, '\\u003c');
 fs.mkdirSync(path.join(OUT, RADAR), { recursive: true });
 fs.writeFileSync(path.join(OUT, RADAR, 'index.html'), fs.readFileSync('radar/index.html', 'utf8').replace('__RADAR_DATA__', () => radarData)
+  .replace('__RADAR_CONFIG__', () => radarConfig)
   .replace('</body>', () => analytics + '\n</body>'));
 
 // sitemap com alternativas de idioma (hreflang)
