@@ -2,10 +2,11 @@
    cada página em HTML estático para os mecanismos de busca). */
 
 // "/en/pimbolas/" -> { lang: 'en', key: 'pimbolas' } · "/" -> { lang: 'pt', key: '' }
+// páginas filhas (edições da newsletter): "/newsletter/slug/" -> { key: 'newsletter/slug' }
 export const parsePath = p => {
   const m = p.split('/').filter(s => s && s !== 'index.html');
   const lang = m[0] === 'en' ? (m.shift(), 'en') : 'pt';
-  return { lang, key: m[0] || '' };
+  return { lang, key: m.slice(0, 2).join('/') };
 };
 
 export function createRenderer(D, lang) {
@@ -83,7 +84,7 @@ export function createRenderer(D, lang) {
     const shut = closed ? closed.has(i) : true;
     return `<div class="grp${shut ? ' closed' : ''}" data-i="${i}"><button class="t" aria-expanded="${!shut}"><span>${rich(g.title)}</span>${chevron}</button>
       <div class="items"><div>${g.items.map(it => it.page
-      ? `<a href="${href(it.page)}"${it.page === key ? ' class="active"' : ''}>${rich(it.label)}</a>`
+      ? `<a href="${href(it.page)}"${it.page && (it.page === key || key.startsWith(it.page + '/')) ? ' class="active"' : ''}>${rich(it.label)}</a>`
       // url começando com "/" é página à parte do site (ex.: o radar): abre na mesma guia, fora da navegação do app.js
       : it.url.startsWith('/')
       ? `<a href="${esc(it.url)}" data-full>${rich(it.label)}</a>`
@@ -287,7 +288,43 @@ export function createRenderer(D, lang) {
     ${contact()}</div>`;
   };
 
-  const view = (key, p) => `<div class="view">${p ? (p.levels ? guia(p) : page(p)) : home()}</div>`;
+  /* ---------- newsletter (edições vêm do Substack via sync-newsletter.mjs) ---------- */
+  const day = (d, opts = { day: 'numeric', month: 'short', year: 'numeric' }) =>
+    new Intl.DateTimeFormat(htmlLang(lang), { ...opts, timeZone: 'America/Sao_Paulo' }).format(new Date(d)).replace(/\.|de /g, '');
+  const mins = w => Math.max(1, Math.round((w || 0) / 200));
+  const subscribe = N => `<div class="links"><a href="${esc(N.substack)}/subscribe" target="_blank" rel="noopener">${rich(N.ui.subscribe)} ${ext}</a></div>`;
+
+  // lista de edições, agrupada por ano, com busca
+  const newsletter = N => {
+    const years = new Map();
+    arr(N.posts).forEach(e => { const y = e.date.slice(0, 4); years.has(y) || years.set(y, []); years.get(y).push(e); });
+    const row = e => `<a class="row c2 nl-row" href="${href('newsletter/' + e.slug)}" data-q="${esc(norm(e.title + ' ' + e.subtitle))}"><span>${esc(e.title)}${e.subtitle ? `<small>${esc(e.subtitle)}</small>` : ''}</span><span>${day(e.date, { day: 'numeric', month: 'short' })}</span></a>`;
+    return `<div class="page nl"><h1 class="back"><a href="${href()}" data-back>${arrow}<span>${rich(N.title)}</span></a></h1>
+    <p class="desc">${nl(N.intro)}</p>${subscribe(N)}
+    <input class="nl-q" type="search" placeholder="${esc(N.ui.search)}" aria-label="${esc(N.ui.search)}">
+    ${[...years].map(([y, es]) => `<section class="sec nl-year"><h2>${y} <small>${es.length}</small></h2>${es.map(row).join('')}</section>`).join('')}
+    <p class="nl-empty" hidden>${rich(N.ui.empty)}</p>
+    ${contact()}</div>`;
+  };
+
+  // uma edição; p.parent é o índice da newsletter (textos da interface e ordem das edições)
+  const edition = p => {
+    const N = p.parent, list = arr(N.posts), i = list.findIndex(e => e.slug === p.slug);
+    const newer = list[i - 1], older = list[i + 1];
+    const nav = (e, label, cls) => e ? `<a class="${cls}" href="${href('newsletter/' + e.slug)}"><small>${rich(label)}</small><span>${esc(e.title)}</span></a>` : '<span></span>';
+    return `<div class="page nl"><h1 class="back"><a href="${href('newsletter')}" data-back>${arrow}<span>${rich(N.title)}</span></a></h1>
+    <article class="nl-post" lang="pt-BR">
+      <header><span class="cap">${day(p.date)} · ${mins(p.words)} ${rich(N.ui.read)}</span><h2 class="nl-title">${esc(p.title)}</h2>${p.subtitle ? `<p class="desc">${esc(p.subtitle)}</p>` : ''}
+      ${t(N.ui.lang) ? `<p class="nl-note">${rich(N.ui.lang)}</p>` : ''}</header>
+      <div class="nl-body">${p.html}</div>
+    </article>
+    <p class="nl-note"><a href="${esc(p.url)}" target="_blank" rel="noopener">${rich(N.ui.original)} ${ext}</a></p>
+    ${subscribe(N)}
+    <nav class="nl-nav">${nav(older, N.ui.prev, 'prev')}${nav(newer, N.ui.next, 'next')}</nav>
+    ${contact()}</div>`;
+  };
+
+  const view = (key, p) => `<div class="view">${p ? (p.parent ? edition(p) : p.newsletter ? newsletter(p) : p.levels ? guia(p) : page(p)) : home()}</div>`;
 
   /* ---------- SEO ---------- */
   const plain = x => String(t(x) ?? '').replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
@@ -297,11 +334,12 @@ export function createRenderer(D, lang) {
     const S = (key ? p && p.seo : D.home.seo) || {};
     const ss = site.seo || {};
     const firstText = () => { if (p && p.intro) return plain(p.intro); for (const s of arr(p && p.sections)) for (const b of arr(s.blocks)) if (isText(b)) return plain(b); return ''; };
-    const title = plain(S.title) || (key ? `${plain(p.title)} | ${fullName}` : fullName);
-    const desc = clip(plain(S.description) || plain(p && p.description) || firstText() || plain(site.bio));
-    const url = base + href(key);
+    const ed = p && p.parent; // edição da newsletter: o original fica no Substack (canonical aponta para lá)
+    const title = ed ? `${plain(p.title)} — ${plain(ed.title)}` : plain(S.title) || (key ? `${plain(p.title)} | ${fullName}` : fullName);
+    const desc = clip(ed ? plain(p.subtitle) || plain(String(p.html).replace(/<[^>]+>/g, ' ')) : plain(S.description) || plain(p && p.description) || firstText() || plain(site.bio));
+    const url = ed ? p.url : base + href(key);
     const card = D.home.cards.find(c => c.page === key);
-    const image = base + u(S.image || (card && card.img) || ss.image || site.avatar);
+    const image = ed && /^https?:/.test(p.cover) ? p.cover : base + u(S.image || (card && card.img) || ss.image || site.avatar);
     const inLanguage = htmlLang(lang);
     const personId = base + '/#person';
     const sameAs = site.social.map(s => s.url).filter(x => /^https?:/.test(x) && !/SEU-/i.test(x));
@@ -312,7 +350,9 @@ export function createRenderer(D, lang) {
       affiliation: { '@type': 'CollegeOrUniversity', name: 'FIAP' },
       knowsAbout: ss.knowsAbout, sameAs
     }];
-    if (!key) {
+    if (ed) {
+      g.push({ '@type': 'BlogPosting', headline: plain(p.title), description: desc, url, image, datePublished: p.date, inLanguage: 'pt-BR', author: { '@id': personId }, isPartOf: { '@type': 'Blog', name: plain(ed.title), url: ed.substack } });
+    } else if (!key) {
       g.push({ '@type': 'WebSite', '@id': base + '/#website', url: base + '/', name: fullName, inLanguage, publisher: { '@id': personId } });
     } else {
       g.push({ '@type': 'BreadcrumbList', itemListElement: [
@@ -330,14 +370,17 @@ export function createRenderer(D, lang) {
   const headHTML = (key, p) => {
     const i = seo(key, p), a = x => esc(x);
     const alt = l => base + href(key, l);
+    const ed = p && p.parent;
     return [
       `<title data-seo>${a(i.title)}</title>`,
       `<meta data-seo name="description" content="${a(i.desc)}">`,
       `<link data-seo rel="canonical" href="${a(i.url)}">`,
-      `<link data-seo rel="alternate" hreflang="pt-BR" href="${a(alt('pt'))}">`,
-      `<link data-seo rel="alternate" hreflang="en" href="${a(alt('en'))}">`,
-      `<link data-seo rel="alternate" hreflang="x-default" href="${a(alt('pt'))}">`,
-      `<meta data-seo property="og:type" content="website">`,
+      // edições: o canonical é o Substack, então não há versões de idioma para anunciar
+      ...(ed ? [] : [
+        `<link data-seo rel="alternate" hreflang="pt-BR" href="${a(alt('pt'))}">`,
+        `<link data-seo rel="alternate" hreflang="en" href="${a(alt('en'))}">`,
+        `<link data-seo rel="alternate" hreflang="x-default" href="${a(alt('pt'))}">`]),
+      `<meta data-seo property="og:type" content="${ed ? 'article' : 'website'}">`,
       `<meta data-seo property="og:site_name" content="${a(fullName)}">`,
       `<meta data-seo property="og:title" content="${a(i.title)}">`,
       `<meta data-seo property="og:description" content="${a(i.desc)}">`,

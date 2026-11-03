@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # todo dia às 9h (Brasília): traz as edições novas da newsletter do Substack
+  schedule:
+    - cron: "0 12 * * *"
   # disparado pelo repo baptixta/guia-do-game-designer a cada push na main dele
   repository_dispatch:
     types: [guia-updated]
@@ -26,6 +29,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      # se o Substack falhar, o script só avisa e o site segue com as edições do repositório
+      - run: node sync-newsletter.mjs
       - run: node build.mjs
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -31,6 +31,17 @@ if (!legacy && !redirecting) {
   });
 
   async function load(k) {
+    // página filha (edição da newsletter): o JSON fica na pasta "children" da página mãe
+    const [root, sub] = k.split('/');
+    if (sub) {
+      const parent = await load(root);
+      if (!parent || !parent.children || !(parent.posts || []).some(e => e.slug === sub)) return null;
+      if (!cache[k]) {
+        try { cache[k] = { ...(await (await fetch('/' + parent.children + sub + '.json')).json()), parent }; }
+        catch (e) { return null; }
+      }
+      return cache[k];
+    }
     if (!k || !D.pages[k]) return null;
     if (!cache[k]) {
       try {
@@ -263,6 +274,18 @@ if (!legacy && !redirecting) {
       const n = all[(all.indexOf(tb) + (e.key === 'ArrowRight' ? 1 : all.length - 1)) % all.length];
       tab(n.dataset.tab, true); n.focus();
     }
+  });
+  // busca na lista de edições da newsletter (todas as palavras, sem acento)
+  document.addEventListener('input', e => {
+    if (!e.target.matches || !e.target.matches('.nl-q')) return;
+    const words = e.target.value.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    document.querySelectorAll('.nl-year').forEach(s => {
+      let k = 0;
+      s.querySelectorAll('.nl-row').forEach(r => { const ok = words.every(w => r.dataset.q.includes(w)); r.hidden = !ok; k += ok; });
+      s.hidden = !k; n += k;
+    });
+    $('.nl-empty').hidden = n > 0;
   });
   addEventListener('popstate', go);
 
