@@ -1,0 +1,1116 @@
+{
+  "title": "bom dia, gedê",
+  "newsletter": true,
+  "children": "content/newsletter/posts/",
+  "substack": "https://baptixta.substack.com",
+  "intro": {
+    "pt": "minha newsletter sobre **game design**, **gamedev** e **jogos brasileiros**: vivências da rotina de quem faz jogos, referências e um jogo bom, barato e brasileiro por edição. sai no Substack e no LinkedIn, e todas as edições ficam aqui também.",
+    "en": "my newsletter about **game design**, **gamedev** and **Brazilian games**: what it's like to make games day to day, references, and a good, cheap Brazilian game in every issue. It goes out on Substack and LinkedIn, and every issue is archived here too. Issues are written in Portuguese."
+  },
+  "ui": {
+    "subscribe": {
+      "pt": "assinar no Substack",
+      "en": "subscribe on Substack"
+    },
+    "search": {
+      "pt": "buscar edição…",
+      "en": "search issues…"
+    },
+    "empty": {
+      "pt": "nenhuma edição encontrada.",
+      "en": "no issues found."
+    },
+    "read": {
+      "pt": "min de leitura",
+      "en": "min read"
+    },
+    "original": {
+      "pt": "publicada originalmente no Substack",
+      "en": "originally published on Substack"
+    },
+    "lang": {
+      "pt": "",
+      "en": "this issue is in Portuguese."
+    },
+    "prev": {
+      "pt": "edição anterior",
+      "en": "previous issue"
+    },
+    "next": {
+      "pt": "próxima edição",
+      "en": "next issue"
+    },
+    "all": {
+      "pt": "todas as edições",
+      "en": "all issues"
+    }
+  },
+  "seo": {
+    "title": {
+      "pt": "bom dia, gedê — newsletter de Davi Baptixta",
+      "en": "bom dia, gedê — Davi Baptixta's newsletter"
+    },
+    "description": {
+      "pt": "Todas as edições da bom dia, gedê, newsletter de Davi Baptixta sobre game design, gamedev e jogos brasileiros.",
+      "en": "Every issue of bom dia, gedê, Davi Baptixta's newsletter about game design, gamedev and Brazilian games (in Portuguese)."
+    }
+  },
+  "posts": [
+    {
+      "slug": "o-que-colocar-no-seu-portfolio",
+      "title": "o que colocar no seu portfólio?",
+      "subtitle": "um guia sem fórmulas mágicas",
+      "date": "2026-10-23T11:08:33.281Z",
+      "cover": "https://substack-post-media.s3.amazonaws.com/public/images/7ba70778-5e87-4f09-a685-fe9e9c345111_823x462.png",
+      "words": 958
+    },
+    {
+      "slug": "conhecendo-gamedevs-5-caina-morellato",
+      "title": "conhecendo gamedevs #6: Cainã Morellato",
+      "subtitle": "sound designer nos games, e um dos integrantes do cauwave!",
+      "date": "2026-10-21T11:08:33.765Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!CdN1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F345af235-1470-4f13-9a1b-2533b0cf5c34_1398x1443.jpeg",
+      "words": 1198
+    },
+    {
+      "slug": "conhecendo-gamedevs-4-antonio-guaranys",
+      "title": "conhecendo gamedevs #5: Antonio Guaranys",
+      "subtitle": "vem conhecer o fundador do Mentorias Games Brasil!",
+      "date": "2026-10-07T11:08:51.920Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!HY7I!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa95105fb-31b1-44f4-88e9-d4482ee67e3e_400x400.jpeg",
+      "words": 663
+    },
+    {
+      "slug": "criando-sem-expectativas",
+      "title": "criando sem expectativas",
+      "subtitle": "será que é possível?",
+      "date": "2026-10-02T11:08:14.672Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!xUsE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe2077b3f-b015-42af-8fc9-a6755cf816a2_3840x2160.jpeg",
+      "words": 607
+    },
+    {
+      "slug": "conhecendo-gamedevs-4-mat-graz",
+      "title": "conhecendo gamedevs #4: Mat Graz",
+      "subtitle": "a mente pensante por trás do meu novo JRPG (ou BRPG) favorito.",
+      "date": "2026-09-23T11:08:21.330Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!lo0J!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F81df74b3-0049-4c18-9635-c3f212bb597e_1200x1600.jpeg",
+      "words": 971
+    },
+    {
+      "slug": "filtrando-melhor",
+      "title": "filtrando melhor",
+      "subtitle": "a importância das escolhas",
+      "date": "2026-09-18T11:08:16.096Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!JDem!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ec7ebad-8558-4cd2-a729-d6613717a49c_2400x1350.jpeg",
+      "words": 474
+    },
+    {
+      "slug": "sobre-press-kits",
+      "title": "guia sobre press-kits",
+      "subtitle": "uma das coisas mais esquecidas, porém uma das mais importantes",
+      "date": "2026-09-11T11:09:45.273Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!lq5d!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3defc03-b9c2-4519-a33f-55abd6ec2de0_1174x847.png",
+      "words": 423
+    },
+    {
+      "slug": "conhecendo-gamedevs-3-bag",
+      "title": "conhecendo gamedevs #3: Bag",
+      "subtitle": "quem é esse Bagmon?",
+      "date": "2026-09-09T11:08:44.217Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!WCyj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2aaf1d8-5236-4714-8663-e0ce59a26598_400x400.jpeg",
+      "words": 1044
+    },
+    {
+      "slug": "continue-fazendo-perguntas",
+      "title": "continue fazendo perguntas",
+      "subtitle": "deixando a chama viva",
+      "date": "2026-08-28T11:09:35.430Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!uOvm!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8bf49eaf-c145-47fc-b49e-bea06033dc0f_640x422.jpeg",
+      "words": 467
+    },
+    {
+      "slug": "conhecendo-gamedevs-2-rennan-costa",
+      "title": "conhecendo gamedevs #2: rennan costa ",
+      "subtitle": "um dos cabeças por trás do survivor like mais fofo de todos",
+      "date": "2026-08-26T11:08:37.844Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!xoCo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F393863ba-5179-4c23-8d3e-4f9ec3ee3d0a_400x400.jpeg",
+      "words": 777
+    },
+    {
+      "slug": "jogos-brasileiros-independentes-no",
+      "title": "jogos brasileiros independentes no festival jogatório 🎮 ",
+      "subtitle": "eu joguei (ou vi) eles, e você conhece por aqui!",
+      "date": "2026-08-19T11:08:33.778Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!Odw-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff1ac50ac-a9a6-43c6-b6ed-91d76c524a80_1920x1080.bin",
+      "words": 1249
+    },
+    {
+      "slug": "aproveitar-a-jornada",
+      "title": "aproveitar a jornada",
+      "subtitle": "só olhar pra recompensa final é perigoso.",
+      "date": "2026-08-14T11:08:29.224Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!O8pr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb5e05ef-bece-401c-9a4a-48ef3aaebf92_800x1066.jpeg",
+      "words": 583
+    },
+    {
+      "slug": "conhecendo-gamedevs-1-andre-cardoso",
+      "title": "conhecendo gamedevs #1: andré cardoso ",
+      "subtitle": "quadro novo na área!!!!!",
+      "date": "2026-08-12T11:08:21.884Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!kPpk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1bfcd02d-4d93-4b9f-a183-bda72e175490_1000x1000.jpeg",
+      "words": 584
+    },
+    {
+      "slug": "como-foi-lancar-um-jogo",
+      "title": "como foi lançar um jogo",
+      "subtitle": "minha vivência lançando o Pimbolas",
+      "date": "2026-08-07T11:08:27.271Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!O-YS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99d3a3fc-a5b7-498e-88dc-b04fdd476fab_2560x1920.jpeg",
+      "words": 645
+    },
+    {
+      "slug": "linguagem",
+      "title": "linguagem",
+      "subtitle": "desbravando barreiras linguísticas",
+      "date": "2026-06-03T11:08:24.688Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!21Jh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2190b6a-e7ba-4491-a805-25bf079af8ff_483x872.png",
+      "words": 246
+    },
+    {
+      "slug": "descansa-gamedev",
+      "title": "descansa gamedev",
+      "subtitle": "a importância do ócio criativo",
+      "date": "2026-05-29T11:08:22.266Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!SYqO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa049d7f4-1a0b-4901-b04b-2a9a628a0440_480x480.gif",
+      "words": 469
+    },
+    {
+      "slug": "super-heroi",
+      "title": "super-herói",
+      "subtitle": "distorcendo a realidade",
+      "date": "2026-05-27T11:08:50.175Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!T17g!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6781df8a-f9eb-435c-b8bb-69d9664af658_500x345.gif",
+      "words": 243
+    },
+    {
+      "slug": "a-exaustao-de-desenvolver-um-jogo",
+      "title": "a exaustão de desenvolver um jogo",
+      "subtitle": "partes não tão legais do processo",
+      "date": "2026-05-15T11:08:53.716Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!44LF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffebf407d-5067-4c23-bd82-12fa40f18158_400x368.gif",
+      "words": 572
+    },
+    {
+      "slug": "como-foi-a-gamescom-latam-2026",
+      "title": "como foi a gamescom latam 2026",
+      "subtitle": "meu ponto de vista do evento",
+      "date": "2026-05-08T11:08:51.455Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!tskI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2a99bebb-d5f0-45a1-91cb-8416a241e6af_1215x911.jpeg",
+      "words": 459
+    },
+    {
+      "slug": "balanceamento",
+      "title": "balanceamento",
+      "subtitle": "encontrando o ponto ideal",
+      "date": "2026-04-24T11:08:47.368Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!C5Cp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff96b3182-8e90-47b0-80a3-b1ce8fc79cc4_558x308.png",
+      "words": 534
+    },
+    {
+      "slug": "quarta-do-jogo-maluco",
+      "title": "quarta do jogo maluco",
+      "subtitle": "saindo do óbvio",
+      "date": "2026-04-22T11:08:19.265Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!7NPi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c77a285-4a64-4d0e-85c6-87111f6bd410_800x450.gif",
+      "words": 232
+    },
+    {
+      "slug": "coisas-legais",
+      "title": "coisas legais",
+      "subtitle": "uma lista com várias",
+      "date": "2026-04-10T11:08:40.304Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!5SUC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbbc3b885-5264-4082-a292-99a8b9a34d6e_750x422.jpeg",
+      "words": 285
+    },
+    {
+      "slug": "jogo-de-dados",
+      "title": "jogo de dados",
+      "subtitle": "desconstruindo jogos",
+      "date": "2026-04-03T11:08:42.562Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!QXjI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1150e053-99ca-40ea-a339-2ab35ec4ce98_956x537.gif",
+      "words": 536
+    },
+    {
+      "slug": "demora-pra-fazer-jogos",
+      "title": "demora pra fazer jogos",
+      "subtitle": "muito mais tempo do que você gostaria",
+      "date": "2026-03-27T11:08:44.467Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!mt_u!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8208937-991b-4caf-b32c-66cfe60b21a7_450x450.gif",
+      "words": 462
+    },
+    {
+      "slug": "vrum-vrum",
+      "title": "vrum vrum",
+      "subtitle": "corre cutia na casa da tia",
+      "date": "2026-03-25T11:08:42.085Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!zVqR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc9c6092e-b728-4b6a-9429-10865fb99f73_1920x1080.jpeg",
+      "words": 318
+    },
+    {
+      "slug": "sobre-divulgar-seu-proprio-jogo",
+      "title": "sobre divulgar seu próprio jogo",
+      "subtitle": "marketing é um trampo (mas vale a pena)",
+      "date": "2026-03-20T11:08:41.401Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!jYgY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F823c52fb-75b9-4ef4-960a-0f5581a89444_1920x1080.jpeg",
+      "words": 412
+    },
+    {
+      "slug": "respeitando-limites",
+      "title": "respeitando limites",
+      "subtitle": "só se vive uma vez",
+      "date": "2026-03-18T11:08:36.998Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!RfpP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd822ef0d-5bcd-4956-9a50-e96891851a8b_500x343.gif",
+      "words": 278
+    },
+    {
+      "slug": "criando-sistemas-em-jogos",
+      "title": "criando sistemas em jogos",
+      "subtitle": "como fizemos o sistema do arcade no Pimbolas",
+      "date": "2026-03-06T11:08:51.092Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!dh8L!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F711e1519-8612-49b1-99c7-f10c14ba7d57_1231x690.gif",
+      "words": 576
+    },
+    {
+      "slug": "sobre-ser-reconhecido",
+      "title": "sobre ser reconhecido",
+      "subtitle": "quando alguém vê e curte o que você fez",
+      "date": "2026-02-27T11:08:21.586Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!woTT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F619fa562-3b1b-4c6a-83dc-4d93e8fad9f5_1280x1551.jpeg",
+      "words": 389
+    },
+    {
+      "slug": "sobre-criar-musicas-pra-jogos",
+      "title": "sobre criar músicas pra jogos",
+      "subtitle": "o tuts tuts faz toda diferença",
+      "date": "2026-02-20T11:08:20.024Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!idI4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fca01a369-4750-42dc-9c44-d3e8655d2d70_700x350.jpeg",
+      "words": 722
+    },
+    {
+      "slug": "cameras-e-videogames",
+      "title": "câmeras e videogames",
+      "subtitle": "o click perfeito",
+      "date": "2026-02-18T11:08:19.299Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!dlaU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F276375d8-cc77-47b6-93e4-f87d9d599c2f_498x614.png",
+      "words": 311
+    },
+    {
+      "slug": "botando-ordem-na-casa",
+      "title": "botando ordem na casa",
+      "subtitle": "tchau bagunça",
+      "date": "2026-02-13T11:08:26.598Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!mgnT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa0e5aaac-99c4-4052-b319-1353cc8b16ae_1000x1000.png",
+      "words": 387
+    },
+    {
+      "slug": "cachorros-e-videogames",
+      "title": "cachorros e videogames",
+      "subtitle": "auauau ",
+      "date": "2026-02-11T11:08:21.364Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!90G7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8398b1d2-7505-44f4-a64a-96364568d027_674x840.png",
+      "words": 371
+    },
+    {
+      "slug": "o-lugar-que-nunca-existiu",
+      "title": "o lugar que nunca existiu",
+      "subtitle": "dando nome aos bois",
+      "date": "2026-02-04T11:08:57.378Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ZFuu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a9e83ff-f60b-4d0d-8338-f180b751ab67_1000x1000.png",
+      "words": 204
+    },
+    {
+      "slug": "sobre-trabalhar-com-games",
+      "title": "sobre trabalhar com games",
+      "subtitle": "a correria de ser um gamedev",
+      "date": "2026-01-30T11:08:08.232Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!hNjM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffa5eb933-839a-421f-a55b-ff0349538766_640x496.gif",
+      "words": 512
+    },
+    {
+      "slug": "bbb",
+      "title": "bbb",
+      "subtitle": "o grande irmão vê tudo",
+      "date": "2026-01-28T11:08:18.284Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!pQR0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2ec0d09e-f000-4530-a807-00b65e9eb630_1200x675.jpeg",
+      "words": 256
+    },
+    {
+      "slug": "criando-palavras",
+      "title": "criando palavras",
+      "subtitle": "feliz no simples",
+      "date": "2026-01-23T11:08:16.869Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!Lvw8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F06b2a3a1-a6e9-4353-b89f-4fcb8d6970ad_960x1280.jpeg",
+      "words": 391
+    },
+    {
+      "slug": "brincadeira-de-roda",
+      "title": "brincadeira de roda",
+      "subtitle": "voltando à infância ✨",
+      "date": "2026-01-21T11:08:57.385Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!B83y!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faf80a0b4-23d0-4be8-8ca5-ac4b84cb231a_736x1041.jpeg",
+      "words": 257
+    },
+    {
+      "slug": "reflexao",
+      "title": "reflexão",
+      "subtitle": "pensando em tudo que passou",
+      "date": "2026-01-16T11:08:21.159Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ew34!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F030034ba-55d8-4009-a688-28e1a092420c_1000x1000.png",
+      "words": 441
+    },
+    {
+      "slug": "ano-novo",
+      "title": "ano novo",
+      "subtitle": "metas, desafios, e aquelas coisas de sempre",
+      "date": "2026-01-14T11:08:16.631Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!xE8L!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F57589843-08b9-4f6d-a903-1892bfb8a107_3131x2027.png",
+      "words": 330
+    },
+    {
+      "slug": "ultimo-do-ano",
+      "title": "último do ano",
+      "subtitle": "pra fechar 2025",
+      "date": "2025-12-17T11:08:19.917Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!wjl2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9e232c21-ee1b-4e18-bc86-88c37944568a_500x375.gif",
+      "words": 315
+    },
+    {
+      "slug": "sobre-lancar-a-demo-de-um-jogo",
+      "title": "sobre lançar a demo de um jogo",
+      "subtitle": "a demo do Pimbolas lançou! ",
+      "date": "2025-12-12T22:36:27.987Z",
+      "cover": "https://substackcdn.com/image/youtube/w_728,c_limit/xE41dqfRPCc",
+      "words": 556
+    },
+    {
+      "slug": "os-ultimos-10",
+      "title": "os últimos 10%",
+      "subtitle": "fazer jogo dá trabalho",
+      "date": "2025-12-05T11:08:35.605Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!N530!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a2052ba-b7fd-45e4-ba1a-145517c3bc31_2490x1320.png",
+      "words": 633
+    },
+    {
+      "slug": "sobre-criar-trailers",
+      "title": "sobre criar trailers",
+      "subtitle": "a arte de mostrar o que realmente importa",
+      "date": "2025-10-24T11:08:31.892Z",
+      "cover": "https://substackcdn.com/image/youtube/w_728,c_limit/fgXyuVRV1LY",
+      "words": 452
+    },
+    {
+      "slug": "mudando-paradigmas",
+      "title": "mudando paradigmas",
+      "subtitle": "corrida sem carro?",
+      "date": "2025-10-22T11:08:11.943Z",
+      "cover": "https://substack-post-media.s3.amazonaws.com/public/images/c71a2589-81f6-4b89-8497-3de8f636b642_480x270.gif",
+      "words": 337
+    },
+    {
+      "slug": "aprendi-fazendo-jogos-aa4",
+      "title": "aprendi fazendo jogos",
+      "subtitle": "vivências novas e antigas + anúncio",
+      "date": "2025-10-17T14:09:33.478Z",
+      "cover": "https://substack-post-media.s3.amazonaws.com/public/images/c4c4a515-f38b-4517-b03c-79c670c19cc4_1920x1080.png",
+      "words": 429
+    },
+    {
+      "slug": "saindo-do-piloto-automatico",
+      "title": "saindo do piloto automático",
+      "subtitle": "a importância da escolha",
+      "date": "2025-10-10T11:08:29.724Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!VapY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb3bb707-8217-4451-a4a5-e0ba1d586b8f_480x480.gif",
+      "words": 422
+    },
+    {
+      "slug": "ultimo-gas",
+      "title": "último gás",
+      "subtitle": "usando aquele resto de energia",
+      "date": "2025-10-08T11:08:34.625Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!M2CI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbdb7379a-74dc-4121-b2ed-fe52ddeba6f6_720x493.png",
+      "words": 272
+    },
+    {
+      "slug": "monotematico",
+      "title": "monotemático",
+      "subtitle": "hiperfocado?",
+      "date": "2025-10-03T11:08:20.702Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!3x65!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F93ae1e56-92ae-4870-b02e-5038dca049f8_500x320.gif",
+      "words": 567
+    },
+    {
+      "slug": "revivendo-momentos",
+      "title": "revivendo momentos",
+      "subtitle": "revendo coisas boas",
+      "date": "2025-10-01T11:08:22.411Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!dT2-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a49b5d1-e756-4ecb-9496-fd2ebe6b3759_511x379.gif",
+      "words": 364
+    },
+    {
+      "slug": "pensando-pensamentos",
+      "title": "pensando pensamentos",
+      "subtitle": "pense pinky pense",
+      "date": "2025-09-12T11:08:18.341Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!Nzl2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fec884217-c4a2-49a1-bd4e-74a4641e6f63_480x480.gif",
+      "words": 373
+    },
+    {
+      "slug": "barulhos",
+      "title": "barulhos",
+      "subtitle": "a maioria das pessoas não escutam com a intenção de entender",
+      "date": "2025-09-10T11:08:35.114Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ry5r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 325
+    },
+    {
+      "slug": "aprendi-fazendo-jogos-326",
+      "title": "aprendi fazendo jogos",
+      "subtitle": "fizemos um campeonato e olha no que deu",
+      "date": "2025-08-29T11:08:32.897Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!8XAK!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff023ab27-42de-464d-a441-da2e20f7fae3_1440x1504.jpeg",
+      "words": 669
+    },
+    {
+      "slug": "subvertendo-mecanicas",
+      "title": "subvertendo mecânicas",
+      "subtitle": "tem que ser meio doido pra fazer jogos",
+      "date": "2025-08-27T11:08:23.865Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!_TXx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faa45133d-efe4-41b6-93f4-729316232095_480x414.gif",
+      "words": 288
+    },
+    {
+      "slug": "coisas-extremamente-especificas",
+      "title": "coisas extremamente específicas",
+      "subtitle": "olhando no detalhe",
+      "date": "2025-08-22T11:08:20.314Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!d2sd!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F83ffee75-e7f7-46fd-b7c3-8655277e95f3_450x450.gif",
+      "words": 376
+    },
+    {
+      "slug": "ciclos",
+      "title": "ciclos",
+      "subtitle": "reflexões e walk cycles",
+      "date": "2025-08-20T11:08:31.856Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ATOQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F849ee3c1-b75f-42d3-90e2-bb87c4297540_1208x852.gif",
+      "words": 359
+    },
+    {
+      "slug": "poder-de-sintese",
+      "title": "poder de síntese",
+      "subtitle": "fazendo muito com pouco.",
+      "date": "2025-08-15T11:08:20.040Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!iSJh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44f5ac12-ae6f-46bc-85f4-5b5ca0d81512_400x400.gif",
+      "words": 468
+    },
+    {
+      "slug": "mini-mundos",
+      "title": "mini mundos",
+      "subtitle": "explorando ideias",
+      "date": "2025-08-14T11:08:39.757Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!m-tm!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07732b8a-fec2-4073-a0d7-188752a0875c_735x1025.jpeg",
+      "words": 351
+    },
+    {
+      "slug": "conhecendo-a-galera",
+      "title": "conhecendo a galera",
+      "subtitle": "o tal do networking",
+      "date": "2025-08-08T11:08:34.983Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!6CtL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4c22e0fc-804a-4213-bbbc-f80b49c9f8a4_480x480.gif",
+      "words": 326
+    },
+    {
+      "slug": "aponta-e-clica",
+      "title": "aponta e clica",
+      "subtitle": "feliz no simples",
+      "date": "2025-08-04T14:59:30.151Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ry5r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 394
+    },
+    {
+      "slug": "experiencia-do-usuario-ou-ux-se-voce",
+      "title": "experiência do usuário (ou UX se você quiser ser chique)",
+      "subtitle": "colocando o jogador em 🥇 lugar",
+      "date": "2025-08-01T11:08:12.157Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!_EZB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F72561b3c-ff38-4be2-9f75-a3c008108d1c_480x480.gif",
+      "words": 260
+    },
+    {
+      "slug": "rage-quit-ou-ficar-muito-pistola",
+      "title": "rage quit (ou ficar muito pistola)",
+      "subtitle": "jogos que deixam a gente completamente lelé da cuca",
+      "date": "2025-07-30T11:08:16.630Z",
+      "cover": "https://substackcdn.com/image/youtube/w_728,c_limit/jQ_Te-uaPRw",
+      "words": 305
+    },
+    {
+      "slug": "entrevistas-de-emprego-para-games",
+      "title": "entrevistas de emprego para games",
+      "subtitle": "o que você deveria saber",
+      "date": "2025-07-25T11:08:59.887Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!FG6k!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa1b9676d-1175-4a8f-8fcf-b139abe7ac9e_480x360.gif",
+      "words": 706
+    },
+    {
+      "slug": "uma-coisa-leva-a-outra",
+      "title": "uma coisa leva à outra",
+      "subtitle": "desenvolvimento de jogos e seus desafios",
+      "date": "2025-07-23T11:08:27.530Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!6rGo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5cdf04ff-dff2-4279-88f8-a0cc4888d0aa_2424x930.png",
+      "words": 349
+    },
+    {
+      "slug": "parado-na-esquina",
+      "title": "parado na esquina",
+      "subtitle": "limitações em jogos",
+      "date": "2025-07-16T11:08:29.581Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ry5r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 339
+    },
+    {
+      "slug": "jogos-bons-baratos-e-brasileiros",
+      "title": "jogos bons, baratos e brasileiros",
+      "subtitle": "festival jogatório edition",
+      "date": "2025-07-11T11:08:26.468Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ry5r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 234
+    },
+    {
+      "slug": "basico-bem-feito",
+      "title": "básico bem feito",
+      "subtitle": "- é +",
+      "date": "2025-07-09T11:08:08.548Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!1Ul_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F41ec20ce-9b95-4b16-9a8a-32492c8bd6b0_600x370.gif",
+      "words": 510
+    },
+    {
+      "slug": "aprendi-fazendo-jogos",
+      "title": "aprendi fazendo jogos",
+      "subtitle": "todo dia uma coisa nova",
+      "date": "2025-07-04T11:08:34.049Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!0f5p!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7e5960f-ee86-4fb5-8ad5-9f6b66990f75_1440x1800.jpeg",
+      "words": 378
+    },
+    {
+      "slug": "melhorando-o-que-ja-e-muito-bom",
+      "title": "melhorando o que já é muito bom",
+      "subtitle": "pensando pensamentos",
+      "date": "2025-07-02T11:08:25.526Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ry5r!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 434
+    },
+    {
+      "slug": "sobre-desenvolver-jogos",
+      "title": "sobre desenvolver jogos",
+      "subtitle": "dias de luta, dias de glória",
+      "date": "2025-06-27T11:08:27.014Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!PnuT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd9591822-1951-4d08-8ca3-6854165756e6_1920x1080.jpeg",
+      "words": 367
+    },
+    {
+      "slug": "de-volta",
+      "title": "de volta",
+      "subtitle": "oi, sumido",
+      "date": "2025-06-25T11:08:18.552Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!gC1m!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75d6d87b-c790-46e6-bb9e-ac7bb1b8243c_960x1280.jpeg",
+      "words": 367
+    },
+    {
+      "slug": "me-deixou-animado",
+      "title": "me deixou animado 🎮",
+      "subtitle": "novos jogos na área",
+      "date": "2025-06-13T11:08:21.785Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!eDL3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F81b3f800-209d-4ae0-bf57-1ec1dd2afab2_332x332.gif",
+      "words": 323
+    },
+    {
+      "slug": "escolhas",
+      "title": "escolhas",
+      "subtitle": "uma maldição ou uma benção 🤷‍♂️",
+      "date": "2025-06-11T11:08:22.370Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!gk-f!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd7203488-56aa-44a1-9bd4-9b0ab0295712_350x350.gif",
+      "words": 418
+    },
+    {
+      "slug": "um-pouco-a-cada-dia",
+      "title": "um pouco a cada dia",
+      "subtitle": "consistência faz as coisas andarem 🚶",
+      "date": "2025-06-06T11:08:30.245Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!v0vd!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd99025aa-7ceb-419f-b796-70fab842175e_480x480.gif",
+      "words": 298
+    },
+    {
+      "slug": "devagar-e-sempre",
+      "title": "devagar e sempre",
+      "subtitle": "indo contra a maré 🌊",
+      "date": "2025-06-04T11:08:25.661Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ToDo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbcbabe4c-eba5-4cf1-8111-ddcab7dec4d2_640x640.gif",
+      "words": 316
+    },
+    {
+      "slug": "livros-jogo",
+      "title": "livros-jogo",
+      "subtitle": "outra forma de jogar 🎮",
+      "date": "2025-05-30T11:08:19.959Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!sNdl!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F915204d0-e001-47a2-96d3-85d1a0321c48_480x316.gif",
+      "words": 235
+    },
+    {
+      "slug": "inversao-de-papeis",
+      "title": "inversão de papéis",
+      "subtitle": "mudando o jogo 👀",
+      "date": "2025-05-28T11:08:15.547Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!CpEF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F784c1346-1172-463a-9140-c882352eea96_512x512.gif",
+      "words": 318
+    },
+    {
+      "slug": "queria-ter-conhecido-antes",
+      "title": "queria ter conhecido antes",
+      "subtitle": "e vamos de recomendações",
+      "date": "2025-05-23T11:08:25.073Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 263
+    },
+    {
+      "slug": "dividindo",
+      "title": "dividindo",
+      "subtitle": "metades que se reinventam",
+      "date": "2025-05-21T11:08:20.675Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbd33ea20-9a98-4817-b138-66d39527a935_480x480.gif",
+      "words": 314
+    },
+    {
+      "slug": "plagio-polemico-procon-x-nintendo",
+      "title": "plágio polêmico, Procon x Nintendo, e IA maluca no Fortnite",
+      "subtitle": "só notícias bizarras pra começar bem a semana :)",
+      "date": "2025-05-19T11:08:12.999Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!Tgw9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63c2345d-dfc1-45ab-9bc9-3626345d617a_480x350.gif",
+      "words": 225
+    },
+    {
+      "slug": "sobre-ser-crianca",
+      "title": "sobre ser criança",
+      "subtitle": "um tempo mágico 🧸",
+      "date": "2025-05-16T11:08:23.388Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!zw-J!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4a64c2ba-81ba-494a-ad96-0d1fffbb2999_480x480.gif",
+      "words": 360
+    },
+    {
+      "slug": "o-jogo-do-desanimo-e-da-reclamacao",
+      "title": "o jogo do desânimo e da reclamação",
+      "subtitle": "já imaginou isso?",
+      "date": "2025-05-14T11:08:16.552Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!C54s!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe280ce86-3e17-460f-bfcf-6f1862ace036_500x375.gif",
+      "words": 225
+    },
+    {
+      "slug": "trailer-novo-de-gta-6-aceleracao",
+      "title": "trailer novo de GTA 6, aceleração de estúdios brasileiros, loja digital br nova, e mais",
+      "subtitle": "o hype de GTA 6 só aumenta, será que o lançamento vai cumprir com toda essa expectativa?",
+      "date": "2025-05-12T11:08:25.249Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!5ov9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F57517a7e-8d50-4139-a2d0-b42cc241b403_500x500.gif",
+      "words": 200
+    },
+    {
+      "slug": "criar-jogos-e-dificil",
+      "title": "criar jogos é difícil",
+      "subtitle": "muito legal (e muito difícil)",
+      "date": "2025-05-09T11:08:12.186Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!tOXy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff05a2000-ede9-4305-9923-82beb98d76a7_480x480.gif",
+      "words": 331
+    },
+    {
+      "slug": "voce-dentro-de-um-jogo",
+      "title": "você dentro de um jogo?",
+      "subtitle": "mudando paradigmas com gamedev 🎮",
+      "date": "2025-05-07T11:08:27.091Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ILa3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14da1238-7658-4a24-abfa-17499d77f90f_459x620.gif",
+      "words": 194
+    },
+    {
+      "slug": "gta-6-adiado-jogos-por-r500-e-gamescom",
+      "title": "GTA 6 adiado, jogos por R$500, e gamescom latam 2025",
+      "subtitle": "surpresas inesperadas, preços ainda mais caros, e muito mais no mundo dos games!",
+      "date": "2025-05-05T11:08:20.560Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 216
+    },
+    {
+      "slug": "jogos-brasileiros-independentes-na",
+      "title": "jogos brasileiros independentes na gamescom latam 🎮",
+      "subtitle": "eu joguei eles, e você conhece por aqui!",
+      "date": "2025-05-01T12:23:43.204Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!64xx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F06d490c5-c642-4138-8e8a-c942ceba73bc_500x378.gif",
+      "words": 643
+    },
+    {
+      "slug": "jogos-novos-precos-exorbitantes-eventos",
+      "title": "jogos novos, preços exorbitantes, eventos, e muito mais 🎮",
+      "subtitle": "é novidade pra tudo que é lado! confira aqui",
+      "date": "2025-04-28T11:08:10.599Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 240
+    },
+    {
+      "slug": "ferramenta-de-reinventar-espacos",
+      "title": "ferramenta de reinventar espaços",
+      "subtitle": "como o skate me faz um gamedev melhor 🛹",
+      "date": "2025-04-25T11:08:22.443Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!Je87!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F33c5cbb1-2d09-4cbc-9c75-89397b3ffbae_400x312.gif",
+      "words": 206
+    },
+    {
+      "slug": "melhorando-ainda-mais-os-jogos-que",
+      "title": "melhorando ainda mais os jogos que gostamos 💖",
+      "subtitle": "indo um passo além 🧠",
+      "date": "2025-04-23T11:08:24.593Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!MPrG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0fab6ba5-e2a3-421c-a8c8-9a4448fa57e4_533x300.gif",
+      "words": 395
+    },
+    {
+      "slug": "r50k-pra-desenvolver-seu-jogo-jogo",
+      "title": "R$50k pra desenvolver seu jogo, jogo novo brasileiro, e muito mais 👀",
+      "subtitle": "pode ser sua chance de tirar sua ideia do papel 📄",
+      "date": "2025-04-21T11:08:35.971Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 227
+    },
+    {
+      "slug": "livros-e-mais-livros",
+      "title": "livros e mais livros",
+      "subtitle": "um ano um pouco diferente dos outros.",
+      "date": "2025-04-18T11:08:57.949Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 263
+    },
+    {
+      "slug": "nem-todo-jogo-precisa-ser-divertido",
+      "title": "nem todo jogo precisa ser divertido",
+      "subtitle": "nem tudo é sobre diversão (será?)",
+      "date": "2025-04-16T11:08:45.560Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 351
+    },
+    {
+      "slug": "jogo-novo-da-bungie-dlc-de-katana",
+      "title": "jogo novo da Bungie, DLC de Katana Zero, e muito mais 🎮",
+      "subtitle": "todo mundo decidiu anunciar ou lançar jogos 👀",
+      "date": "2025-04-14T11:08:52.996Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 217
+    },
+    {
+      "slug": "um-som-pra-te-inspirar",
+      "title": "um som pra te inspirar",
+      "subtitle": "música é tudo 🎵",
+      "date": "2025-04-11T11:08:47.700Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!7uqJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9449d84b-b738-434b-86d9-320c59c62fa5_500x384.gif",
+      "words": 204
+    },
+    {
+      "slug": "tudo-girando-em-torno-de-uma-coisa",
+      "title": "tudo girando em torno de uma coisa só 🌎",
+      "subtitle": "criando universos baseado em uma coisa",
+      "date": "2025-04-09T11:08:49.786Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ab2bb6-c5ca-4f17-9bc3-ef6031576d63_798x798.png",
+      "words": 306
+    },
+    {
+      "slug": "nintendo-switch-2-muitos-jogos-novos",
+      "title": "Nintendo Switch 2, muitos jogos novos anunciados, e jogos nacionais 🎮",
+      "subtitle": "e essa nintendo direct, ein?",
+      "date": "2025-04-07T11:08:59.541Z",
+      "cover": "https://substackcdn.com/image/youtube/w_728,c_limit/fgXyuVRV1LY",
+      "words": 267
+    },
+    {
+      "slug": "jogos-e-experiencias-curtos",
+      "title": "jogos e experiências curtas 🎮",
+      "subtitle": "nem sempre ter mais tempo significa ter mais qualidade ⚖️",
+      "date": "2025-04-04T11:08:55.529Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!wmuN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F06b3569c-1c21-4588-a681-7458e8b0c893_480x480.gif",
+      "words": 305
+    },
+    {
+      "slug": "um-jogo-pra-jogar-todos-os-dias",
+      "title": "um jogo pra jogar todos os dias 🤯",
+      "subtitle": "wordle, dungleon, guess the game? ",
+      "date": "2025-04-02T12:22:31.849Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ZM5C!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F60589f27-7cd7-4809-8e3d-92cc409f838b_454x480.gif",
+      "words": 215
+    },
+    {
+      "slug": "nova-publisher-brasileira-gta-6-e",
+      "title": "nova publisher brasileira, GTA 6, e Ubisoft 2",
+      "subtitle": "oportunidades, expectativas, mudanças 👀",
+      "date": "2025-03-31T11:09:00.080Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!HfBp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b1ce4ab-4ed5-4daf-9ed4-1469f9ac298b_480x480.gif",
+      "words": 284
+    },
+    {
+      "slug": "de-referencias",
+      "title": "⛈️ de referências",
+      "subtitle": "conhecendo pessoas novas",
+      "date": "2025-03-28T11:08:32.965Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a82b3ca-7d41-4983-a35b-b1f3003fcb04_1080x1080.png",
+      "words": 246
+    },
+    {
+      "slug": "o-tic-tac-nunca-para",
+      "title": "o tic tac nunca para",
+      "subtitle": "08:08 tem alguém pensando em mim",
+      "date": "2025-03-26T11:08:52.110Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ZNev!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4584f202-fa2a-4ec6-abee-15531722b8ac_600x600.gif",
+      "words": 172
+    },
+    {
+      "slug": "ia-dando-errado-bilhoes-em-games",
+      "title": "💣IA dando errado, bilhões em games, e mentorias femininas nos games!",
+      "subtitle": "semana cheia, ein?",
+      "date": "2025-03-24T11:08:42.265Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a82b3ca-7d41-4983-a35b-b1f3003fcb04_1080x1080.png",
+      "words": 256
+    },
+    {
+      "slug": "vai-um-cafe",
+      "title": "vai um café? ☕",
+      "subtitle": "um gole de inspiração ",
+      "date": "2025-03-21T11:08:43.563Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ohdU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5559dda5-c80b-485c-afef-b2c3d1be0d97_400x328.gif",
+      "words": 359
+    },
+    {
+      "slug": "arrumar-pra-criar",
+      "title": "arrumar pra criar 📦",
+      "subtitle": "com as coisas organizadas, as ideias fluem melhor ✅",
+      "date": "2025-03-19T11:08:46.926Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!GZ3q!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb81d2bf5-327d-4d88-b1dc-ead1fe4c1182_1280x720.jpeg",
+      "words": 279
+    },
+    {
+      "slug": "cursos-gratis-pokemon-arabe-e-vagas",
+      "title": "cursos grátis, pokémon árabe e vagas ⚡",
+      "subtitle": "muita coisa boa pra aproveitar ",
+      "date": "2025-03-17T11:08:42.966Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!loAl!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffed572f2-cd9e-4ce1-a81a-16f9021f2552_533x300.gif",
+      "words": 380
+    },
+    {
+      "slug": "um-lugar-magico",
+      "title": "um lugar mágico 📚",
+      "subtitle": "e que você pode ir 👟",
+      "date": "2025-03-14T11:08:37.126Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!nH-t!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F43791607-a0da-41d0-ab94-d67bac9035c8_400x301.gif",
+      "words": 273
+    },
+    {
+      "slug": "linhas-tortas-tambem-criam",
+      "title": "linhas tortas também criam",
+      "subtitle": "abraçando a imperfeição 🫂",
+      "date": "2025-03-12T11:08:37.785Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71eebba7-a9b1-4b53-819c-78cee58464c7_500x500.gif",
+      "words": 286
+    },
+    {
+      "slug": "mentoria-gratis-tony-hawk-vem-ai",
+      "title": "mentoria grátis, tony hawk vem aí e studios fechando 🔒",
+      "subtitle": "notícias pra te ajudar e te fazer pensar 🧠",
+      "date": "2025-03-10T11:08:41.937Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!zZx5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc0d61de5-3e23-4c49-8d36-6da1af40cd4b_500x355.gif",
+      "words": 250
+    },
+    {
+      "slug": "jogo-digital-versao-analogico",
+      "title": "jogo digital versão analógico",
+      "subtitle": "uma descoberta aleatória 🤔",
+      "date": "2025-03-07T11:08:35.944Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!zFJp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F32a5f742-ed81-4586-ae28-ec3b42c92014_513x911.png",
+      "words": 355
+    },
+    {
+      "slug": "so-2-botoes",
+      "title": "só 2 botões 🟦🟥",
+      "subtitle": "2 botões e muitas ideias",
+      "date": "2025-03-05T11:09:00.582Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!eWp7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffff828c8-363d-43c9-83f8-18ada58e8c9e_480x360.gif",
+      "words": 293
+    },
+    {
+      "slug": "speedrun-de-mario-trilhoes-e-mais",
+      "title": "speedrun de mario, feito no brasilsilsil e mais layoffs 👀",
+      "subtitle": "notícias pra acordar e meter marcha",
+      "date": "2025-03-03T11:08:46.594Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!lK6I!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F709fd7c0-a5f2-4705-8bfc-392634e620f7_356x360.gif",
+      "words": 307
+    },
+    {
+      "slug": "cobras-e-tapetes",
+      "title": "cobras e tapetes 🐍",
+      "subtitle": "qual será a relação 👀",
+      "date": "2025-02-28T11:08:49.535Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!xsPh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F98112050-02c4-4091-953c-3caf1c42a4d3_911x911.png",
+      "words": 338
+    },
+    {
+      "slug": "azul-e-a-cor-mais-quente",
+      "title": "azul é a cor mais quente 🔥",
+      "subtitle": "será mesmo? (eu prefiro magenta)",
+      "date": "2025-02-26T11:08:45.798Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!XtZS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F913f3669-7a29-4fb5-9d3a-62bd6b168a59_1200x675.png",
+      "words": 238
+    },
+    {
+      "slug": "layoffs-quedas-e-skate",
+      "title": "layoffs, quedas, e skate (?)",
+      "subtitle": "carnaval nem passou e o ano já tá uma loucura 👀",
+      "date": "2025-02-24T11:08:43.592Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a82b3ca-7d41-4983-a35b-b1f3003fcb04_1080x1080.png",
+      "words": 302
+    },
+    {
+      "slug": "bom-dia-gede-16",
+      "title": "bom dia, gedê #16 ",
+      "subtitle": "criando jogos e abraçando novas ideias 🫂",
+      "date": "2025-02-13T11:03:15.400Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!teFF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F498c2c83-45be-41c5-ad34-7e6e35686a9c_1280x1590.jpeg",
+      "words": 801
+    },
+    {
+      "slug": "bom-dia-gede-15",
+      "title": "bom dia, gedê #15",
+      "subtitle": "sobre conhecer pessoas 👋",
+      "date": "2025-01-30T11:03:17.666Z",
+      "cover": "https://substack-post-media.s3.amazonaws.com/public/images/15b2a362-6728-4cee-9d38-69bb8899236d_555x746.png",
+      "words": 745
+    },
+    {
+      "slug": "bom-dia-gede-14",
+      "title": "bom dia, gedê #14",
+      "subtitle": "feliz ano novo 🎉",
+      "date": "2025-01-16T11:02:07.413Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5679b486-272a-4363-b7e2-652097332317_1813x900.png",
+      "words": 727
+    },
+    {
+      "slug": "bom-dia-gede-13",
+      "title": "bom dia, gedê #13",
+      "subtitle": "🚶 a volta dos que não foram 🚶‍➡️",
+      "date": "2024-10-31T11:02:24.629Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F433b330f-5093-48f2-bbfc-637df527e1c9_1440x1024.png",
+      "words": 676
+    },
+    {
+      "slug": "bom-dia-gede-12",
+      "title": "bom dia, gedê #12 ",
+      "subtitle": "🏠 mudanças",
+      "date": "2024-09-10T11:01:57.570Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!-pT6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5359fb13-2727-420b-8528-352597ed3d41_1126x1160.jpeg",
+      "words": 481
+    },
+    {
+      "slug": "bom-dia-gede-11",
+      "title": "bom dia, gedê #11",
+      "subtitle": "🖥️ portfólio novo 99% pronto",
+      "date": "2024-08-27T11:02:37.709Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!yyKF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdda30480-d3d2-4548-8559-f30c3f7a41ec_1624x950.gif",
+      "words": 338
+    },
+    {
+      "slug": "bom-dia-gede-10",
+      "title": "bom dia, gedê #10",
+      "subtitle": "⏳ é hora de se reinventar",
+      "date": "2024-08-20T11:01:01.169Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!u4zz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff070a955-d456-44e3-ad7c-1dc5f969a253_1065x923.png",
+      "words": 578
+    },
+    {
+      "slug": "bom-dia-gede-09",
+      "title": "bom dia, gedê #09",
+      "subtitle": "🏃‍♀️correria gamedev",
+      "date": "2024-08-06T11:02:55.146Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!ESCJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd90c3e77-9474-4f34-9059-4b871e4fc01f_895x894.jpeg",
+      "words": 722
+    },
+    {
+      "slug": "bom-dia-gede-08",
+      "title": "bom dia, gedê #08",
+      "subtitle": "🧌 como criar inimigos legais?",
+      "date": "2024-06-18T11:02:29.862Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!AeZO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9ed623bd-9eab-47b7-9207-19104fc98b39_1241x388.png",
+      "words": 688
+    },
+    {
+      "slug": "bom-dia-gede-07-edicao-relampago",
+      "title": "bom dia gedê #07 (edição relâmpago)",
+      "subtitle": "🏃 papo rápido + promo relâmpago!",
+      "date": "2024-06-13T15:36:38.390Z",
+      "cover": "https://i.scdn.co/image/ab6765630000ba8a36869bb5d93fbe3eb7747ba9",
+      "words": 192
+    },
+    {
+      "slug": "bom-dia-gede-06",
+      "title": "bom dia, gedê #06",
+      "subtitle": "sobre a jornada infinita de aprender ✨",
+      "date": "2024-06-04T11:00:58.421Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!FZ9m!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe5906e2e-99fb-4bcd-831e-b7d3fb52c9bc_657x858.png",
+      "words": 580
+    },
+    {
+      "slug": "bom-dia-gede-05",
+      "title": "bom dia, gedê #05",
+      "subtitle": "✍️ sobre tirar as coisas da mente e colocar no papel (e talvez ficar só no papel mesmo)",
+      "date": "2024-05-29T11:02:39.490Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!WGtt!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F259f7d9d-c88b-4fb7-a4c7-1911f3cba012_2028x2027.jpeg",
+      "words": 605
+    },
+    {
+      "slug": "bom-dia-gede-04",
+      "title": "bom dia gedê #04",
+      "subtitle": "estou viciado em Balatro 🃏",
+      "date": "2024-05-22T15:44:25.271Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!9SI5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff1c8fc49-8ded-4a3b-8ca5-c93ab61a378f_991x557.webp",
+      "words": 672
+    },
+    {
+      "slug": "bom-dia-gede-03",
+      "title": "bom dia gedê #03",
+      "subtitle": "e vamos de análise de jogo indie 🏃",
+      "date": "2024-05-16T11:01:36.123Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fafa9d80f-7063-4062-bb83-810b3b1127ad_320x320.jpeg",
+      "words": 1303
+    },
+    {
+      "slug": "bom-dia-gede-02",
+      "title": "bom dia, gedê #02",
+      "subtitle": "🛠️ criando sem amarras",
+      "date": "2024-05-08T11:01:41.662Z",
+      "cover": "https://substackcdn.com/image/fetch/$s_!YKch!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde4ba948-964e-4ecf-9f43-97d6e14f8e0e_1289x453.png",
+      "words": 647
+    },
+    {
+      "slug": "bom-dia-gede-01",
+      "title": "bom dia, gedê #01",
+      "subtitle": "e esse tal de godot, ein? 👀",
+      "date": "2024-04-30T11:30:55.244Z",
+      "cover": "https://i.scdn.co/image/ab6765630000ba8a723c3df101c5eff381acca15",
+      "words": 631
+    },
+    {
+      "slug": "bom-dia-gede-00",
+      "title": "bom dia, gedê #00",
+      "subtitle": "um novo começo",
+      "date": "2024-04-24T15:48:41.406Z",
+      "cover": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fafa9d80f-7063-4062-bb83-810b3b1127ad_320x320.jpeg",
+      "words": 710
+    }
+  ]
+}

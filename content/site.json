@@ -156,8 +156,8 @@
           "page": "media-kit"
         },
         {
-          "label": "newsletter ↗",
-          "url": "https://baptixta.substack.com"
+          "label": "newsletter",
+          "page": "newsletter"
         }
       ]
     }
@@ -172,7 +172,8 @@
     "atlas-wars": "content/games/atlas-wars.json",
     "services": "content/services.json",
     "guia-game-designer": "guia/guia.json",
-    "media-kit": "content/media-kit.json"
+    "media-kit": "content/media-kit.json",
+    "newsletter": "content/newsletter/index.json"
   },
   "ui": {
     "resp": {

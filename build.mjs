@@ -78,13 +78,17 @@ ${analytics}
 </html>
 `;
 
+// páginas filhas (edições da newsletter): /<pagina>/<slug>/, com o JSON de content/.../posts/<slug>.json
+const children = Object.entries(pages).filter(([, p]) => p.children)
+  .flatMap(([k, p]) => (p.posts || []).map(e => [`${k}/${e.slug}`, { ...read(p.children + e.slug + '.json'), parent: p }]));
+
 // páginas: / , /<pagina>/ , /en/ , /en/<pagina>/
 for (const lang of ['pt', 'en']) {
   const R = createRenderer(D, lang);
-  for (const key of keys) {
+  for (const [key, p] of [...keys.map(k => [k, pages[k]]), ...children]) {
     const dir = path.join(OUT, lang === 'en' ? 'en' : '', key);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), doc(R, key, pages[key]));
+    fs.writeFileSync(path.join(dir, 'index.html'), doc(R, key, p));
   }
 }
 
@@ -132,4 +136,5 @@ fs.writeFileSync(path.join(OUT, '404.html'), `<!doctype html>
 <body><main style="padding:12vh 24px;text-align:center"><h1 class="back" style="border:0"><a href="/">404 · página não encontrada / page not found</a></h1></main></body></html>
 `);
 
-console.log(`✅ ${keys.length * 2} páginas geradas em ${OUT}/ (+ sitemap.xml, robots.txt)`);
+// as edições da newsletter não entram no sitemap: o canonical delas é o Substack
+console.log(`✅ ${(keys.length + children.length) * 2} páginas geradas em ${OUT}/ (+ sitemap.xml, robots.txt)`);
