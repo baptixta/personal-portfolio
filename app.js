@@ -43,19 +43,29 @@ if (!legacy && !redirecting) {
     return cache[k];
   }
 
-  /* ---------- guia do game designer: abas, busca e filtros do almanaque, gaveta da ficha ---------- */
-  const alm = { cat: '', tags: new Set(), q: '' };
+  /* ---------- abas (guia, media kit): a primeira aba não tem #, as outras ficam no endereço ---------- */
   function tab(id, push) {
     const t = document.getElementById('tab-' + id);
     if (!t) return;
-    document.querySelectorAll('.guia [role=tab]').forEach(b => {
+    const all = [...t.closest('[role=tablist]').querySelectorAll('[role=tab]')];
+    all.forEach(b => {
       const on = b === t;
       b.setAttribute('aria-selected', on);
       b.tabIndex = on ? 0 : -1;
       document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
     });
-    if (push) history.replaceState(history.state, '', location.pathname + (id === 'guia' ? '' : '#' + id));
+    if (push) history.replaceState(history.state, '', location.pathname + (t === all[0] ? '' : '#' + id));
   }
+  function tabs() {
+    const h = location.hash.slice(1);
+    document.querySelectorAll('.page [role=tablist]').forEach(l => {
+      const b = (h && l.querySelector(`[data-tab="${CSS.escape(h)}"]`)) || l.querySelector('[role=tab]');
+      if (b) tab(b.dataset.tab);
+    });
+  }
+
+  /* ---------- guia do game designer: busca e filtros do almanaque, gaveta da ficha ---------- */
+  const alm = { cat: '', tags: new Set(), q: '' };
   function filter() {
     const g = $('.alm-grid');
     if (!g) return;
@@ -81,7 +91,6 @@ if (!legacy && !redirecting) {
   function guia() {
     if (!$('.guia')) return;
     alm.cat = ''; alm.tags.clear(); alm.q = '';
-    tab(location.hash === '#almanaque' ? 'almanaque' : 'guia');
     const q = $('.alm-q');
     if (q) q.oninput = () => { alm.q = q.value; filter(); };
     const d = $('.alm-dlg');
@@ -147,6 +156,7 @@ if (!legacy && !redirecting) {
     document.head.insertAdjacentHTML('beforeend', R.headHTML(k, p));
     document.body.classList.remove('menu');
     cards();
+    tabs();
     guia();
   }
 
@@ -215,8 +225,17 @@ if (!legacy && !redirecting) {
       b.setAttribute('aria-expanded', !g.classList.contains('closed'));
       return;
     }
-    const tb = e.target.closest('.guia [role=tab]');
+    const tb = e.target.closest('.page [role=tab]');
     if (tb) { tab(tb.dataset.tab, true); return; }
+    // capa de vídeo: troca pelo player (YouTube ou Instagram) só quando clica
+    const pl = e.target.closest('.play[data-yt], .play[data-ig]');
+    if (pl) {
+      const title = pl.getAttribute('aria-label').replace(/"/g, '&quot;');
+      pl.outerHTML = pl.dataset.ig
+        ? `<div class="embed ig-live"><iframe src="${pl.dataset.ig.replace(/"/g, '')}embed/" title="${title}" allowfullscreen></iframe></div>`
+        : `<div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(pl.dataset.yt)}?autoplay=1" title="${title}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+      return;
+    }
     const chip = e.target.closest('.alm .chip');
     if (chip) {
       if ('cat' in chip.dataset) alm.cat = chip.dataset.cat;
@@ -238,9 +257,9 @@ if (!legacy && !redirecting) {
   document.addEventListener('keydown', e => {
     const f = e.target.closest && e.target.closest('.ficha');
     if (f && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openFicha(f); return; }
-    const tb = e.target.closest && e.target.closest('.guia [role=tab]');
+    const tb = e.target.closest && e.target.closest('.page [role=tab]');
     if (tb && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
-      const all = [...document.querySelectorAll('.guia [role=tab]')];
+      const all = [...tb.closest('[role=tablist]').querySelectorAll('[role=tab]')];
       const n = all[(all.indexOf(tb) + (e.key === 'ArrowRight' ? 1 : all.length - 1)) % all.length];
       tab(n.dataset.tab, true); n.focus();
     }
@@ -253,5 +272,6 @@ if (!legacy && !redirecting) {
   if (history.state == null) history.replaceState({ i: 0 }, '');
   cur = history.state.i;
   cards(); // o conteúdo já está na página (pré-renderizado)
+  tabs();
   guia();
 }
