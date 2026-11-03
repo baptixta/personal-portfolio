@@ -37,6 +37,9 @@
       }
     ],
     "url": "https://baptixta.com",
+    "analytics": {
+      "cloudflare": "79fca017eae34ba899641d60f70d8298"
+    },
     "seo": {
       "image": "assets/profile.png",
       "googleVerification": "",

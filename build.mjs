@@ -40,6 +40,10 @@ fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const verify = (D.site.seo && D.site.seo.googleVerification)
   ? `<meta name="google-site-verification" content="${D.site.seo.googleVerification}">` : '';
+// cloudflare web analytics (sem cookies). "spa": true conta também as trocas de página feitas pelo app.js
+const cfToken = D.site.analytics && D.site.analytics.cloudflare;
+const analytics = cfToken
+  ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${JSON.stringify({ token: cfToken, spa: true })}'></script>` : '';
 
 const doc = (R, key, p) => `<!doctype html>
 <html lang="${R.htmlLang(R.lang)}">
@@ -68,6 +72,7 @@ try { document.documentElement.dataset.theme = localStorage.getItem('theme') || 
 <main id="main">${R.view(key, p)}</main>
 </div>
 <script type="module" src="/app.js"></script>
+${analytics}
 </body>
 </html>
 `;
@@ -86,7 +91,8 @@ for (const lang of ['pt', 'en']) {
 const RADAR = 'radar-de-eventos-games-br';
 const radarData = JSON.stringify(read('radar/eventos.json')).replace(/</g, '\\u003c');
 fs.mkdirSync(path.join(OUT, RADAR), { recursive: true });
-fs.writeFileSync(path.join(OUT, RADAR, 'index.html'), fs.readFileSync('radar/index.html', 'utf8').replace('__RADAR_DATA__', () => radarData));
+fs.writeFileSync(path.join(OUT, RADAR, 'index.html'), fs.readFileSync('radar/index.html', 'utf8').replace('__RADAR_DATA__', () => radarData)
+  .replace('</body>', () => analytics + '\n</body>'));
 
 // sitemap com alternativas de idioma (hreflang)
 const loc = (key, lang) => base + (lang === 'en' ? '/en/' : '/') + (key ? key + '/' : '');
