@@ -1,0 +1,636 @@
+{
+  "title": "media kit",
+  "links": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/baptixta/"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@baptixta"
+    },
+    {
+      "label": "newsletter",
+      "url": "https://baptixta.substack.com"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/baptixta/"
+    }
+  ],
+  "description": {
+    "pt": "falo de **game design**, **gamedev** e **jogos brasileiros** para quem faz e para quem quer fazer jogos. sou cofundador da Nano Knight Studio, professor de jogos digitais na FIAP e host da Rede Ronaldo Games. desde 2018 trabalho com design de sistemas, mecânicas, combate, game feel e level design.",
+    "en": "I talk about **game design**, **gamedev** and **Brazilian games** for people who make games and people who want to. I'm co-founder of Nano Knight Studio, digital games professor at FIAP and host at Rede Ronaldo Games. Since 2018 I've worked on systems design, mechanics, combat, game feel and level design."
+  },
+  "sections": [
+    {
+      "title": {
+        "pt": "audiência",
+        "en": "audience"
+      },
+      "blocks": [
+        {
+          "stats": [
+            {
+              "value": {
+                "pt": "7,9 mil",
+                "en": "7.9K"
+              },
+              "label": "Instagram",
+              "note": {
+                "pt": "seguidores · 288 posts",
+                "en": "followers · 288 posts"
+              }
+            },
+            {
+              "value": {
+                "pt": "6,2 mil",
+                "en": "6.2K"
+              },
+              "label": "YouTube",
+              "note": {
+                "pt": "inscritos · 116 vídeos",
+                "en": "subscribers · 116 videos"
+              }
+            },
+            {
+              "value": {
+                "pt": "14 mil",
+                "en": "14K"
+              },
+              "label": "LinkedIn",
+              "note": {
+                "pt": "seguidores",
+                "en": "followers"
+              }
+            },
+            {
+              "value": {
+                "pt": "4,4 mil+",
+                "en": "4.4K+"
+              },
+              "label": "bom dia, gedê",
+              "note": {
+                "pt": "assinantes da newsletter · Substack + LinkedIn",
+                "en": "newsletter subscribers · Substack + LinkedIn"
+              }
+            },
+            {
+              "value": {
+                "pt": "29 mil+",
+                "en": "29K+"
+              },
+              "label": {
+                "pt": "no total",
+                "en": "in total"
+              },
+              "note": {
+                "pt": "seguidores nas redes",
+                "en": "followers across platforms"
+              },
+              "accent": true
+            }
+          ],
+          "note": {
+            "pt": "números dos perfis em 3 de novembro de 2026. a newsletter **bom dia, gedê** sai no Substack (1,4 mil+ assinantes) e no LinkedIn (3 mil inscritos).",
+            "en": "profile numbers as of November 3, 2026. the **bom dia, gedê** newsletter goes out on Substack (1.4K+ subscribers) and LinkedIn (3K subscribers)."
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "pt": "em destaque",
+        "en": "highlights"
+      },
+      "blocks": [
+        {
+          "tabs": [
+            {
+              "id": "youtube",
+              "label": "YouTube",
+              "blocks": [
+                {
+                  "stats": [
+                    {
+                      "value": {
+                        "pt": "6,24 mil",
+                        "en": "6.24K"
+                      },
+                      "note": {
+                        "pt": "inscritos",
+                        "en": "subscribers"
+                      }
+                    },
+                    {
+                      "value": "116",
+                      "note": {
+                        "pt": "vídeos e shorts",
+                        "en": "videos and shorts"
+                      }
+                    },
+                    {
+                      "value": {
+                        "pt": "125 mil",
+                        "en": "125K"
+                      },
+                      "note": {
+                        "pt": "views no mais visto",
+                        "en": "views on the top video"
+                      }
+                    }
+                  ],
+                  "small": true
+                },
+                {
+                  "embeds": [
+                    {
+                      "youtube": "-STtqRsiosg",
+                      "short": true,
+                      "num": {
+                        "pt": "125 mil",
+                        "en": "125K"
+                      },
+                      "meta": {
+                        "pt": "views · short",
+                        "en": "views · short"
+                      },
+                      "title": {
+                        "pt": "desenvolver jogos é tipo…",
+                        "en": "making games is like…"
+                      },
+                      "url": "https://www.youtube.com/shorts/-STtqRsiosg"
+                    },
+                    {
+                      "youtube": "fhioDUcQxcc",
+                      "num": {
+                        "pt": "65 mil",
+                        "en": "65K"
+                      },
+                      "meta": {
+                        "pt": "views · vídeo",
+                        "en": "views · video"
+                      },
+                      "title": {
+                        "pt": "como eu criei um jogo em 10 dias",
+                        "en": "how I made a game in 10 days"
+                      },
+                      "url": "https://www.youtube.com/watch?v=fhioDUcQxcc"
+                    },
+                    {
+                      "youtube": "Fx3ellTtEEs",
+                      "short": true,
+                      "num": {
+                        "pt": "49 mil",
+                        "en": "49K"
+                      },
+                      "meta": {
+                        "pt": "views · short",
+                        "en": "views · short"
+                      },
+                      "title": {
+                        "pt": "os devs indicam jogos bons, baratos e brasileiros",
+                        "en": "devs recommend good, cheap Brazilian games"
+                      },
+                      "url": "https://www.youtube.com/shorts/Fx3ellTtEEs"
+                    },
+                    {
+                      "youtube": "GQ6zQWcJFjo",
+                      "short": true,
+                      "num": {
+                        "pt": "30 mil",
+                        "en": "30K"
+                      },
+                      "meta": {
+                        "pt": "views · short",
+                        "en": "views · short"
+                      },
+                      "title": {
+                        "pt": "sempre tem aquele amigo",
+                        "en": "there is always that one friend"
+                      },
+                      "url": "https://www.youtube.com/shorts/GQ6zQWcJFjo"
+                    },
+                    {
+                      "youtube": "awJSCtfLVRQ",
+                      "short": true,
+                      "num": {
+                        "pt": "25 mil",
+                        "en": "25K"
+                      },
+                      "meta": {
+                        "pt": "views · short",
+                        "en": "views · short"
+                      },
+                      "title": {
+                        "pt": "nada como aprender jogando!",
+                        "en": "nothing like learning by playing!"
+                      },
+                      "url": "https://www.youtube.com/shorts/awJSCtfLVRQ"
+                    }
+                  ]
+                },
+                {
+                  "links": [
+                    {
+                      "label": {
+                        "pt": "ver canal",
+                        "en": "visit channel"
+                      },
+                      "url": "https://www.youtube.com/@baptixta"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "newsletter",
+              "label": "newsletter",
+              "blocks": [
+                {
+                  "stats": [
+                    {
+                      "value": {
+                        "pt": "4,4 mil+",
+                        "en": "4.4K+"
+                      },
+                      "note": {
+                        "pt": "assinantes no Substack e LinkedIn",
+                        "en": "subscribers on Substack and LinkedIn"
+                      }
+                    },
+                    {
+                      "value": "132",
+                      "note": {
+                        "pt": "edições publicadas",
+                        "en": "issues published"
+                      }
+                    },
+                    {
+                      "value": {
+                        "pt": "abr 2024",
+                        "en": "Apr 2024"
+                      },
+                      "note": {
+                        "pt": "primeira edição",
+                        "en": "first issue"
+                      }
+                    }
+                  ],
+                  "small": true
+                },
+                {
+                  "posts": [
+                    {
+                      "img": "assets/media-kit/nl-1.jpg",
+                      "title": {
+                        "pt": "entrevistas de emprego para games",
+                        "en": "job interviews in games (PT-BR)"
+                      },
+                      "date": {
+                        "pt": "jul 2025",
+                        "en": "Jul 2025"
+                      },
+                      "url": "https://baptixta.substack.com/p/entrevistas-de-emprego-para-games"
+                    },
+                    {
+                      "img": "assets/media-kit/nl-2.jpg",
+                      "title": {
+                        "pt": "jogos brasileiros independentes na gamescom latam",
+                        "en": "Brazilian indie games at gamescom latam (PT-BR)"
+                      },
+                      "date": {
+                        "pt": "mai 2025",
+                        "en": "May 2025"
+                      },
+                      "url": "https://baptixta.substack.com/p/jogos-brasileiros-independentes-na"
+                    },
+                    {
+                      "img": "assets/media-kit/nl-3.jpg",
+                      "title": {
+                        "pt": "o tic tac nunca para",
+                        "en": "the clock never stops (PT-BR)"
+                      },
+                      "date": {
+                        "pt": "mar 2025",
+                        "en": "Mar 2025"
+                      },
+                      "url": "https://baptixta.substack.com/p/o-tic-tac-nunca-para"
+                    },
+                    {
+                      "img": "assets/media-kit/nl-4.jpg",
+                      "title": {
+                        "pt": "conhecendo gamedevs #1: André Cardoso",
+                        "en": "meet the gamedevs #1: André Cardoso (PT-BR)"
+                      },
+                      "date": {
+                        "pt": "ago 2026",
+                        "en": "Aug 2026"
+                      },
+                      "url": "https://baptixta.substack.com/p/conhecendo-gamedevs-1-andre-cardoso"
+                    },
+                    {
+                      "img": "assets/media-kit/nl-5.jpg",
+                      "title": {
+                        "pt": "barulhos",
+                        "en": "noises (PT-BR)"
+                      },
+                      "date": {
+                        "pt": "set 2025",
+                        "en": "Sep 2025"
+                      },
+                      "url": "https://baptixta.substack.com/p/barulhos"
+                    }
+                  ]
+                },
+                {
+                  "links": [
+                    {
+                      "label": {
+                        "pt": "assinar a newsletter",
+                        "en": "subscribe"
+                      },
+                      "url": "https://baptixta.substack.com"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "instagram",
+              "label": "Instagram",
+              "blocks": [
+                {
+                  "stats": [
+                    {
+                      "value": {
+                        "pt": "7,9 mil",
+                        "en": "7.9K"
+                      },
+                      "note": {
+                        "pt": "seguidores",
+                        "en": "followers"
+                      }
+                    },
+                    {
+                      "value": "288",
+                      "note": "posts"
+                    },
+                    {
+                      "value": {
+                        "pt": "495 mil",
+                        "en": "495K"
+                      },
+                      "note": {
+                        "pt": "views no mais visto",
+                        "en": "views on the top reel"
+                      }
+                    }
+                  ],
+                  "small": true
+                },
+                {
+                  "embeds": [
+                    {
+                      "instagram": "https://www.instagram.com/reel/DaSpmHZuFFH/",
+                      "img": "assets/media-kit/ig-1.jpg",
+                      "num": {
+                        "pt": "495 mil",
+                        "en": "495K"
+                      },
+                      "meta": {
+                        "pt": "views · reel",
+                        "en": "views · reel"
+                      },
+                      "title": {
+                        "pt": "as bolas malucas do Pimbolas",
+                        "en": "the wild balls of Pimbolas"
+                      },
+                      "url": "https://www.instagram.com/reel/DaSpmHZuFFH/"
+                    },
+                    {
+                      "instagram": "https://www.instagram.com/reel/DdTxLvoBUdp/",
+                      "img": "assets/media-kit/ig-2.jpg",
+                      "num": {
+                        "pt": "67,4 mil",
+                        "en": "67.4K"
+                      },
+                      "meta": {
+                        "pt": "views · reel",
+                        "en": "views · reel"
+                      },
+                      "title": {
+                        "pt": "como as pessoas reagem quando você diz que faz jogos",
+                        "en": "how people react when you say you make games"
+                      },
+                      "url": "https://www.instagram.com/reel/DdTxLvoBUdp/"
+                    },
+                    {
+                      "instagram": "https://www.instagram.com/reel/Dac8sQzuOTq/",
+                      "img": "assets/media-kit/ig-3.jpg",
+                      "num": {
+                        "pt": "53 mil",
+                        "en": "53K"
+                      },
+                      "meta": {
+                        "pt": "views · reel",
+                        "en": "views · reel"
+                      },
+                      "title": {
+                        "pt": "a evolução do Pimbolas",
+                        "en": "how Pimbolas evolved"
+                      },
+                      "url": "https://www.instagram.com/reel/Dac8sQzuOTq/"
+                    },
+                    {
+                      "instagram": "https://www.instagram.com/reel/Da255nYBrDB/",
+                      "img": "assets/media-kit/ig-4.jpg",
+                      "num": {
+                        "pt": "33,4 mil",
+                        "en": "33.4K"
+                      },
+                      "meta": {
+                        "pt": "views · reel",
+                        "en": "views · reel"
+                      },
+                      "title": {
+                        "pt": "as skins do Pimbolas",
+                        "en": "the skins of Pimbolas"
+                      },
+                      "url": "https://www.instagram.com/reel/Da255nYBrDB/"
+                    },
+                    {
+                      "instagram": "https://www.instagram.com/reel/DanP9t7uonc/",
+                      "img": "assets/media-kit/ig-5.jpg",
+                      "num": {
+                        "pt": "32,1 mil",
+                        "en": "32.1K"
+                      },
+                      "meta": {
+                        "pt": "views · reel",
+                        "en": "views · reel"
+                      },
+                      "title": {
+                        "pt": "cada arena tem a sua música",
+                        "en": "every arena has its own song"
+                      },
+                      "url": "https://www.instagram.com/reel/DanP9t7uonc/"
+                    }
+                  ]
+                },
+                {
+                  "links": [
+                    {
+                      "label": {
+                        "pt": "ver perfil",
+                        "en": "visit profile"
+                      },
+                      "url": "https://www.instagram.com/baptixta/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Pimbolas",
+      "blocks": [
+        {
+          "video": "1Ir0AuBdNaY"
+        },
+        {
+          "stats": [
+            {
+              "value": "94%",
+              "label": {
+                "pt": "análises positivas",
+                "en": "positive reviews"
+              },
+              "note": {
+                "pt": "\"Muito positivas\" · 91 análises na Steam",
+                "en": "\"Very Positive\" · 91 Steam reviews"
+              },
+              "accent": true
+            },
+            {
+              "value": {
+                "pt": "16 jul 2026",
+                "en": "Jul 16, 2026"
+              },
+              "label": {
+                "pt": "lançamento",
+                "en": "release"
+              },
+              "note": {
+                "pt": "Steam · Win, Mac e Linux",
+                "en": "Steam · Win, Mac and Linux"
+              }
+            },
+            {
+              "value": "R$ 24,99",
+              "label": {
+                "pt": "preço",
+                "en": "price"
+              },
+              "note": {
+                "pt": "na Steam Brasil",
+                "en": "on Steam Brazil"
+              }
+            },
+            {
+              "value": {
+                "pt": "1 a 4",
+                "en": "1–4"
+              },
+              "label": {
+                "pt": "jogadores",
+                "en": "players"
+              },
+              "note": {
+                "pt": "local ou contra a CPU",
+                "en": "local or vs CPU"
+              }
+            },
+            {
+              "value": "15+",
+              "label": "power-ups",
+              "note": {
+                "pt": "bolas e modificadores",
+                "en": "balls and modifiers"
+              }
+            },
+            {
+              "value": "10",
+              "label": {
+                "pt": "idiomas",
+                "en": "languages"
+              },
+              "note": {
+                "pt": "PT-BR incluso",
+                "en": "including PT-BR"
+              }
+            }
+          ]
+        },
+        {
+          "pt": "Pimbolas é um party game de **pebolim** com multiplayer local. você controla os bonecos com os analógicos e os gatilhos do controle: move a fileira, bate na bola e dá aquela roletada. a cada partida, power-ups e modificadores mudam a bola e o campo, então nenhuma partida sai igual.",
+          "en": "Pimbolas is a **foosball** party game with local multiplayer. You control the players with your gamepad's sticks and triggers: move the rods, hit the ball and spin like a pro. Every match, power-ups and modifiers change the ball and the field, so no two matches play the same."
+        },
+        {
+          "pt": "tem bola gigante que cresce no ar, bola quadrada que quica pra onde quer, bola de fogo que queima os jogadores, bomba, bola de gelo que escorrega, planeta e até coco e siri. dá pra jogar com os amigos no mesmo sofá ou avançar no modo arcade contra a CPU, desbloqueando personagens e itens no caminho.",
+          "en": "There are giant balls that grow mid-air, square balls that bounce wherever they want, fireballs that burn your players, bombs, slippery ice balls, planets and even coconuts and crabs. Play with friends on the same couch or climb the arcade mode against the CPU, unlocking characters and items along the way."
+        },
+        {
+          "shots": [
+            "assets/pimbolas/print-1.jpg",
+            "assets/pimbolas/print-2.jpg",
+            "assets/pimbolas/print-3.jpg",
+            "assets/pimbolas/print-4.jpg",
+            "assets/pimbolas/print-5.jpg",
+            "assets/pimbolas/print-6.jpg"
+          ]
+        },
+        {
+          "pt": "**meu papel:** game design (progressão, balanceamento e level design) e sound design (efeitos sonoros e músicas). é o primeiro jogo comercial autoral da Nano Knight, feito por um time de três pessoas e distribuído pela Nuntius Games e Vsoo Games. o desenvolvimento virou conteúdo em devlogs no YouTube, do protótipo ao lançamento.",
+          "en": "**My role:** game design (progression, balancing and level design) and sound design (sound effects and music). It's Nano Knight's first original commercial game, made by a team of three and published by Nuntius Games and Vsoo Games. The development became content through YouTube devlogs, from prototype to launch."
+        },
+        {
+          "links": [
+            {
+              "label": {
+                "pt": "ver na Steam",
+                "en": "view on Steam"
+              },
+              "url": "https://store.steampowered.com/app/3621200/Pimbolas/"
+            },
+            {
+              "label": "devlogs",
+              "url": "https://www.youtube.com/playlist?list=PLbpN6bv9xede_9ey35JNgnRnLK2TX9JMV"
+            },
+            {
+              "label": {
+                "pt": "página do jogo",
+                "en": "game page"
+              },
+              "page": "pimbolas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": {
+      "pt": "Media kit — Davi Baptixta",
+      "en": "Media kit — Davi Baptixta"
+    },
+    "description": {
+      "pt": "Media kit de Davi Baptixta, game designer e criador de conteúdo: 29 mil+ seguidores, conteúdos em destaque, o jogo Pimbolas e contato.",
+      "en": "Media kit for Davi Baptixta, game designer and content creator: 29K+ followers, top content, the game Pimbolas and contact."
+    },
+    "image": "assets/pimbolas.png"
+  }
+}

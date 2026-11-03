@@ -122,17 +122,84 @@ export function createRenderer(D, lang) {
     return `<div class="page"><h1 class="sr-only">${esc((h.seo && h.seo.h1) || fullName)}</h1>${hand(h.cards)}${secs}${contact()}</div>`;
   };
 
+  /* ---------- blocos do media kit ---------- */
+  const ext = '<svg viewBox="0 0 10 10" width="9" height="9" aria-hidden="true"><path d="M3 7l4-4M3.5 3H7v3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const yt = 'allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"';
+
+  // números: { stats: [{ value, label?, note?, accent? }], note?, small? }
+  const stats = b => `<div class="stats${b.small ? ' small' : ''}">${arr(b.stats).map(s =>
+    `<div${s.accent ? ' class="on"' : ''}><b>${esc(s.value)}</b>${s.label ? `<span>${rich(s.label)}</span>` : ''}${s.note ? `<small>${rich(s.note)}</small>` : ''}</div>`).join('')}</div>${b.note ? `<p class="stats-note">${rich(b.note)}</p>` : ''}`;
+
+  // legenda de vídeo/post: posição, número (opcional), título com link
+  const cap = (c, i) => {
+    const title = c.url ? `<a class="kit-title" href="${esc(c.url)}" target="_blank" rel="noopener">${rich(c.title)}</a>` : `<span class="kit-title">${rich(c.title)}</span>`;
+    const date = c.date ? `<small>${rich(c.date)}</small>` : '';
+    return c.num == null
+      ? `<span class="kit-num"><i>${i + 1}</i>${title}</span>${date}`
+      : `<span class="kit-num"><i>${i + 1}</i>${esc(c.num)} <small>${rich(c.meta)}</small></span>${title}${date}`;
+  };
+
+  // vídeos: { embeds: [{ youtube: "id" | instagram: "url do reel" + img: "capa", short?, num, meta, title, url }]
+  // cada um vira uma capa 16:9 (o primeiro maior) e só carrega o player no clique; vertical aparece em pé no meio da capa
+  const embeds = list => {
+    const es = arr(list);
+    if (!es.length) return '';
+    return `<div class="embeds">${es.map((e, i) => {
+      const ig = e.instagram ? String(e.instagram).split('?')[0].replace(/\/$/, '') + '/' : '';
+      const tall = !!(ig || e.short);
+      const img = ig ? esc(u(e.img)) : `https://i.ytimg.com/vi/${esc(e.youtube)}/${e.short ? 'oar2' : 'maxresdefault'}.jpg`;
+      const poster = tall
+        ? `<img class="blur" src="${img}" alt="" loading="lazy"><img class="tall" src="${img}" alt="" loading="lazy">`
+        : `<img src="${img}" alt="" loading="lazy">`;
+      const data = ig ? `data-ig="${esc(ig)}"` : `data-yt="${esc(e.youtube)}"`;
+      return `<figure><button class="embed play" ${data} aria-label="${lang === 'pt' ? 'assistir' : 'play'}: ${esc(e.title)}">${poster}<span class="play-i" aria-hidden="true"></span></button><figcaption>${cap(e, i)}</figcaption></figure>`;
+    }).join('')}</div>`;
+  };
+
+  // posts com capa: { posts: [{ img, num, meta, title, date?, url }] }
+  // capa inteira no centro, com ela mesma desfocada preenchendo o 16:9 (igual aos shorts)
+  const posts = list => `<div class="embeds">${arr(list).map((c, i) =>
+    `<figure><a class="embed thumb" href="${esc(c.url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="blur" src="${esc(u(c.img))}" alt="" loading="lazy"><img class="fit" src="${esc(u(c.img))}" alt="" loading="lazy"></a><figcaption>${cap(c, i)}</figcaption></figure>`).join('')}</div>`;
+
+  // linhas como na home: { rows: [[col, col, col] | { cols, url }] }
+  const rows = list => arr(list).map(r => {
+    r = Array.isArray(r) ? { cols: r } : r;
+    const cells = r.cols.map(x => `<span>${rich(x)}</span>`).join('');
+    return r.url ? `<a class="row c${r.cols.length}" href="${esc(r.url)}" target="_blank" rel="noopener">${cells}</a>` : `<div class="row c${r.cols.length}">${cells}</div>`;
+  }).join('');
+
+  // botões-pílula: { links: [{ label, url } | { label, page }] }
+  const pills = list => `<div class="links">${arr(list).map(l => 'page' in l
+    ? `<a href="${href(l.page)}">${rich(l.label)}</a>`
+    : `<a href="${esc(l.url)}" target="_blank" rel="noopener">${rich(l.label)} ${ext}</a>`).join('')}</div>`;
+
+  const shotsOf = (list, T) => arr(list).map((s, i) => `<a href="${esc(u(s))}" target="_blank" rel="noopener"><img src="${esc(u(s))}" alt="${T} — ${lang === 'pt' ? 'captura de tela' : 'screenshot'} ${i + 1}" loading="lazy"></a>`).join('');
+
   const page = p => {
     const T = esc(p.title);
     const vid = id => id ? `<div class="video"><iframe src="${/^https?:/.test(id) ? esc(id) : 'https://www.youtube-nocookie.com/embed/' + esc(id)}" allowfullscreen loading="lazy" title="${T} — video"></iframe></div>` : '';
+    // abas: { tabs: [{ id, label, blocks }] } — mesma navegação das abas do guia
+    const tabs = list => {
+      const ts = arr(list);
+      return `<div class="tabs" role="tablist">${ts.map((x, i) => `<button role="tab" id="tab-${esc(x.id)}" aria-controls="aba-${esc(x.id)}" aria-selected="${!i}" data-tab="${esc(x.id)}"${i ? ' tabindex="-1"' : ''}>${rich(x.label)}</button>`).join('')}</div>`
+        + ts.map((x, i) => `<div class="aba" id="aba-${esc(x.id)}" role="tabpanel" aria-labelledby="tab-${esc(x.id)}"${i ? ' hidden' : ''}>${arr(x.blocks).map(blk).join('')}</div>`).join('');
+    };
     const blk = b => isText(b) ? `<p>${nl(b)}</p>`
       : b.cards ? hand(b.cards)
       : b.list ? `<div class="resp list">${b.list.map(i => `<span>${rich(i)}</span>`).join('')}</div>`
       : b.logos ? logos(b.logos)
       : b.gallery ? gallery(b.gallery)
+      : b.stats ? stats(b)
+      : b.tabs ? tabs(b.tabs)
+      : b.embeds ? embeds(b.embeds)
+      : b.posts ? posts(b.posts)
+      : b.rows ? rows(b.rows)
+      : b.links ? pills(b.links)
+      : b.shots ? `<div class="shots">${shotsOf(b.shots, T)}</div>`
+      : b.instagramProfile ? `<div class="ig-profile"><iframe src="https://www.instagram.com/${esc(b.instagramProfile)}/embed/" title="@${esc(b.instagramProfile)} — Instagram" loading="lazy"></iframe></div>`
       : (b.img || b.src) ? fig(b) : vid(b.video);
     const links = arr(p.links).map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${rich(l.label)} ↗</a>`).join('');
-    const shots = arr(p.screenshots).map((s, i) => `<a href="${esc(u(s))}" target="_blank" rel="noopener"><img src="${esc(u(s))}" alt="${T} — ${lang === 'pt' ? 'captura de tela' : 'screenshot'} ${i + 1}" loading="lazy"></a>`).join('');
+    const shots = shotsOf(p.screenshots, T);
     const resp = arr(p.responsabilidades).map(r => `<div class="resp">${rich(r.title)}${r.items.map(i => `<span>${rich(i)}</span>`).join('')}</div>`).join('');
     return `<div class="page"><h1 class="back"><a href="${href()}" data-back>${arrow}<span>${rich(p.title)}</span></a></h1>${hand(p.cards)}${gallery(p.gallery)}${logos(p.logos)}${vid(p.trailer)}
     ${links ? `<div class="links">${links}</div>` : ''}
