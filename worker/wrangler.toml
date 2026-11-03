@@ -3,6 +3,7 @@
 # segredos (cada um pede o valor no terminal, nada fica no repo):
 #   npx wrangler secret put TURNSTILE_SECRET
 #   npx wrangler secret put GITHUB_TOKEN
+#   npx wrangler secret put DISCORD_WEBHOOK   (opcional: avisos de cada envio num canal do Discord)
 name = "radar-eventos"
 main = "src/index.js"
 compatibility_date = "2025-09-01"

@@ -4,7 +4,8 @@
    3. o link oficial precisa estar no ar
    4. checagem com IA (Workers AI): é mesmo um evento de games? tem algo ofensivo, golpe ou spam?
    5. só então grava radar/eventos.json no GitHub; o commit dispara o deploy do site (pages.yml)
-   qualquer falha numa etapa = o evento não é publicado. */
+   qualquer falha numa etapa = o evento não é publicado.
+   depois do anti-robô, cada resultado (publicado, recusado ou erro) vira um aviso no Discord (segredo DISCORD_WEBHOOK). */
 import { normalizar, validar, duplicado, inserir } from '../../radar/validar.mjs';
 
 const MODELO = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
@@ -14,7 +15,7 @@ const json = (dados, status, cors) => new Response(JSON.stringify(dados), { stat
 const recusa = (motivos, status, cors) => json({ ok: false, motivos: [].concat(motivos) }, status, cors);
 
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     const origem = req.headers.get('origin') || '';
     const permitidas = (env.ORIGENS || '').split(',').map(s => s.trim()).filter(Boolean);
     const cors = permitidas.includes(origem)
@@ -24,7 +25,7 @@ export default {
     if (!cors['access-control-allow-origin']) return recusa('origem não permitida', 403, cors);
 
     try {
-      return await receber(req, env, cors);
+      return await receber(req, env, ctx, cors);
     } catch (err) {
       console.error(err && err.stack || err);
       return recusa('algo deu errado do nosso lado. tente de novo em alguns minutos', 500, cors);
@@ -32,7 +33,7 @@ export default {
   }
 };
 
-async function receber(req, env, cors) {
+async function receber(req, env, ctx, cors) {
   const ip = req.headers.get('cf-connecting-ip') || '';
 
   // 1. anti-robô
@@ -50,23 +51,55 @@ async function receber(req, env, cors) {
   if (f.consentimento !== true) return recusa('marque que você concorda com a publicação das informações', 422, cors);
   if (!(await turnstile(f.turnstile, ip, env))) return recusa('não conseguimos confirmar que você não é um robô. recarregue a página e tente de novo', 403, cors);
 
-  // 2. regras fixas
+  // daqui em diante é uma pessoa: todo resultado vira aviso no Discord (sem atrasar a resposta)
   const e = normalizar(f);
+  const avisa = (resultado, motivos) => { if (env.DISCORD_WEBHOOK) ctx.waitUntil(discord(env.DISCORD_WEBHOOK, resultado, e, motivos).catch(err => console.error('discord', err && err.message))); };
+  const nega = (motivos, status, etapa = '') => { avisa('recusado', [].concat(motivos).map(m => etapa + m)); return recusa(motivos, status, cors); };
+
+  // 2. regras fixas
   const erros = validar(e);
-  if (erros.length) return recusa(erros, 422, cors);
+  if (erros.length) return nega(erros, 422);
 
   // 3. o link precisa estar no ar (e o conteúdo da página ajuda a IA a conferir o evento)
   const pagina = await lerPagina(e.u);
-  if (pagina.erro) return recusa(pagina.erro, 422, cors);
+  if (pagina.erro) return nega(pagina.erro, 422);
 
   // 4. checagem com IA
   const ia = await moderar(e, pagina, env);
-  if (!ia.publicar) return recusa(ia.motivo, 422, cors);
+  if (!ia.publicar) return nega(ia.motivo, 422, 'IA: ');
 
   // 5. grava no GitHub
-  const gravado = await publicar(e, env);
-  if (gravado.duplicado) return recusa(`esse evento já está no radar (${gravado.duplicado})`, 409, cors);
+  let gravado;
+  try { gravado = await publicar(e, env); }
+  catch (err) { avisa('erro', [`não gravou no GitHub: ${String(err && err.message || err).slice(0, 300)}`]); throw err; }
+  if (gravado.duplicado) return nega(`esse evento já está no radar (${gravado.duplicado})`, 409);
+  avisa('publicado', ia.motivo ? [`IA: ${ia.motivo}`] : []);
   return json({ ok: true, publicado: !env.DRY_RUN, evento: e, ...(env.DRY_RUN ? { arquivo: gravado.arquivo } : {}) }, 200, cors);
+}
+
+/* aviso no canal do Discord. o texto vem de quem enviou o formulário: nada de menções (@everyone) */
+async function discord(webhook, resultado, e, motivos) {
+  const cor = { publicado: 0x2ecc71, recusado: 0xff2b58, erro: 0xf39c12 }[resultado];
+  const titulo = { publicado: '✅ evento publicado no radar', recusado: '⛔ evento recusado', erro: '⚠️ evento aprovado, mas não foi gravado' }[resultado];
+  const corta = (s, n) => String(s || '').slice(0, n) || '—';
+  const quando = e.d + (e.ate ? ` a ${e.ate}` : '') + (e.h ? ` · ${e.h}` : '');
+  const onde = e.uf === 'online' ? 'online' : `${e.v} · ${e.c}/${e.uf}`;
+  const fields = [
+    { name: 'quando', value: corta(quando, 100), inline: true },
+    { name: 'onde', value: corta(onde, 200), inline: true },
+    { name: 'link', value: corta(e.u, 300) }
+  ];
+  if (e.n) fields.splice(2, 0, { name: 'descrição', value: corta(e.n, 200) });
+  if (motivos && motivos.length) fields.push({ name: resultado === 'publicado' ? 'checagem' : 'motivo', value: corta(motivos.join('\n'), 1000) });
+  if (resultado === 'publicado') fields.push({ name: 'remover', value: 'apague a linha do evento em radar/eventos.json (faça Pull antes)' });
+  const r = await fetch(webhook, {
+    method: 'POST', headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      username: 'radar de eventos', allowed_mentions: { parse: [] },
+      embeds: [{ title: titulo, description: corta(e.a, 200), color: cor, fields, timestamp: new Date().toISOString() }]
+    })
+  });
+  if (!r.ok) throw new Error(`discord ${r.status}`);
 }
 
 async function turnstile(token, ip, env) {
