@@ -38,7 +38,8 @@
     { "t": "indie", "d": "2027-02-27", "ate": "2027-02-28", "a": "Nerd Experience", "n": "Games, anime, RPG e cinema", "v": "Expominas", "c": "Belo Horizonte", "uf": "MG", "u": "https://nerdexperience.com.br" },
     { "t": "indie", "d": "2027-03-26", "ate": "2027-03-28", "a": "EVO Brazil", "n": "Campeonato de jogos de luta", "v": "Expo Center Norte", "c": "São Paulo", "uf": "SP", "u": "https://www.omelete.com.br/games/evo-brazil-2027-data-jogos-mais-tudo-sobre" },
     { "t": "indie", "d": "2027-05-14", "ate": "2027-05-16", "a": "Brasília Game Festival", "v": "Local a confirmar", "c": "Brasília", "uf": "DF", "u": "https://brasiliagamefestival.com.br/" },
-    { "t": "indie", "d": "2026-11-19", "ate": "2026-11-21", "a": "Headscon XP ES 2026", "n": "R$ 15 mil em premiações e reunirá jogos do Espírito Santo, Amazônia Legal e Sistema S", "v": "Sesi Jardim da Penha", "c": "Vitoria", "uf": "ES", "h": "12h", "u": "https://headscon.com.br/", "via": "comunidade" }
+    { "t": "indie", "d": "2026-11-19", "ate": "2026-11-21", "a": "Headscon XP ES 2026", "n": "R$ 15 mil em premiações e reunirá jogos do Espírito Santo, Amazônia Legal e Sistema S", "v": "Sesi Jardim da Penha", "c": "Vitoria", "uf": "ES", "h": "12h", "u": "https://headscon.com.br/", "via": "comunidade" },
+    { "t": "indie", "d": "2026-11-07", "ate": "2026-11-08", "a": "PENHA GEEK 9ª EDIÇÃO", "n": "Prepare-se para o Penha Geek, a experiência definitiva para todos os fãs da cultura pop", "v": "Centro Cultural da Penha Largo do Rosário, 20 Penha de França", "c": "São Paulo", "uf": "SP", "h": "11h", "free": true, "u": "https://www.sympla.com.br/evento/penha-geek-9-edicao-domingo/3626041?referrer=www.google.com&referrer=www.google.com", "via": "comunidade" }
   ],
   "fontes": [
     { "n": "EAI Jogos", "u": "https://linktr.ee/eaiJogos", "s": "Lido na Sympla e no Linktree. Só a edição de novembro está publicada. O Instagram só mostra parte dos posts sem login" },
